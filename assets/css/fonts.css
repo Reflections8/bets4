@@ -1,0 +1,7 @@
+@font-face {
+  font-family: '*font name*';
+  src: local('*current local font name*'),
+  url('*path to font file') format('*format');
+  font-weight: 400;
+  font-style: normal;
+}
