@@ -1,0 +1,15 @@
+.textlink {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.textlink.color-important:hover {
+  filter: url(#filter-color-primary);
+}
+
+.textlink.color-primary:hover {
+  filter: url(#filter-color-important);
+}

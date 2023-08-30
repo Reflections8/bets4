@@ -1,0 +1,20 @@
+.matchesList {
+  border-bottom: 1px solid var(--bg-accent-primary);
+}
+
+.matchesList__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--indent-card);
+}
+
+.matchesListWrapper .matchesList:last-of-type {
+  border-bottom: none;
+}
+
+.matchesList--Short {
+  display: flex;
+  flex-direction: column;
+  border-bottom: none;
+  gap: 15px;
+}

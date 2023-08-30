@@ -1,0 +1,15 @@
+.threeDots {
+  display: flex;
+  gap: 2px;
+}
+
+.threeDots--Vertical {
+  flex-direction: column;
+  margin-right: 2px;
+}
+
+.threeDots__dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+}

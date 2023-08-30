@@ -1,0 +1,103 @@
+/* ----- background-color ----- */
+.bg-important-text {
+  background-color: var(--color-important);
+}
+
+.bg-important-primary {
+  background-color: var(--bg-important-primary);
+}
+
+.bg-important-secondary {
+  background-color: var(--bg-important-secondary);
+}
+
+.bg-primary {
+  background-color: var(--bg-primary);
+}
+
+.bg-accent-primary {
+  background-color: var(--bg-accent-primary);
+}
+
+.bg-accent-secondary {
+  background-color: var(--bg-accent-secondary);
+}
+
+.bg-warning {
+  background-color: var(--bg-warning);
+}
+
+.bg-error {
+  background-color: var(--bg-error);
+}
+
+
+/* ----- color ----- */
+.color-important {
+  color: var(--color-important);
+}
+
+.color-primary {
+  color: var(--color-primary);
+}
+
+.color-secondary {
+  color: var(--color-secondary);
+}
+
+.color-inactive {
+  color: var(--color-inactive);
+}
+
+.color-contrast {
+  color: var(--color-contrast);
+}
+
+.color-money {
+  color: var(--color-money);
+}
+
+.color-red {
+  color: var(--color-red);
+}
+
+.color-green {
+  color: var(--color-green);
+}
+
+/* Font weight */
+.fw-100 {
+  font-weight: 100;
+}
+
+.fw-200 {
+  font-weight: 200;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.fw-800 {
+  font-weight: 800;
+}
+
+.fw-900 {
+  font-weight: 900;
+}

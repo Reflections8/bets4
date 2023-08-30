@@ -1,3 +1,43 @@
 :root {
+  /* BACKGROUND */
+  --bg-body: #3a343e;
+  --bg-important-primary: #141017;
+  --bg-important-secondary: #1d1a21;
+  --bg-primary: #27252b;
+  --bg-accent-primary: #323036;
+  --bg-accent-secondary: #2d2b31;
+  --bg-warning: #fba200;
+  --bg-error: #9c0305;
 
+
+  /* TEXT */
+  /* simple */
+  --color-important: #ffffff;
+  --color-primary: #c8c8c8;
+  --color-secondary: #999999;
+  --color-inactive: #696969;
+  --color-contrast: #141017;
+  --color-money: #fba200;
+  --color-red: #ab040d;
+  --color-green: #009f4d;
+
+  /* disciplines */
+  --discipline-dota2: #910c14;
+  --discipline-cs-go: #df651b;
+  --discipline-overwatch: #f9ab0e;
+  --discipline-hs: #07a4b1;
+  --discipline-soccer: #0d6504;
+  --discipline-basketball: #bb452d;
+  --discipline-hockey: #c8c8c8;
+  --discipline-lol: #c57600;
+  --discipline-sc: #016bf0;
+  --discipline-valorant: #ff4655;
+  --discipline-other: #7c7c7c;
+
+  /* BORDER-RADIUS */
+  --border-radius-card: 15px;
+  --border-radius-card-content: 25px;
+
+  /* INDENTS */
+  --indent-card: 20px;
 }

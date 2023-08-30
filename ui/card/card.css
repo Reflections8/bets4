@@ -1,0 +1,24 @@
+/* Card */
+.card {
+  border-radius: var(--border-radius-card);
+}
+
+.card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--indent-card);
+}
+
+.card__header-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+}
+
+.card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

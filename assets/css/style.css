@@ -1,25 +1,102 @@
+/* Fonts */
+@import "fonts.css";
+
 /* Theme variables */
 @import "vars.css";
+
+/* Classes */
+@import "classes.css";
+
+/* Link icons */
+@import "icons.css";
 
 /* Components */
 @import "../../components/header/header.css";
 @import "../../components/footer/footer.css";
+@import "../../components/disciplines/disciplines.css";
+@import "../../components/matchesList/matchesList.css";
+@import "../../components/userList/userList.css";
 
+/* UI-elements */
+@import "../../ui/card/card.css";
+@import "../../ui/pills/pills.css";
+@import "../../ui/textlink/textlink.css";
+@import "../../ui/languageSelect/languageSelect.css";
+@import "../../ui/matchCard/matchCard.css";
+@import "../../ui/threeDots/threeDots.css";
+@import "../../ui/userCard/userCard.css";
+@import "../../ui/tabs/tabs.css";
+
+/* Common tags */
 *, *:after, *:before {
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Roboto Flex', sans-serif;
+
+  background-color: var(--bg-body);
+  background-image: url("/assets/images/general-bg/background-image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  color: var(--color-primary);
+}
+
 a {
+  color: unset;
   text-decoration: none;
 }
 
 button {
   cursor: pointer;
   transition: all .2s ease-in-out;
+  outline: none;
+  border: none;
 }
 
+abbr {
+  text-decoration: none;
+}
+
+/* CLASSES */
 .container {
   max-width: 1200px;
   padding: 0 20px;
   margin: 0 auto;
+}
+
+/* Text ellipsis */
+.text--ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Outer margins X */
+.marginCard {
+  margin-top: var(--indent-card);
+  margin-bottom: var(--indent-card);
+}
+
+.paddingCard {
+  padding: var(--indent-card);
+}
+
+/* Root content */
+.rootContent {
+  display: flex;
+  gap: var(--indent-card)
+}
+
+.rootContent main {
+  width: 65%;
+  height: fit-content;
+}
+
+.rootContent aside {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--indent-card);
 }

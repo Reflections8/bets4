@@ -1,7 +1,6 @@
 @font-face {
-  font-family: '*font name*';
-  src: local('*current local font name*'),
-  url('*path to font file') format('*format');
-  font-weight: 400;
+  font-family: 'Roboto Flex';
+  src: url('../fonts/RobotoFlex.ttf') format('truetype-variations');
+  font-weight: 100 900;
   font-style: normal;
 }

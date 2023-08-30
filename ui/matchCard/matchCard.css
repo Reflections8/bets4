@@ -1,0 +1,175 @@
+/* Head text */
+.matchCard__headText {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.matchCard__headText-timeAgo-clockIcon {
+  margin-bottom: 1px;
+}
+
+.matchCard__headText-timeAgo {
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+  gap: 6px;
+  padding-left: 25px;
+  margin-bottom: 4px;
+}
+
+.matchCard__headText-title {
+  max-width: 165px;
+  font-size: 11px;
+  padding-right: 10px;
+  margin-bottom: 4px;
+}
+
+/* Body */
+.matchCard__body {
+  display: flex;
+  align-items: stretch;
+  margin-left: 5px;
+  position: relative;
+}
+
+.matchCard__body[data-icon-side="true"] .matchCard__body-SideIcon {
+  visibility: visible;
+}
+
+.matchCard__body-SideIcon {
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  transform: translate(-50%, -50%);
+}
+
+/* Match type colored box */
+.matchCard__body-matchTypeBox {
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: var(--border-radius-card);
+  border-bottom-left-radius: var(--border-radius-card);
+  max-width: 26px;
+  width: 100%;
+}
+
+.matchCard__body-matchTypeBox-icon {
+  max-width: 16px;
+  max-height: 16px;
+  filter: brightness(0) invert(1);
+}
+
+/* Main content */
+.matchCard__body-main {
+  display: flex;
+  align-items: center;
+  gap: var(--indent-card);
+  padding-left: 20px;
+  padding-right: 60px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 100%;
+}
+
+.matchCard__body-main-textInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.matchCard__body-main-textInfo--FirstTeam {
+  max-width: 130px;
+  width: 100%;
+}
+
+.matchCard__body-main-textInfo-key {
+  font-size: 14px;
+  max-width: 130px;
+}
+
+.matchCard__body-main-textInfo-value {
+  font-size: 12px;
+  max-width: 130px;
+}
+
+.matchCard__body-main-LeagueImg {
+  margin-left: auto;
+}
+
+
+/* MATCH TYPES */
+.matchCard__body-matchTypeBox[data-match-discpiline='dota2'] {
+  background-color: var(--discipline-dota2);
+}
+
+.matchCard__body-matchTypeBox[data-match-discpiline='cs-go'] {
+  background-color: var(--discipline-cs-go);
+}
+
+.matchCard__body-matchTypeBox[data-match-discpiline='basketball'] {
+  background-color: var(--discipline-basketball);
+}
+
+.matchCard__body-matchTypeBox[data-match-discpiline='soccer'] {
+  background-color: var(--discipline-soccer);
+}
+
+/* SHORT CARD */
+.matchCard--Short .matchCard__body-main-textInfo--FirstTeam {
+  max-width: 90px;
+}
+
+.matchCard--Short .matchCard__headText-timeAgo {
+  padding-left: 10px;
+}
+.matchCard--Short .matchCard__headText-title {
+  padding-right: 25px;
+}
+
+.matchCard--Short .matchCard__body-main {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  gap: 16px;
+}
+
+.matchCard--Short .matchCard__body-main-textInfo-key {
+  font-size: 12px;
+  max-width: 90px;
+}
+
+.matchCard--Short .matchCard__headText-title {
+  max-width: 100px;
+  font-size: 11px;
+}
+
+.matchCard--Short .matchCard__body-main-teamImg {
+  max-width: 16px;
+}
+
+/* ICON RIGHT SIDE */
+.matchCard--IconRight .matchCard__body {
+  margin-left: 0;
+  margin-right: 5px;
+}
+
+.matchCard--IconRight .matchCard__body-SideIcon {
+  right: -16px;
+  left: unset;
+}
+
+.matchCard--IconRight .matchCard__body-main {
+  padding-right: 20px;
+}
+
+.matchCard--IconRight .matchCard__body-matchTypeBox {
+  order: 1;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: var(--border-radius-card);
+  border-bottom-right-radius: var(--border-radius-card);
+}

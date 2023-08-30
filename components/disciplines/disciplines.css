@@ -1,0 +1,113 @@
+.disciplines {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 10%;
+}
+
+.disciplines__pills {
+  padding: 12px;
+  border-radius: var(--border-radius-card);
+  border-right: 1px solid var(--bg-accent-primary);
+}
+
+.disciplines__pills-container-glider {
+  box-shadow: 0 0 8px 0 var(--bg-warning);
+}
+
+.disciplines__list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px;
+}
+
+.disciplines__list-item {
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  border-bottom: 3px solid;
+  position: relative;
+  max-width: 45px;
+  width: 100%;
+  min-height: 69px;
+}
+
+.disciplines__list-item:after {
+  transition: all .2s ease-in-out;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 20%;
+  pointer-events: none;
+}
+
+.disciplines__list-item:hover.disciplines__list-item:after {
+  opacity: 30%;
+}
+
+.disciplines__list-item-link {
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+}
+
+.disciplines__list-item[data-discipline="dota2"] {
+  border-color: var(--discipline-dota2);
+}
+
+.disciplines__list-item[data-discipline="dota2"]:after {
+  background-color: var(--discipline-dota2);
+}
+
+.disciplines__list-item[data-discipline="cs-go"] {
+  border-color: var(--discipline-cs-go);
+}
+
+.disciplines__list-item[data-discipline="cs-go"]:after {
+  background-color: var(--discipline-cs-go);
+}
+
+.disciplines__list-item[data-discipline="overwatch"] {
+  border-color: var(--discipline-overwatch);
+}
+
+.disciplines__list-item[data-discipline="overwatch"]:after {
+  background-color: var(--discipline-overwatch);
+}
+
+.disciplines__list-item[data-discipline="hs"] {
+  border-color: var(--discipline-hs);
+}
+
+.disciplines__list-item[data-discipline="hs"]:after {
+  background-color: var(--discipline-hs);
+}
+
+.disciplines__list-item[data-discipline="soccer"] {
+  border-color: var(--discipline-soccer);
+}
+
+.disciplines__list-item[data-discipline="soccer"]:after {
+  background-color: var(--discipline-soccer);
+}
+
+.disciplines__list-item[data-discipline="basketball"] {
+  border-color: var(--discipline-basketball);
+}
+
+.disciplines__list-item[data-discipline="basketball"]:after {
+  background-color: var(--discipline-basketball);
+}
+
+.disciplines__list-item[data-discipline="hockey"] {
+  border-color: var(--discipline-hockey);
+}
+
+.disciplines__list-item[data-discipline="hockey"]:after {
+  background-color: var(--discipline-hockey);
+}

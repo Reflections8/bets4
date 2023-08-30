@@ -1,0 +1,27 @@
+{
+  "main": {
+    "firstTeamPercent": "48%",
+    "secondTeamPercent": "52%",
+    "score": "VS"
+  },
+  "hc": {
+    "firstTeamPercent": "20%",
+    "secondTeamPercent": "80%",
+    "score": "0:0"
+  },
+  "fb": {
+    "firstTeamPercent": "30%",
+    "secondTeamPercent": "70%",
+    "score": "1:0"
+  },
+  "live": {
+    "firstTeamPercent": "50%",
+    "secondTeamPercent": "50%",
+    "score": "VS"
+  },
+  "game3": {
+    "firstTeamPercent": "40%",
+    "secondTeamPercent": "60%",
+    "score": "1:1"
+  }
+}

@@ -1,0 +1,72 @@
+[data-link-default-icon="important"]:after {
+  content: url("../icons/link-important.svg");
+}
+
+[data-link-default-icon="primary"]:after {
+  content: url("../icons/link-primary.svg");
+}
+
+[data-link-custom-icon="false"]:before {
+  content: "";
+}
+
+[data-link-custom-icon="bets"]:before {
+  content: url("../../components/header/img/bets.svg");
+}
+
+[data-link-custom-icon="investments"]:before {
+  content: url("../../components/header/img/investments.svg");
+}
+
+[data-link-custom-icon="items"]:before {
+  content: url("../../components/header/img/items.svg");
+}
+
+[data-link-custom-icon="payments"]:before {
+  content: url("../../components/header/img/payments.svg");
+}
+
+[data-link-custom-icon="market"]:before {
+  content: url("../../components/header/img/market.svg");
+}
+
+[data-link-custom-icon="support"]:before {
+  content: url("../../components/header/img/support.svg");
+}
+
+[data-link-custom-icon="mail"]:before {
+  content: url("../../components/footer/img/mail.svg");
+}
+
+[data-link-custom-icon="steam"]:before {
+  content: url("../../components/footer/img/steam.svg");
+}
+
+/* MATCH CARD */
+[data-link-custom-icon="shield"]:before {
+  content: url("../../ui/matchCard/img/shield.svg");
+}
+
+[data-link-custom-icon="hc"]:before {
+  content: url("../../ui/matchCard/img/hc.svg");
+}
+
+[data-link-custom-icon="fb"]:before {
+  content: url("../../ui/matchCard/img/fb.svg");
+}
+
+[data-link-custom-icon="game3"]:before {
+  content: url("../../ui/matchCard/img/game3.svg");
+}
+
+/* WINNER CROWN */
+[data-winner-icon="true"] abbr {
+  position: relative;
+  top: -2px;
+}
+
+[data-winner-icon="true"]:before {
+  content: url("../../assets/icons/crown.svg");
+  position: relative;
+  top: 1px;
+}

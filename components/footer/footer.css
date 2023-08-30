@@ -1,0 +1,101 @@
+.footer {
+  padding: 32px 50px 16px 16px;
+  display: flex;
+  gap: 12%;
+}
+
+.footer__logoSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer__logoSection-logo {
+  max-width: 114px;
+  height: auto;
+  min-height: 43px;
+  margin-left: 60px;
+}
+
+.footer__content-main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+}
+
+.footer__content-main-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8%;
+}
+
+.footer__content-main-info-item {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer__content-main-info-item-key {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.footer__content-main-info-item-value {
+  display: flex;
+  align-items: center;
+}
+
+.footer__content-main-info-item-value--Socials {
+  gap: 10px;
+}
+
+.footer__content-main-info-item-value--Socials-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-important);
+  border-radius: var(--border-radius-card-content);
+  width: 30px;
+  height: 20px;
+}
+
+.footer__content-main-info-item-value--Socials-item:hover {
+  background-color: var(--color-primary);
+}
+
+.footer__content-main-info-item-value--Socials-item-img {
+  max-width: 20px;
+}
+
+.footer__content-main-info-item--Info {
+  gap: 12px;
+}
+
+.footer__content-main-copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  gap: 2px;
+}
+
+.footer__content-main-copyright-sign {
+  font-size: 16px;
+  margin-right: 2px;
+}
+
+.footer__content-main-copyright-sitename {
+  font-weight: 700;
+}
+
+.footer__content-main-copyright-steam.textlink {
+  font-weight: 700;
+}
+
+.footer__content-main-copyright-llc {
+  font-weight: 700;
+}

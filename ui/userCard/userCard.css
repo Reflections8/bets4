@@ -1,0 +1,52 @@
+.userCard {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  padding: 10px 12px 10px 30px;
+  font-size: 12px;
+  font-weight: 700;
+  min-height: 40px;
+}
+
+.userCard__img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+
+.userCard__userInfo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.userCard--WithButton .userCard__userInfo-name {
+  max-width: 135px;
+}
+
+.userCard .userCard__userInfo-name {
+  max-width: 200px;
+}
+
+.userCard__investBtn {
+  padding: 5px 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: 8px;
+  background-color: var(--color-important);
+  margin-left: auto;
+}
+
+.userCard__investBtn:hover {
+  background-color: var(--color-primary);
+}
+
+.userCard__investBtn-text {
+  font-weight: 600;
+  font-family: 'Roboto Flex', sans-serif;
+  font-size: 12px;
+}
