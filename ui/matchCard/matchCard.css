@@ -5,6 +5,15 @@
   justify-content: space-between;
 }
 
+.matchCard__headText-tabsGradientWrapper {
+  max-width: 280px;
+  width: 100%;
+}
+
+.matchCard__headText-tabs::-webkit-scrollbar {
+  display: none;
+}
+
 .matchCard__headText-timeAgo-clockIcon {
   margin-bottom: 1px;
 }
@@ -16,6 +25,11 @@
   gap: 6px;
   padding-left: 25px;
   margin-bottom: 4px;
+}
+
+.matchCard__headText-timeAgo-symbol {
+  width: 3px;
+  height: 3px;
 }
 
 .matchCard__headText-title {
@@ -43,23 +57,25 @@
   top: 50%;
   left: -10px;
   transform: translate(-50%, -50%);
+  height: 100%;
+  max-width: 8px;
 }
 
 /* Match type colored box */
 .matchCard__body-matchTypeBox {
-  padding: 0 4px;
+  padding: 0 2px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-top-left-radius: var(--border-radius-card);
   border-bottom-left-radius: var(--border-radius-card);
-  max-width: 26px;
+  max-width: 20px;
   width: 100%;
 }
 
 .matchCard__body-matchTypeBox-icon {
-  max-width: 16px;
-  max-height: 16px;
+  max-width: 14px;
+  max-height: 14px;
   filter: brightness(0) invert(1);
 }
 
@@ -99,8 +115,11 @@
 
 .matchCard__body-main-LeagueImg {
   margin-left: auto;
+  max-width: 40px;
+  width: 100%;
+  height: 100%;
+  max-height: 55px;
 }
-
 
 /* MATCH TYPES */
 .matchCard__body-matchTypeBox[data-match-discpiline='dota2'] {

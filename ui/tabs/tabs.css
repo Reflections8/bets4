@@ -1,9 +1,44 @@
+.tabsGradientWrapper {
+  position: relative;
+}
+
+.tabsGradientWrapper:before {
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0) 95%, var(--bg-primary) 100%);
+  pointer-events: none;
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 20;
+}
+
+.tabsGradientWrapper:after {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 95%, var(--bg-primary) 100%);
+  pointer-events: none;
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 20;
+}
+
+.tabs {
+  overflow-x: scroll;
+  white-space: nowrap;
+  position: relative;
+}
+
 .tabs__wrapper {
-  padding: 0 8px;
+  padding: 0 16px;
   margin: 0 -8px;
   overflow: hidden;
   display: flex;
   gap: 4px;
+  width: fit-content;
 }
 
 .tab {
@@ -11,7 +46,7 @@
   position: relative;
   box-sizing: border-box;
   font-family: sans-serif;
-  border-radius: 0 0 12px 12px;
+  border-radius: 0 0 10px 10px;
   z-index: 1;
   display: flex;
   align-items: center;
@@ -20,7 +55,7 @@
 }
 
 .tab__content {
-  padding: 6px 8px;
+  padding: 6px 8px 3px 8px;
   transform: scaleY(-1);
   display: flex;
   align-items: center;
@@ -28,6 +63,13 @@
   gap: 4px;
   font-size: 12px;
   cursor: pointer;
+  font-family: 'Roboto Flex', sans-serif;
+}
+
+.tab__content-redDot {
+  width: 3px;
+  height: 3px;
+  margin-right: 4px;
 }
 
 .tab--Active {

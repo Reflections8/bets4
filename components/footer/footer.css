@@ -80,7 +80,7 @@
   justify-content: center;
   align-items: center;
   font-size: 12px;
-  gap: 2px;
+  gap: 4px;
 }
 
 .footer__content-main-copyright-sign {
@@ -94,6 +94,7 @@
 
 .footer__content-main-copyright-steam.textlink {
   font-weight: 700;
+  gap: 2px;
 }
 
 .footer__content-main-copyright-llc {

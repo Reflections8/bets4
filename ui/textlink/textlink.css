@@ -13,3 +13,7 @@
 .textlink.color-primary:hover {
   filter: url(#filter-color-important);
 }
+
+a.color-primary:hover {
+  color: var(--color-important);
+}

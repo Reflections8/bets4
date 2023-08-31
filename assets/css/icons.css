@@ -1,5 +1,9 @@
 [data-link-default-icon="important"]:after {
   content: url("../icons/link-important.svg");
+  width: 9px;
+  height: 9px;
+  display: flex;
+  align-items: center;
 }
 
 [data-link-default-icon="primary"]:after {
@@ -36,6 +40,7 @@
 
 [data-link-custom-icon="mail"]:before {
   content: url("../../components/footer/img/mail.svg");
+  margin-bottom: -3px;
 }
 
 [data-link-custom-icon="steam"]:before {

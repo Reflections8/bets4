@@ -21,7 +21,7 @@
 @import "../../ui/card/card.css";
 @import "../../ui/pills/pills.css";
 @import "../../ui/textlink/textlink.css";
-@import "../../ui/languageSelect/languageSelect.css";
+@import "../../ui/dropdown/dropdown.css";
 @import "../../ui/matchCard/matchCard.css";
 @import "../../ui/threeDots/threeDots.css";
 @import "../../ui/userCard/userCard.css";
@@ -36,7 +36,7 @@ body {
   font-family: 'Roboto Flex', sans-serif;
 
   background-color: var(--bg-body);
-  background-image: url("/assets/images/general-bg/background-image.png");
+  background-image: url("../images/general-bg/background-image.png");
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -99,4 +99,36 @@ abbr {
   display: flex;
   flex-direction: column;
   gap: var(--indent-card);
+}
+
+/* Red dot */
+.red-dot {
+  border-radius: 50%;
+  background-color: var(--color-red);
+  box-shadow: 0px 0px 6px 1px var(--color-red);
+  animation: blink;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+[data-red-dot-animation-duration="3"] {
+  animation-duration: 3s;
+}
+
+[data-red-dot-animation-duration="5"] {
+  animation-duration: 5s;
+}
+
+@keyframes blink {
+  0% {
+    box-shadow: 0px 0px 6px 1px var(--color-red);
+  }
+
+  40% {
+    box-shadow: 0px 0px 10px 4px var(--color-red);
+  }
+
+  100% {
+    box-shadow: 0px 0px 6px 1px var(--color-red);
+  }
 }

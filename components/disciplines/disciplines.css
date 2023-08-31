@@ -1,8 +1,7 @@
 .disciplines {
   display: flex;
-  flex-wrap: wrap;
   align-items: stretch;
-  gap: 10%;
+  gap: 2%;
 }
 
 .disciplines__pills {
@@ -19,7 +18,9 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 40px;
+  gap: 10px;
+  margin-left: auto;
+  margin-right: 20px;
 }
 
 .disciplines__list-item {
@@ -27,11 +28,25 @@
   display: flex;
   align-items: stretch;
   justify-content: center;
-  border-bottom: 3px solid;
   position: relative;
   max-width: 45px;
   width: 100%;
   min-height: 69px;
+  transition: all .2s ease-in-out;
+  overflow: hidden;
+}
+
+/* Trapezoid */
+.disciplines__list-item:before {
+  content: "";
+  position: absolute;
+  border-bottom: 3px solid;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  height: 0;
+  width: 100%;
+  bottom: -3px;
+  transition: all .2s ease-in-out;
 }
 
 .disciplines__list-item:after {
@@ -56,58 +71,104 @@
   align-items: center;
 }
 
-.disciplines__list-item[data-discipline="dota2"] {
-  border-color: var(--discipline-dota2);
+.disciplines__list-item:active:before {
+  bottom: 0;
 }
 
-.disciplines__list-item[data-discipline="dota2"]:after {
+.disciplines__list-item[data-discipline="dota2"]:active:before {
+  border-bottom-color: var(--discipline-dota2);
+}
+
+.disciplines__list-item[data-discipline="dota2"]:hover:after {
   background-color: var(--discipline-dota2);
 }
 
-.disciplines__list-item[data-discipline="cs-go"] {
-  border-color: var(--discipline-cs-go);
+.disciplines__list-item[data-discipline="cs-go"]:active:before {
+  border-bottom-color: var(--discipline-cs-go);
 }
 
-.disciplines__list-item[data-discipline="cs-go"]:after {
+.disciplines__list-item[data-discipline="cs-go"]:hover:after {
   background-color: var(--discipline-cs-go);
 }
 
-.disciplines__list-item[data-discipline="overwatch"] {
-  border-color: var(--discipline-overwatch);
+.disciplines__list-item[data-discipline="overwatch"]:active:before {
+  border-bottom-color: var(--discipline-overwatch);
 }
 
-.disciplines__list-item[data-discipline="overwatch"]:after {
+.disciplines__list-item[data-discipline="overwatch"]:hover:after {
   background-color: var(--discipline-overwatch);
 }
 
-.disciplines__list-item[data-discipline="hs"] {
-  border-color: var(--discipline-hs);
+.disciplines__list-item[data-discipline="hs"]:active:before {
+  border-bottom-color: var(--discipline-hs);
 }
 
-.disciplines__list-item[data-discipline="hs"]:after {
+.disciplines__list-item[data-discipline="hs"]:hover:after {
   background-color: var(--discipline-hs);
 }
 
-.disciplines__list-item[data-discipline="soccer"] {
-  border-color: var(--discipline-soccer);
+.disciplines__list-item[data-discipline="soccer"]:active:before {
+  border-bottom-color: var(--discipline-soccer);
 }
 
-.disciplines__list-item[data-discipline="soccer"]:after {
+.disciplines__list-item[data-discipline="soccer"]:hover:after {
   background-color: var(--discipline-soccer);
 }
 
-.disciplines__list-item[data-discipline="basketball"] {
-  border-color: var(--discipline-basketball);
+.disciplines__list-item[data-discipline="basketball"]:active:before {
+  border-bottom-color: var(--discipline-basketball);
 }
 
-.disciplines__list-item[data-discipline="basketball"]:after {
+.disciplines__list-item[data-discipline="basketball"]:hover:after {
   background-color: var(--discipline-basketball);
 }
 
-.disciplines__list-item[data-discipline="hockey"] {
-  border-color: var(--discipline-hockey);
+.disciplines__list-item[data-discipline="hockey"]:active:before {
+  border-bottom-color: var(--discipline-hockey);
 }
 
-.disciplines__list-item[data-discipline="hockey"]:after {
+.disciplines__list-item[data-discipline="hockey"]:hover:after {
   background-color: var(--discipline-hockey);
+}
+
+.disciplines__list-item[data-discipline="lol"]:active:before {
+  border-bottom-color: var(--discipline-lol);
+}
+
+.disciplines__list-item[data-discipline="lol"]:hover:after {
+  background-color: var(--discipline-lol);
+}
+
+.disciplines__list-item[data-discipline="sc"]:active:before {
+  border-bottom-color: var(--discipline-sc);
+}
+
+.disciplines__list-item[data-discipline="sc"]:hover:after {
+  background-color: var(--discipline-sc);
+}
+
+.disciplines__list-item[data-discipline="valorant"]:active:before {
+  border-bottom-color: var(--discipline-valorant);
+}
+
+.disciplines__list-item[data-discipline="valorant"]:hover:after {
+  background-color: var(--discipline-valorant);
+}
+
+.disciplines__list-item[data-discipline="other"]:active:before {
+  border-bottom-color: var(--discipline-other);
+}
+
+.disciplines__list-item[data-discipline="other"]:hover:after {
+  background-color: var(--discipline-other);
+}
+
+@media screen and (max-width: 1200px) {
+  .disciplines__list {
+    overflow-x: scroll;
+  }
+
+  .disciplines__list::-webkit-scrollbar {
+    display: none;
+  }
 }

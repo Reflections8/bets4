@@ -25,8 +25,13 @@
 <!-- 1) primary color on hover -->
 <svg width="0" height="0">
 		<filter id="filter-color-primary">
-				<feColorMatrix type="matrix"
-											 values="0 0 0 0 0.784 0 0 0 0 0.784 0 0 0 0 0.784 0 0 0 1 0"></feColorMatrix>
+				<feColorMatrix
+								color-interpolation-filters="sRGB"
+								type="matrix"
+								values="0.78 0   0   0   0
+                        0   0.78  0   0   0
+                        0   0   0.78  0   0
+                        0   0   0   1   0 "/>
 		</filter>
 </svg>
 
@@ -221,7 +226,8 @@
 													 name="tabs"/>
 										<label class="pills__label color-red"
 													 for="radio-3">
-												<span class="pills__label-redDot color-red">•</span>
+												<span class="pills__label-redDot red-dot"
+															data-red-dot-animation-duration="3"></span>
 												<span class="pills__label-text">
 														<abbr>Live</abbr>
 												</span>
@@ -305,6 +311,46 @@
 										</a>
 								</li>
 
+								<!-- item -->
+								<li class="disciplines__list-item"
+										data-discipline="lol">
+										<a href="#" class="disciplines__list-item-link">
+												<img src="components/disciplines/img/games/lol.svg"
+														 alt="lol"
+														 class="disciplines__list-item-link-icon">
+										</a>
+								</li>
+
+								<!-- item -->
+								<li class="disciplines__list-item"
+										data-discipline="sc">
+										<a href="#" class="disciplines__list-item-link">
+												<img src="components/disciplines/img/games/sc.svg"
+														 alt="sc"
+														 class="disciplines__list-item-link-icon">
+										</a>
+								</li>
+
+								<!-- item -->
+								<li class="disciplines__list-item"
+										data-discipline="valorant">
+										<a href="#" class="disciplines__list-item-link">
+												<img src="components/disciplines/img/games/valorant.svg"
+														 alt="valorant"
+														 class="disciplines__list-item-link-icon">
+										</a>
+								</li>
+
+								<!-- item -->
+								<li class="disciplines__list-item"
+										data-discipline="other">
+										<a href="#" class="disciplines__list-item-link">
+												<img src="components/disciplines/img/games/other.svg"
+														 alt="other"
+														 class="disciplines__list-item-link-icon">
+										</a>
+								</li>
+
 						</ul>
 
 				</div>
@@ -324,7 +370,8 @@
 								<!-- ui/card -->
 								<div class="card__header">
 										<h2 class="color-red card__header-title">
-												<span class="card__header-title-symbol red-dot color-red">•</span>
+												<span class="card__header-title-symbol red-dot"
+															data-red-dot-animation-duration="5"></span>
 												Live
 										</h2>
 								</div>
@@ -339,23 +386,23 @@
 
 														<!-- time -->
 														<div class="matchCard__headText-timeAgo">
-																<span class="matchCard__headText-timeAgo-symbol color-red">•</span>
+																<span class="matchCard__headText-timeAgo-symbol red-dot"></span>
 																<div class="matchCard__headText-timeAgo-value color-red">
 																		<span>1</span>h <span>29</span> min ago
 																</div>
 														</div>
 
 														<!-- title -->
-														<div class="matchCard__headText-title text--ellipsis color-primary">
+														<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
 																<abbr>
 																		EUROPE: Europa Conference League
 																</abbr>
-														</div>
+														</a>
 												</div>
 
 												<!-- body -->
-												<div class="matchCard__body bg-accent-primary card"
-														 data-icon-side="true">
+												<a href="#" class="matchCard__body bg-accent-primary card"
+													 data-icon-side="true">
 
 														<!-- Left Absolute Icon -->
 														<img src="ui/matchCard/img/coins.svg"
@@ -419,7 +466,7 @@
 																		 class="matchCard__body-main-LeagueImg">
 
 														</div>
-												</div>
+												</a>
 										</div>
 
 										<!-- ui/matchCard -->
@@ -430,83 +477,97 @@
 
 														<!-- time -->
 														<div class="matchCard__headText-timeAgo">
-																<span class="matchCard__headText-timeAgo-symbol color-red">•</span>
+																<span class="matchCard__headText-timeAgo-symbol red-dot"></span>
 																<div class="matchCard__headText-timeAgo-value color-red">
 																		<span>1</span>h <span>29</span> min ago
 																</div>
 														</div>
 
 														<!-- ui/tabs -->
-														<div class="matchCard__headText-tabs tabs">
+														<div class="matchCard__headText-tabsGradientWrapper tabsGradientWrapper">
+																<div class="matchCard__headText-tabs tabs">
 
-																<div class="tabs__wrapper">
+																		<div class="tabs__wrapper">
 
-																		<!-- tab -->
-																		<div class="tab tab--Active"
-																				 data-tab-content="main">
-																				<div class="tab__content textlink color-primary"
-																						 data-link-custom-icon="shield">
+																				<!-- tab -->
+																				<div class="tab tab--Active"
+																						 data-tab-content="main">
+																						<div class="tab__content textlink color-primary"
+																								 data-link-custom-icon="shield">
+																						</div>
 																				</div>
-																		</div>
 
-																		<!-- tab -->
-																		<div class="tab"
-																				 data-tab-content="hc">
-																				<div class="tab__content textlink color-primary"
-																						 data-link-custom-icon="hc">
-																						<div class="tab__text">
-																								HC
+																				<!-- tab -->
+																				<div class="tab"
+																						 data-tab-content="hc">
+																						<div class="tab__content textlink color-primary"
+																								 data-link-custom-icon="hc">
+																								<div class="tab__text">
+																										HC
+																								</div>
+																						</div>
+																				</div>
+
+																				<!-- tab -->
+																				<div class="tab"
+																						 data-tab-content="fb">
+																						<div class="tab__content textlink color-primary"
+																								 data-link-custom-icon="fb">
+																								<div class="tab__text">
+																										FB
+																								</div>
+																						</div>
+																				</div>
+
+																				<!-- tab -->
+																				<div class="tab"
+																						 data-tab-content="live">
+																						<div class="tab__content">
+																								<span class="tab__content-redDot red-dot"></span>
+																								<div class="tab__text color-red">
+																										Live
+																								</div>
+																						</div>
+																				</div>
+
+																				<!-- tab -->
+																				<div class="tab"
+																						 data-tab-content="game3">
+																						<div class="tab__content textlink color-primary"
+																								 data-link-custom-icon="game3">
+																								<div class="tab__text">
+																										Game 2
+																								</div>
+																						</div>
+																				</div>
+
+																				<!-- tab -->
+																				<div class="tab"
+																						 data-tab-content="game3">
+																						<div class="tab__content textlink color-primary"
+																								 data-link-custom-icon="game3">
+																								<div class="tab__text">
+																										Game 3
+																								</div>
 																						</div>
 																				</div>
 																		</div>
 
-																		<!-- tab -->
-																		<div class="tab"
-																				 data-tab-content="fb">
-																				<div class="tab__content textlink color-primary"
-																						 data-link-custom-icon="fb">
-																						<div class="tab__text">
-																								FB
-																						</div>
-																				</div>
-																		</div>
-
-																		<!-- tab -->
-																		<div class="tab"
-																				 data-tab-content="live">
-																				<div class="tab__content">
-																						<span class="color-red">•</span>
-																						<div class="tab__text color-red">
-																								Live
-																						</div>
-																				</div>
-																		</div>
-
-																		<!-- tab -->
-																		<div class="tab"
-																				 data-tab-content="game3">
-																				<div class="tab__content textlink color-primary"
-																						 data-link-custom-icon="game3">
-																						<div class="tab__text">
-																								Game 3
-																						</div>
-																				</div>
-																		</div>
 																</div>
-
 														</div>
 
+
 														<!-- title -->
-														<div class="matchCard__headText-title text--ellipsis color-primary">
+														<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
 																<abbr>
 																		WNBA
 																</abbr>
-														</div>
+														</a>
 												</div>
 
 												<!-- body -->
-												<div class="matchCard__body bg-accent-primary card"
-														 data-icon-side="false">
+												<a href="#" class="matchCard__body bg-accent-primary card"
+													 data-icon-side="false">
 
 														<!-- Left Absolute Icon -->
 														<img src="ui/matchCard/img/coins.svg"
@@ -571,7 +632,7 @@
 																		 class="matchCard__body-main-LeagueImg">
 
 														</div>
-												</div>
+												</a>
 										</div>
 								</div>
 
@@ -613,16 +674,16 @@
 														</div>
 
 														<!-- title -->
-														<div class="matchCard__headText-title text--ellipsis color-primary">
+														<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
 																<abbr>
 																		EUROPE: Europa Conference League
 																</abbr>
-														</div>
+														</a>
 												</div>
 
 												<!-- body -->
-												<div class="matchCard__body bg-accent-primary card"
-														 data-icon-side="true">
+												<a href="#" class="matchCard__body bg-accent-primary card"
+													 data-icon-side="true">
 
 														<!-- Left Absolute Icon -->
 														<img src="ui/matchCard/img/coins.svg"
@@ -687,7 +748,7 @@
 																		 class="matchCard__body-main-LeagueImg">
 
 														</div>
-												</div>
+												</a>
 										</div>
 
 										<!-- ui/matchCard -->
@@ -708,76 +769,79 @@
 														</div>
 
 														<!-- ui/tabs -->
-														<div class="matchCard__headText-tabs tabs">
+														<div class="matchCard__headText-tabsGradientWrapper tabsGradientWrapper">
 
-																<div class="tabs__wrapper">
+																<div class="matchCard__headText-tabs tabs">
 
-																		<!-- tab -->
-																		<div class="tab tab--Active"
-																				 data-tab-content="main">
-																				<div class="tab__content textlink color-primary"
-																						 data-link-custom-icon="shield">
+																		<div class="tabs__wrapper">
+
+																				<!-- tab -->
+																				<div class="tab tab--Active"
+																						 data-tab-content="main">
+																						<div class="tab__content textlink color-primary"
+																								 data-link-custom-icon="shield">
+																						</div>
 																				</div>
-																		</div>
 
-																		<!-- tab -->
-																		<div class="tab"
-																				 data-tab-content="hc">
-																				<div class="tab__content textlink color-primary"
-																						 data-link-custom-icon="hc">
-																						<div class="tab__text">
-																								HC
+																				<!-- tab -->
+																				<div class="tab"
+																						 data-tab-content="hc">
+																						<div class="tab__content textlink color-primary"
+																								 data-link-custom-icon="hc">
+																								<div class="tab__text">
+																										HC
+																								</div>
+																						</div>
+																				</div>
+
+																				<!-- tab -->
+																				<div class="tab"
+																						 data-tab-content="fb">
+																						<div class="tab__content textlink color-primary"
+																								 data-link-custom-icon="fb">
+																								<div class="tab__text">
+																										FB
+																								</div>
+																						</div>
+																				</div>
+
+																				<!-- tab -->
+																				<div class="tab"
+																						 data-tab-content="live">
+																						<div class="tab__content">
+																								<span class="tab__content-redDot red-dot"></span>
+																								<div class="tab__text color-red">
+																										Live
+																								</div>
+																						</div>
+																				</div>
+
+																				<!-- tab -->
+																				<div class="tab"
+																						 data-tab-content="game3">
+																						<div class="tab__content textlink color-primary"
+																								 data-link-custom-icon="game3">
+																								<div class="tab__text">
+																										Game 3
+																								</div>
 																						</div>
 																				</div>
 																		</div>
 
-																		<!-- tab -->
-																		<div class="tab"
-																				 data-tab-content="fb">
-																				<div class="tab__content textlink color-primary"
-																						 data-link-custom-icon="fb">
-																						<div class="tab__text">
-																								FB
-																						</div>
-																				</div>
-																		</div>
-
-																		<!-- tab -->
-																		<div class="tab"
-																				 data-tab-content="live">
-																				<div class="tab__content">
-																						<span class="color-red">•</span>
-																						<div class="tab__text color-red">
-																								Live
-																						</div>
-																				</div>
-																		</div>
-
-																		<!-- tab -->
-																		<div class="tab"
-																				 data-tab-content="game3">
-																				<div class="tab__content textlink color-primary"
-																						 data-link-custom-icon="game3">
-																						<div class="tab__text">
-																								Game 3
-																						</div>
-																				</div>
-																		</div>
 																</div>
-
 														</div>
 
 														<!-- title -->
-														<div class="matchCard__headText-title text--ellipsis color-primary">
+														<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
 																<abbr title="WNBA">
 																		WNBA
 																</abbr>
-														</div>
+														</a>
 												</div>
 
 												<!-- body -->
-												<div class="matchCard__body bg-accent-primary card"
-														 data-icon-side="false">
+												<a href="#" class="matchCard__body bg-accent-primary card"
+													 data-icon-side="false">
 
 														<!-- Left Absolute Icon -->
 														<img src="ui/matchCard/img/coins.svg"
@@ -842,7 +906,7 @@
 																		 class="matchCard__body-main-LeagueImg">
 
 														</div>
-												</div>
+												</a>
 										</div>
 
 										<!-- ui/matchCard -->
@@ -863,16 +927,16 @@
 														</div>
 
 														<!-- title -->
-														<div class="matchCard__headText-title text--ellipsis color-primary">
+														<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
 																<abbr>
 																		EUROPE: Europa Conference League
 																</abbr>
-														</div>
+														</a>
 												</div>
 
 												<!-- body -->
-												<div class="matchCard__body bg-accent-primary card"
-														 data-icon-side="false">
+												<a href="#" class="matchCard__body bg-accent-primary card"
+													 data-icon-side="false">
 
 														<!-- Left Absolute Icon -->
 														<img src="ui/matchCard/img/coins.svg"
@@ -937,7 +1001,7 @@
 																		 class="matchCard__body-main-LeagueImg">
 
 														</div>
-												</div>
+												</a>
 										</div>
 
 										<!-- ui/matchCard -->
@@ -958,16 +1022,16 @@
 														</div>
 
 														<!-- title -->
-														<div class="matchCard__headText-title text--ellipsis color-primary">
+														<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
 																<abbr>
 																		EUROPE: Europa Conference League
 																</abbr>
-														</div>
+														</a>
 												</div>
 
 												<!-- body -->
-												<div class="matchCard__body bg-accent-primary card"
-														 data-icon-side="false">
+												<a href="#" class="matchCard__body bg-accent-primary card"
+													 data-icon-side="false">
 
 														<!-- Left Absolute Icon -->
 														<img src="ui/matchCard/img/coins.svg"
@@ -1032,7 +1096,7 @@
 																		 class="matchCard__body-main-LeagueImg">
 
 														</div>
-												</div>
+												</a>
 										</div>
 
 										<!-- ui/matchCard -->
@@ -1053,16 +1117,16 @@
 														</div>
 
 														<!-- title -->
-														<div class="matchCard__headText-title text--ellipsis color-primary">
+														<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
 																<abbr>
 																		EUROPE: Europa Conference League
 																</abbr>
-														</div>
+														</a>
 												</div>
 
 												<!-- body -->
-												<div class="matchCard__body bg-accent-primary card"
-														 data-icon-side="true">
+												<a href="#" class="matchCard__body bg-accent-primary card"
+													 data-icon-side="true">
 
 														<!-- Left Absolute Icon -->
 														<img src="ui/matchCard/img/coins.svg"
@@ -1127,7 +1191,7 @@
 																		 class="matchCard__body-main-LeagueImg">
 
 														</div>
-												</div>
+												</a>
 										</div>
 
 										<!-- ui/matchCard -->
@@ -1148,16 +1212,16 @@
 														</div>
 
 														<!-- title -->
-														<div class="matchCard__headText-title text--ellipsis color-primary">
+														<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
 																<abbr title="WNBA">
 																		WNBA
 																</abbr>
-														</div>
+														</a>
 												</div>
 
 												<!-- body -->
-												<div class="matchCard__body bg-accent-primary card"
-														 data-icon-side="false">
+												<a href="#" class="matchCard__body bg-accent-primary card"
+													 data-icon-side="false">
 
 														<!-- Left Absolute Icon -->
 														<img src="ui/matchCard/img/coins.svg"
@@ -1222,7 +1286,7 @@
 																		 class="matchCard__body-main-LeagueImg">
 
 														</div>
-												</div>
+												</a>
 										</div>
 
 										<!-- ui/matchCard -->
@@ -1243,16 +1307,16 @@
 														</div>
 
 														<!-- title -->
-														<div class="matchCard__headText-title text--ellipsis color-primary">
+														<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
 																<abbr>
 																		EUROPE: Europa Conference League
 																</abbr>
-														</div>
+														</a>
 												</div>
 
 												<!-- body -->
-												<div class="matchCard__body bg-accent-primary card"
-														 data-icon-side="false">
+												<a href="#" class="matchCard__body bg-accent-primary card"
+													 data-icon-side="false">
 
 														<!-- Left Absolute Icon -->
 														<img src="ui/matchCard/img/coins.svg"
@@ -1317,7 +1381,7 @@
 																		 class="matchCard__body-main-LeagueImg">
 
 														</div>
-												</div>
+												</a>
 										</div>
 
 										<!-- ui/matchCard -->
@@ -1338,16 +1402,16 @@
 														</div>
 
 														<!-- title -->
-														<div class="matchCard__headText-title text--ellipsis color-primary">
+														<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
 																<abbr>
 																		EUROPE: Europa Conference League
 																</abbr>
-														</div>
+														</a>
 												</div>
 
 												<!-- body -->
-												<div class="matchCard__body bg-accent-primary card"
-														 data-icon-side="false">
+												<a href="#" class="matchCard__body bg-accent-primary card"
+													 data-icon-side="false">
 
 														<!-- Left Absolute Icon -->
 														<img src="ui/matchCard/img/coins.svg"
@@ -1412,7 +1476,7 @@
 																		 class="matchCard__body-main-LeagueImg">
 
 														</div>
-												</div>
+												</a>
 										</div>
 
 								</div>
@@ -1458,16 +1522,16 @@
 														</div>
 
 														<!-- title -->
-														<div class="matchCard__headText-title text--ellipsis color-primary">
+														<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
 																<abbr>
 																		ProDota Cup #8 NA (very long league name)
 																</abbr>
-														</div>
+														</a>
 												</div>
 
 												<!-- body -->
-												<div class="matchCard__body bg-accent-primary card"
-														 data-icon-side="true">
+												<a href="#" class="matchCard__body bg-accent-primary card"
+													 data-icon-side="true">
 
 														<!-- Side Absolute Icon -->
 														<img src="ui/matchCard/img/coins.svg"
@@ -1521,7 +1585,7 @@
 																</div>
 
 														</div>
-												</div>
+												</a>
 										</div>
 
 										<!-- ui/matchCard -->
@@ -1536,16 +1600,16 @@
 														</div>
 
 														<!-- title -->
-														<div class="matchCard__headText-title text--ellipsis color-primary">
+														<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
 																<abbr>
 																		ProDota Cup #8 NA (very long league name)
 																</abbr>
-														</div>
+														</a>
 												</div>
 
 												<!-- body -->
-												<div class="matchCard__body bg-accent-primary card"
-														 data-icon-side="true">
+												<a href="#" class="matchCard__body bg-accent-primary card"
+													 data-icon-side="true">
 
 														<!-- Side Absolute Icon -->
 														<img src="ui/matchCard/img/coins.svg"
@@ -1599,7 +1663,7 @@
 																</div>
 
 														</div>
-												</div>
+												</a>
 										</div>
 
 										<!-- ui/matchCard -->
@@ -1614,15 +1678,15 @@
 														</div>
 
 														<!-- title -->
-														<div class="matchCard__headText-title text--ellipsis color-primary">
+														<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
 																<abbr>
 																		ProDota Cup #8 NA (very long league name)
 																</abbr>
-														</div>
+														</a>
 												</div>
 
 												<!-- body -->
-												<div class="matchCard__body bg-accent-primary card">
+												<a href="#" class="matchCard__body bg-accent-primary card">
 
 														<!-- Side Absolute Icon -->
 														<img src="ui/matchCard/img/coins.svg"
@@ -1676,7 +1740,7 @@
 																</div>
 
 														</div>
-												</div>
+												</a>
 										</div>
 
 										<!-- ui/matchCard -->
@@ -1691,15 +1755,15 @@
 														</div>
 
 														<!-- title -->
-														<div class="matchCard__headText-title text--ellipsis color-primary">
+														<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
 																<abbr>
 																		ProDota Cup #8 NA (very long league name)
 																</abbr>
-														</div>
+														</a>
 												</div>
 
 												<!-- body -->
-												<div class="matchCard__body bg-accent-primary card">
+												<a href="#" class="matchCard__body bg-accent-primary card">
 
 														<!-- Side Absolute Icon -->
 														<img src="ui/matchCard/img/coins.svg"
@@ -1753,7 +1817,7 @@
 																</div>
 
 														</div>
-												</div>
+												</a>
 										</div>
 
 										<!-- ui/matchCard -->
@@ -1768,16 +1832,16 @@
 														</div>
 
 														<!-- title -->
-														<div class="matchCard__headText-title text--ellipsis color-primary">
+														<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
 																<abbr>
 																		ProDota Cup #8 NA (very long league name)
 																</abbr>
-														</div>
+														</a>
 												</div>
 
 												<!-- body -->
-												<div class="matchCard__body bg-accent-primary card"
-														 data-icon-side="true">
+												<a href="#" class="matchCard__body bg-accent-primary card"
+													 data-icon-side="true">
 
 														<!-- Side Absolute Icon -->
 														<img src="ui/matchCard/img/coins.svg"
@@ -1831,7 +1895,7 @@
 																</div>
 
 														</div>
-												</div>
+												</a>
 										</div>
 
 										<!-- ui/matchCard -->
@@ -1846,16 +1910,16 @@
 														</div>
 
 														<!-- title -->
-														<div class="matchCard__headText-title text--ellipsis color-primary">
+														<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
 																<abbr>
 																		ProDota Cup #8 NA (very long league name)
 																</abbr>
-														</div>
+														</a>
 												</div>
 
 												<!-- body -->
-												<div class="matchCard__body bg-accent-primary card"
-														 data-icon-side="true">
+												<a href="#" class="matchCard__body bg-accent-primary card"
+													 data-icon-side="true">
 
 														<!-- Side Absolute Icon -->
 														<img src="ui/matchCard/img/coins.svg"
@@ -1909,7 +1973,7 @@
 																</div>
 
 														</div>
-												</div>
+												</a>
 										</div>
 
 										<!-- ui/matchCard -->
@@ -1924,15 +1988,15 @@
 														</div>
 
 														<!-- title -->
-														<div class="matchCard__headText-title text--ellipsis color-primary">
+														<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
 																<abbr>
 																		ProDota Cup #8 NA (very long league name)
 																</abbr>
-														</div>
+														</a>
 												</div>
 
 												<!-- body -->
-												<div class="matchCard__body bg-accent-primary card">
+												<a href="#" class="matchCard__body bg-accent-primary card">
 
 														<!-- Side Absolute Icon -->
 														<img src="ui/matchCard/img/coins.svg"
@@ -1986,7 +2050,7 @@
 																</div>
 
 														</div>
-												</div>
+												</a>
 										</div>
 
 										<!-- ui/matchCard -->
@@ -2001,15 +2065,15 @@
 														</div>
 
 														<!-- title -->
-														<div class="matchCard__headText-title text--ellipsis color-primary">
+														<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
 																<abbr>
 																		ProDota Cup #8 NA (very long league name)
 																</abbr>
-														</div>
+														</a>
 												</div>
 
 												<!-- body -->
-												<div class="matchCard__body bg-accent-primary card">
+												<a href="#" class="matchCard__body bg-accent-primary card">
 
 														<!-- Side Absolute Icon -->
 														<img src="ui/matchCard/img/coins.svg"
@@ -2063,7 +2127,7 @@
 																</div>
 
 														</div>
-												</div>
+												</a>
 										</div>
 
 										<!-- ui/matchCard -->
@@ -2078,15 +2142,15 @@
 														</div>
 
 														<!-- title -->
-														<div class="matchCard__headText-title text--ellipsis color-primary">
+														<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
 																<abbr>
 																		ProDota Cup #8 NA (very long league name)
 																</abbr>
-														</div>
+														</a>
 												</div>
 
 												<!-- body -->
-												<div class="matchCard__body bg-accent-primary card">
+												<a href="#" class="matchCard__body bg-accent-primary card">
 
 														<!-- Side Absolute Icon -->
 														<img src="ui/matchCard/img/coins.svg"
@@ -2139,7 +2203,7 @@
 																</div>
 
 														</div>
-												</div>
+												</a>
 										</div>
 
 										<!-- ui/matchCard -->
@@ -2154,15 +2218,15 @@
 														</div>
 
 														<!-- title -->
-														<div class="matchCard__headText-title text--ellipsis color-primary">
+														<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
 																<abbr>
 																		ProDota Cup #8 NA (very long league name)
 																</abbr>
-														</div>
+														</a>
 												</div>
 
 												<!-- body -->
-												<div class="matchCard__body bg-accent-primary card">
+												<a href="#" class="matchCard__body bg-accent-primary card">
 
 														<!-- Side Absolute Icon -->
 														<img src="ui/matchCard/img/coins.svg"
@@ -2216,7 +2280,7 @@
 																</div>
 
 														</div>
-												</div>
+												</a>
 										</div>
 								</div>
 						</section>
@@ -2463,13 +2527,44 @@
 										 alt="logo"
 										 class="footer__logoSection-logo">
 
-								<!-- ui/languageSelect -->
-								<div class="bg-accent-primary languageSelect footer__logoSection-languageSelect">
-										<img src="ui/languageSelect/img/en.svg"
-												 alt="en"
-												 class="languageSelect-flag">
-
-										<div class="color-important languageSelect-selectedText">English</div>
+								<!-- ui/dropdown -->
+								<div class="dropdownWrapper">
+										<span class="dropdown dropdown--LanguageSelect">
+											<input type="radio"
+														 name="sortType"
+														 value="Relevance"
+														 checked="checked"
+														 id="language-en">
+											<label for="language-en"
+														 class="dropdown__label">
+													<img src="ui/dropdown/img/en.svg"
+															 alt="en"
+															 class="dropdown__label-img">
+													English
+											</label>
+    									<input type="radio"
+														 name="sortType"
+														 value="Popularity"
+														 id="language-ru">
+											<label for="language-ru"
+														 class="dropdown__label">
+													<img src="ui/dropdown/img/ru.svg"
+															 alt="en"
+															 class="dropdown__label-img">
+													Russian
+											</label>
+    									<input type="radio"
+														 name="sortType"
+														 value="PriceIncreasing"
+														 id="language-ua">
+											<label for="language-ua"
+														 class="dropdown__label">
+													<img src="ui/dropdown/img/ru.svg"
+															 alt="en"
+															 class="dropdown__label-img">
+													Ukrainian
+											</label>
+  									</span>
 								</div>
 
 						</div>
@@ -2583,7 +2678,9 @@
 <script src="components/footer/footer.js"></script>
 
 <!-- UI scripts -->
+<script src="ui/pills/pills.js"></script>
 <script src="ui/tabs/tabs.js"></script>
+<script src="ui/dropdown/dropdown.js"></script>
 
 
 </body>

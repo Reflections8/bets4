@@ -17,6 +17,11 @@
   font-size: 18px;
 }
 
+.card__header-title-symbol {
+  width: 5px;
+  height: 5px;
+}
+
 .card__body {
   display: flex;
   flex-direction: column;

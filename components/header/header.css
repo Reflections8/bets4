@@ -51,6 +51,7 @@ header {
   display: flex;
   align-items: center;
   gap: 4px;
+  margin-left: auto;
 }
 
 .header__profile-balanceBlock {
@@ -90,4 +91,8 @@ header {
 .header__profile-logout {
   background-color: transparent;
   padding: 0;
+}
+
+.header__profile-logout-img:hover {
+  filter: url(#filter-color-primary)
 }
