@@ -1,3 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="9" height="13" viewBox="0 0 9 13">
-  <image id="Слой_1164" data-name="Слой 1164" width="9" height="13" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAANCAYAAAB7AEQGAAAAV0lEQVQYldXRsQmAQAxG4UNXEXRPKztxLrew0A0sP4l4pZ6W/hAeJI8UScKCoBsuVXqRLHnip02/lOqCU4e0F6Q9zt5hwna9JmfFGPOQcrUYMKNHc/ZJB2KEY9juF2bcAAAAAElFTkSuQmCC"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="9" height="16" viewBox="0 0 9 12">
+  <defs>
+    <style>
+      .cls-1 {
+      fill: #c8c8c8;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M0,0h1v2h1V0h1v2h1V0h1v2h1V0h1v2h1V0h1V10s-3.555,2.555-4,3-0.562,0.438-1,0-4-3-4-3V0Z"/>
 </svg>

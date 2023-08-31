@@ -1,3 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7" height="11" viewBox="0 0 7 11">
-  <image id="Слой_1156" data-name="Слой 1156" width="7" height="11" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAALCAYAAACzkJeoAAAAT0lEQVQYlWM8ceLEfwYEYGRgYAhmYGDgYmBg+MfCgAkEGBgYOECi2CTZoJJYdYKs+YtL50+QLpAibJLvoEYzYpPcAGMwYZGEA1pIMjAwAAByLAyQ1AiNkgAAAABJRU5ErkJggg=="/>
+<svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1_6)">
+<path d="M3 0H0V11H3V0Z" fill="#C8C8C8"/>
+<path d="M7 6H4V11H7V6Z" fill="#C8C8C8"/>
+<path opacity="0.5" d="M7 0H4V6H7V0Z" fill="#C8C8C8"/>
+</g>
+<defs>
+<clipPath id="clip0_1_6">
+<rect width="7" height="11" fill="white"/>
+</clipPath>
+</defs>
 </svg>
