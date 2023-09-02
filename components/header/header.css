@@ -183,13 +183,15 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
-    transition: all .6s ease-in-out;
+    transition: all .2s ease-in-out;
     border-bottom-left-radius: var(--border-radius-card);
     border-bottom-right-radius: var(--border-radius-card);
+    overflow-y: scroll;
+    max-height: 100vh;
   }
 
   .header__burgerMenu--Hidden {
-    top: -100%;
+    top: -200%;
   }
 
   .header__burgerMenu-top {
