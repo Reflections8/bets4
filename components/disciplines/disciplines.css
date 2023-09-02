@@ -1,3 +1,5 @@
+@import "colors.css";
+
 .disciplines {
   display: flex;
   align-items: stretch;
@@ -14,13 +16,17 @@
   box-shadow: 0 0 8px 0 var(--bg-warning);
 }
 
+.disciplines__listWrapper {
+  width: 100%;
+  margin-right: 20px;
+}
+
 .disciplines__list {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-evenly;
+  width: 100%;
   gap: 10px;
-  margin-left: auto;
-  margin-right: 20px;
 }
 
 .disciplines__list-item {
@@ -29,11 +35,12 @@
   align-items: stretch;
   justify-content: center;
   position: relative;
+  min-width: 45px;
   max-width: 45px;
-  width: 100%;
   min-height: 69px;
   transition: all .2s ease-in-out;
   overflow: hidden;
+  cursor: pointer;
 }
 
 /* Trapezoid */
@@ -46,7 +53,10 @@
   height: 0;
   width: 100%;
   bottom: -3px;
-  transition: all .2s ease-in-out;
+}
+
+.disciplines__list-item--Active:before {
+  bottom: 0;
 }
 
 .disciplines__list-item:after {
@@ -61,8 +71,9 @@
   pointer-events: none;
 }
 
-.disciplines__list-item:hover.disciplines__list-item:after {
+.disciplines__list-item.disciplines__list-item--Active.disciplines__list-item:after {
   opacity: 30%;
+  transition: all .2s ease-in-out;
 }
 
 .disciplines__list-item-link {
@@ -71,104 +82,91 @@
   align-items: center;
 }
 
-.disciplines__list-item:active:before {
-  bottom: 0;
+.disciplines__list-item-link-icon {
+  object-fit: contain;
 }
 
-.disciplines__list-item[data-discipline="dota2"]:active:before {
-  border-bottom-color: var(--discipline-dota2);
+.disciplines__list-item-link:not(.disciplines__list-item-link--Active):hover {
+  border-bottom: 3px solid transparent;
 }
 
-.disciplines__list-item[data-discipline="dota2"]:hover:after {
-  background-color: var(--discipline-dota2);
-}
-
-.disciplines__list-item[data-discipline="cs-go"]:active:before {
-  border-bottom-color: var(--discipline-cs-go);
-}
-
-.disciplines__list-item[data-discipline="cs-go"]:hover:after {
-  background-color: var(--discipline-cs-go);
-}
-
-.disciplines__list-item[data-discipline="overwatch"]:active:before {
-  border-bottom-color: var(--discipline-overwatch);
-}
-
-.disciplines__list-item[data-discipline="overwatch"]:hover:after {
-  background-color: var(--discipline-overwatch);
-}
-
-.disciplines__list-item[data-discipline="hs"]:active:before {
-  border-bottom-color: var(--discipline-hs);
-}
-
-.disciplines__list-item[data-discipline="hs"]:hover:after {
-  background-color: var(--discipline-hs);
-}
-
-.disciplines__list-item[data-discipline="soccer"]:active:before {
-  border-bottom-color: var(--discipline-soccer);
-}
-
-.disciplines__list-item[data-discipline="soccer"]:hover:after {
-  background-color: var(--discipline-soccer);
-}
-
-.disciplines__list-item[data-discipline="basketball"]:active:before {
-  border-bottom-color: var(--discipline-basketball);
-}
-
-.disciplines__list-item[data-discipline="basketball"]:hover:after {
-  background-color: var(--discipline-basketball);
-}
-
-.disciplines__list-item[data-discipline="hockey"]:active:before {
-  border-bottom-color: var(--discipline-hockey);
-}
-
-.disciplines__list-item[data-discipline="hockey"]:hover:after {
-  background-color: var(--discipline-hockey);
-}
-
-.disciplines__list-item[data-discipline="lol"]:active:before {
-  border-bottom-color: var(--discipline-lol);
-}
-
-.disciplines__list-item[data-discipline="lol"]:hover:after {
-  background-color: var(--discipline-lol);
-}
-
-.disciplines__list-item[data-discipline="sc"]:active:before {
-  border-bottom-color: var(--discipline-sc);
-}
-
-.disciplines__list-item[data-discipline="sc"]:hover:after {
-  background-color: var(--discipline-sc);
-}
-
-.disciplines__list-item[data-discipline="valorant"]:active:before {
-  border-bottom-color: var(--discipline-valorant);
-}
-
-.disciplines__list-item[data-discipline="valorant"]:hover:after {
-  background-color: var(--discipline-valorant);
-}
-
-.disciplines__list-item[data-discipline="other"]:active:before {
-  border-bottom-color: var(--discipline-other);
-}
-
-.disciplines__list-item[data-discipline="other"]:hover:after {
-  background-color: var(--discipline-other);
-}
 
 @media screen and (max-width: 1200px) {
-  .disciplines__list {
+  .disciplines__listWrapper {
+    scrollbar-width: none;
     overflow-x: scroll;
+    margin-right: 20px;
   }
 
-  .disciplines__list::-webkit-scrollbar {
+  .disciplines__listWrapper::-webkit-scrollbar {
     display: none;
+  }
+
+  .disciplines__list {
+    justify-content: flex-start;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .disciplines__listWrapper {
+    display: none;
+  }
+
+  .disciplines__list {
+    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    max-width: fit-content;
+    margin: 0 auto;
+  }
+
+  .disciplines__list-item {
+    min-height: 45px;
+    border-radius: var(--border-radius-card);
+    margin: 0 auto;
+  }
+
+  .disciplines__list-item:before {
+    display: none;
+  }
+
+  .disciplines__list-item .disciplines__list-item-link:hover {
+    border-bottom: none;
+  }
+
+  .disciplines__list-item.disciplines__list-item--Active {
+    border: 1px solid;
+  }
+
+  .disciplines__pills {
+    width: 100%;
+    border-right: none;
+    padding: 10px 20px;
+  }
+
+  .disciplines__pills-container .pills__label {
+    max-width: unset;
+  }
+
+  .disciplines__pills-container .pills__glider {
+    max-width: unset;
+  }
+
+  .pills__label-text {
+    max-width: 100px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .disciplines__pills-container .pills__label {
+    gap: 6px;
+    padding: 10px 14px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .disciplines__list {
+    grid-template-columns: repeat(5, 1fr);
   }
 }

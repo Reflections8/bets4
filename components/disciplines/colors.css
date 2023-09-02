@@ -1,0 +1,164 @@
+.disciplines__list-item--Active:hover:before {
+  border-bottom: 4px solid;
+}
+
+.disciplines__list-item[data-discipline="dota2"].disciplines__list-item--Active {
+  border-color: var(--discipline-dota2);
+}
+
+.disciplines__list-item[data-discipline="dota2"]:before {
+  border-bottom-color: var(--discipline-dota2);
+}
+
+.disciplines__list-item[data-discipline="dota2"].disciplines__list-item--Active:after {
+  background-color: var(--discipline-dota2);
+}
+
+
+
+.disciplines__list-item[data-discipline="cs-go"].disciplines__list-item--Active {
+  border-color: var(--discipline-cs-go);
+}
+
+.disciplines__list-item[data-discipline="cs-go"]:before {
+  border-bottom-color: var(--discipline-cs-go);
+}
+
+.disciplines__list-item[data-discipline="cs-go"].disciplines__list-item--Active:after {
+  background-color: var(--discipline-cs-go);
+}
+
+
+
+
+.disciplines__list-item[data-discipline="overwatch"].disciplines__list-item--Active {
+  border-color: var(--discipline-overwatch);
+}
+
+.disciplines__list-item[data-discipline="overwatch"]:before {
+  border-bottom-color: var(--discipline-overwatch);
+}
+
+.disciplines__list-item[data-discipline="overwatch"].disciplines__list-item--Active:after {
+  background-color: var(--discipline-overwatch);
+}
+
+
+
+
+.disciplines__list-item[data-discipline="hs"].disciplines__list-item--Active {
+  border-color: var(--discipline-hs);
+}
+
+.disciplines__list-item[data-discipline="hs"]:before {
+  border-bottom-color: var(--discipline-hs);
+}
+
+.disciplines__list-item[data-discipline="hs"].disciplines__list-item--Active:after {
+  background-color: var(--discipline-hs);
+}
+
+
+
+
+.disciplines__list-item[data-discipline="soccer"].disciplines__list-item--Active {
+  border-color: var(--discipline-soccer);
+}
+
+.disciplines__list-item[data-discipline="soccer"]:before {
+  border-bottom-color: var(--discipline-soccer);
+}
+
+.disciplines__list-item[data-discipline="soccer"].disciplines__list-item--Active:after {
+  background-color: var(--discipline-soccer);
+}
+
+
+
+
+.disciplines__list-item[data-discipline="basketball"].disciplines__list-item--Active {
+  border-color: var(--discipline-basketball);
+}
+
+.disciplines__list-item[data-discipline="basketball"]:before {
+  border-bottom-color: var(--discipline-basketball);
+}
+
+.disciplines__list-item[data-discipline="basketball"].disciplines__list-item--Active:after {
+  background-color: var(--discipline-basketball);
+}
+
+
+
+
+.disciplines__list-item[data-discipline="hockey"].disciplines__list-item--Active {
+  border-color: var(--discipline-hockey);
+}
+
+.disciplines__list-item[data-discipline="hockey"]:before {
+  border-bottom-color: var(--discipline-hockey);
+}
+
+.disciplines__list-item[data-discipline="hockey"].disciplines__list-item--Active:after {
+  background-color: var(--discipline-hockey);
+}
+
+
+
+
+.disciplines__list-item[data-discipline="lol"].disciplines__list-item--Active {
+  border-color: var(--discipline-lol);
+}
+
+.disciplines__list-item[data-discipline="lol"]:before {
+  border-bottom-color: var(--discipline-lol);
+}
+
+.disciplines__list-item[data-discipline="lol"].disciplines__list-item--Active:after {
+  background-color: var(--discipline-lol);
+}
+
+
+
+
+.disciplines__list-item[data-discipline="sc"].disciplines__list-item--Active {
+  border-color: var(--discipline-sc);
+}
+
+.disciplines__list-item[data-discipline="sc"]:before {
+  border-bottom-color: var(--discipline-sc);
+}
+
+.disciplines__list-item[data-discipline="sc"].disciplines__list-item--Active:after {
+  background-color: var(--discipline-sc);
+}
+
+
+
+
+.disciplines__list-item[data-discipline="valorant"].disciplines__list-item--Active {
+  border-color: var(--discipline-valorant);
+}
+
+.disciplines__list-item[data-discipline="valorant"]:before {
+  border-bottom-color: var(--discipline-valorant);
+}
+
+.disciplines__list-item[data-discipline="valorant"].disciplines__list-item--Active:after {
+  background-color: var(--discipline-valorant);
+}
+
+
+
+
+.disciplines__list-item[data-discipline="other"].disciplines__list-item--Active {
+  border-color: var(--discipline-other);
+}
+
+.disciplines__list-item[data-discipline="other"]:before {
+  border-bottom-color: var(--discipline-other);
+}
+
+.disciplines__list-item[data-discipline="other"].disciplines__list-item--Active:after {
+  background-color: var(--discipline-other);
+}

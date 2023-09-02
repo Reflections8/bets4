@@ -10,6 +10,11 @@
 /* Link icons */
 @import "icons.css";
 
+
+/* Pages Root Styles */
+@import "pagesRootStyles.css";
+
+
 /* Components */
 @import "../../components/header/header.css";
 @import "../../components/footer/footer.css";
@@ -26,20 +31,24 @@
 @import "../../ui/threeDots/threeDots.css";
 @import "../../ui/userCard/userCard.css";
 @import "../../ui/tabs/tabs.css";
+@import "../../ui/sectionTabs/sectionTabs.css";
 
 /* Common tags */
 *, *:after, *:before {
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Roboto Flex', sans-serif;
 
   background-color: var(--bg-body);
-  background-image: url("../images/general-bg/background-image.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-
+  background-image: url("../images/general-bg/background-image.png"), url("../images/general-bg/background-comb.jpg");
+  background-repeat: no-repeat, repeat;
+  background-position: center top;
   color: var(--color-primary);
 }
 
@@ -80,7 +89,7 @@ abbr {
 }
 
 .paddingCard {
-  padding: var(--indent-card);
+  padding: var(--padding-card);
 }
 
 /* Root content */
@@ -121,7 +130,7 @@ abbr {
 
 @keyframes blink {
   0% {
-    box-shadow: 0px 0px 6px 1px var(--color-red);
+    box-shadow: 0px 0px 10px 1px var(--color-red);
   }
 
   40% {
@@ -129,6 +138,13 @@ abbr {
   }
 
   100% {
-    box-shadow: 0px 0px 6px 1px var(--color-red);
+    box-shadow: 0px 0px 10px 1px var(--color-red);
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .container {
+    padding: 0 5px;
+    margin: 0 -5px;
   }
 }

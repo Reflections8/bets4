@@ -1,0 +1,10 @@
+@media screen and (max-width: 991px) {
+  /* TODO: temp */
+  .rootContent--index .rootContent__aside {
+    display: none;
+  }
+
+  .rootContent--index .rootContent__main  {
+    width: 100%;
+  }
+}

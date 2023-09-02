@@ -100,3 +100,47 @@
 .footer__content-main-copyright-llc {
   font-weight: 700;
 }
+
+@media screen and (max-width: 1200px) {
+  .footer {
+    gap: 4%;
+  }
+
+  .footer__logoSection-logo {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .footer {
+    gap: 35px;
+    flex-direction: column;
+    padding: 40px 40px 15px 40px;
+  }
+
+  .footer__logoSection {
+    align-items: center;
+  }
+
+  .footer__logoSection .dropdown {
+    transform: translateX(-50%);
+  }
+
+  .footer__content-main-info {
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .footer__content-main-info-item:nth-child(2) {
+    order: 2;
+  }
+
+  .footer__content-main-info-item--Info {
+    order: 1;
+  }
+
+  .footer__content-main-copyright {
+    flex-wrap: wrap;
+  }
+
+}

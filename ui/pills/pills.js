@@ -1,24 +1,33 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const pills = document.querySelector('.pills');
-  const pillsLabels = pills.querySelectorAll('.pills__label');
-  const pillsGlider = pills.querySelector('.pills__glider');
+  const pills = document.querySelectorAll('.pills');
 
-  function updateGlider(label) {
-    const labelWidth = label.clientWidth;
-    const labelOffsetLeft = label.offsetLeft;
+  pills.forEach(item => {
+    const pillsLabels = item.querySelectorAll('.pills__label');
+    const pillsGlider = item.querySelector('.pills__glider');
 
-    pillsGlider.setAttribute('style',
-      `width: ${labelWidth}px;
+    function updateGlider(label) {
+      const labelWidth = label.clientWidth;
+      const labelOffsetLeft = label.offsetLeft;
+
+      pillsGlider.setAttribute('style',
+        `width: ${labelWidth}px;
        transform: translateX(${labelOffsetLeft}px)`);
-  }
+    }
 
-  setTimeout(() => {
-    updateGlider(pillsLabels[0]);
-  }, 0)
-
-  pillsLabels.forEach(label => {
-    label.addEventListener('click', (e) => {
-      updateGlider(e.currentTarget);
+    pillsLabels.forEach(label => {
+      label.addEventListener('click', (e) => {
+        updateGlider(e.currentTarget);
+      });
     });
-  });
+
+    setTimeout(() => {
+      updateGlider(pillsLabels[0]);
+    }, 0)
+    window.addEventListener('resize', () => {
+      setTimeout(() => {
+        updateGlider(pillsLabels[0]);
+      }, 0)
+    })
+  })
+
 });

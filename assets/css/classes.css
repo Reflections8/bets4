@@ -53,6 +53,10 @@
   color: var(--color-contrast);
 }
 
+.color-contrast--Bg {
+  background-color: var(--color-contrast);
+}
+
 .color-money {
   color: var(--color-money);
 }

@@ -24,6 +24,7 @@
   transition: all .2s ease-in-out;
   max-width: 180px;
   width: 100%;
+  user-select: none;
 }
 
 .pills__label-redDot {
@@ -48,11 +49,11 @@
 }
 
 .pills__input:checked + label {
-  color: #000000;
+  color: var(--color-contrast);
 }
 
 .pills__input:checked + label .pills__label-img {
-  filter: invert(1);
+  filter: url(#filter-color-contrast);
 }
 
 .pills__glider {
@@ -65,15 +66,8 @@
   transition: all .2s ease-in-out;
 }
 
-/* Glider position */
-/*input[id="radio-1"]:checked ~ .pills__glider {*/
-/*  transform: translateX(0);*/
-/*}*/
-
-/*input[id="radio-2"]:checked ~ .pills__glider {*/
-/*  transform: translateX(100%);*/
-/*}*/
-
-/*input[id="radio-3"]:checked ~ .pills__glider {*/
-/*  transform: translateX(200%);*/
-/*}*/
+@media screen and (max-width: 991px) {
+  .pills__label-text {
+    max-width: unset;
+  }
+}

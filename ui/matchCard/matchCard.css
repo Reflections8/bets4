@@ -10,9 +10,14 @@
   width: 100%;
 }
 
+.matchCard__headText-tabs {
+  scrollbar-width: none;
+}
+
 .matchCard__headText-tabs::-webkit-scrollbar {
   display: none;
 }
+
 
 .matchCard__headText-timeAgo-clockIcon {
   margin-bottom: 1px;
@@ -146,6 +151,7 @@
 .matchCard--Short .matchCard__headText-timeAgo {
   padding-left: 10px;
 }
+
 .matchCard--Short .matchCard__headText-title {
   padding-right: 25px;
 }
@@ -191,4 +197,121 @@
   border-bottom-left-radius: 0;
   border-top-right-radius: var(--border-radius-card);
   border-bottom-right-radius: var(--border-radius-card);
+}
+
+@media screen and (max-width: 1200px) {
+  .matchCard--Short .matchCard__body-main-textInfo-key {
+    max-width: 70px;
+  }
+
+  .matchCard--Short .matchCard__body-main {
+    padding-left: 10px;
+    padding-right: 5px;
+    gap: 12px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .matchCard__body-SideIcon {
+    top: -12px;
+    left: 8px;
+    max-width: 6px;
+  }
+
+  .matchCard__body {
+    margin-left: 0;
+  }
+
+  .matchCard__body-main {
+    justify-content: space-evenly;
+    padding-right: 20px;
+  }
+
+  .matchCard__body-main-LeagueImg {
+    margin-left: unset;
+  }
+
+  .matchCard--IconRight .matchCard__body-SideIcon {
+    right: 6px;
+    left: unset;
+  }
+
+  .matchCard--Short .matchCard__body-main-textInfo-key {
+    max-width: unset;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .matchCard__body-main-LeagueImg {
+    display: none;
+  }
+
+  .matchCard__body-main {
+    justify-content: space-evenly;
+    padding: 25px 10px;
+    gap: 10px;
+  }
+
+  .matchCard__body-main-textInfo-key {
+    font-size: 12px;
+  }
+
+  .matchCard__body-main-textInfo {
+    gap: 6px;
+  }
+
+  .matchCard__body-main-textInfo--FirstTeam {
+    max-width: 100px;
+  }
+
+  .matchCard__body-main-textInfo-key {
+    max-width: 100px;
+  }
+
+  .matchCard__headText-title {
+    max-width: 100px;
+  }
+
+  .matchCard__headText-tabsGradientWrapper {
+    max-width: 200px;
+  }
+
+  /* TODO: */
+  .matchCard__headText-timeAgo-value span:nth-child(1):after {
+    content: ":";
+  }
+  .matchCard__headText-timeAgo-value span:nth-child(2) {
+    display: none;
+  }
+  .matchCard__headText-timeAgo-value span:nth-child(4) {
+    display: none;
+  }
+
+  .matchCard--Short .matchCard__body-main-textInfo-key {
+    max-width: 90px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .matchCard__body-main-teamImg {
+    max-width: 30px;
+  }
+
+  .matchCard__headText-tabsGradientWrapper {
+    max-width: 150px;
+  }
+
+  .matchCard--Short .matchCard__body-main-textInfo-key {
+    max-width: 70px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .matchCard__body-main-textInfo--FirstTeam {
+    max-width: 70px;
+  }
+
+  .matchCard__body-main-textInfo-key {
+    max-width: 70px;
+  }
 }

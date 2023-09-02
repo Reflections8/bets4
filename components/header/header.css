@@ -14,6 +14,14 @@ header {
   background-size: contain;
 }
 
+.header__burgerIcon {
+  display: none;
+}
+
+.header__burgerMenu {
+  display: none;
+}
+
 .header__logoWrapper {
   display: flex;
   font-size: inherit;
@@ -23,6 +31,7 @@ header {
   max-width: 115px;
   min-height: 45px;
   width: 100%;
+  object-fit: contain;
 }
 
 .header__nav {
@@ -95,4 +104,160 @@ header {
 
 .header__profile-logout-img:hover {
   filter: url(#filter-color-primary)
+}
+
+@media screen and (max-width: 1200px) {
+  .header {
+    padding: 25px 30px 25px 20px;
+    gap: 20px;
+  }
+
+  .header__logo {
+    max-width: 100px;
+  }
+
+  .header__nav {
+    gap: 14px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .header__nav {
+    display: none;
+  }
+
+  .header__profile-nameBlock {
+    display: none;
+  }
+
+  .header__profile {
+    margin-left: unset;
+  }
+
+  .header__profile-logout {
+    display: none;
+  }
+
+  .header__profile-balanceBlock-row-amount {
+    font-size: 12px;
+  }
+
+  .header.marginCard {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: var(--color-contrast);
+    padding: 5px 30px 5px 15px;
+    margin-top: 0;
+    justify-content: space-between;
+  }
+
+  /* BURGER ICON (<= 991px) */
+  .header__burgerIcon {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    max-width: 25px;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .header__burgerIcon-line {
+    width: 100%;
+    height: 3px;
+    border-radius: 4px;
+    background-color: var(--color-important);
+  }
+
+  .header__burgerIcon-line:nth-child(2) {
+    max-width: 20px;
+    width: 100%;
+  }
+
+  /* BURGER MENU (<= 991px) */
+  .header__burgerMenu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    background-color: var(--color-contrast);
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all .6s ease-in-out;
+    border-bottom-left-radius: var(--border-radius-card);
+    border-bottom-right-radius: var(--border-radius-card);
+  }
+
+  .header__burgerMenu--Hidden {
+    top: -100%;
+  }
+
+  .header__burgerMenu-top {
+    padding: 30px 80px 30px 35px;
+    background-image: url("img/avatar.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    border-bottom-left-radius: var(--border-radius-card);
+    border-bottom-right-radius: var(--border-radius-card);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .header__burgerMenu-top .header__profile-nameBlock {
+    display: flex;
+  }
+  .header__burgerMenu-top .header__profile-logout {
+    margin-left: auto;
+    display: block;
+  }
+
+  .header__burgerMenu-center {
+    padding: 50px 20px 10px 20px;
+    border-bottom-left-radius: var(--border-radius-card);
+    border-bottom-right-radius: var(--border-radius-card);
+    border-bottom: 1px solid var(--bg-accent-primary);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .header__burgerMenu-center .header__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .header__burgerMenu-center .header__nav-item-link.textlink {
+    font-size: 18px;
+    gap: 8px;
+  }
+
+  .header__burgerMenu-center .header__nav-item:last-of-type .header__nav-item-link.textlink {
+    font-size: 14px;
+  }
+
+  .header__burgerMenu-center .dropdown {
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .header__burgerMenu-bottom {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header__burgerMenu-bottom-arrowUp {
+    cursor: pointer;
+    max-width: 10px;
+    width: 100%;
+  }
+
+  .header__burgerMenu-bottom-arrowUp:hover {
+    filter: url(#filter-color-important);
+  }
 }

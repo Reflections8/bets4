@@ -27,3 +27,11 @@
   flex-direction: column;
   gap: 20px;
 }
+
+@media screen and (max-width: 991px) {
+  .card__header {
+    padding-left: 15px;
+    padding-right: 5px;
+    margin-bottom: 20px;
+  }
+}

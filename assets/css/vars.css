@@ -40,4 +40,12 @@
 
   /* INDENTS */
   --indent-card: 20px;
+  --padding-card: 20px;
+}
+
+@media screen and (max-width: 991px) {
+  :root {
+    --indent-card: 10px;
+    --padding-card: 5px;
+  }
 }

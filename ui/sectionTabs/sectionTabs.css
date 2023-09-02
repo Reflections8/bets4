@@ -1,0 +1,35 @@
+.sectionTabs {
+  display: none;
+}
+
+@media screen and (max-width: 991px) {
+  .sectionTabs {
+    padding: var(--padding-card);
+    display: flex;
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  .sectionTabs__pills {
+    width: 100%;
+    padding: 2px 1px;
+    overflow-x: scroll;
+  }
+
+  .sectionTabs__pills .pills__label {
+    max-width: unset;
+  }
+
+  .sectionTabs__pills .pills__input:checked + label {
+    color: var(--color-important);
+  }
+
+  .sectionTabs__pills .pills__input:checked + label .pills__label-img {
+    filter: url(#filter-color-important);
+  }
+
+  .sectionTabs__pills .pills__glider {
+    max-width: unset;
+    height: calc(100% - 4px);
+  }
+}
