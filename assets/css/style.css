@@ -32,6 +32,8 @@
 @import "../../ui/userCard/userCard.css";
 @import "../../ui/tabs/tabs.css";
 @import "../../ui/sectionTabs/sectionTabs.css";
+@import "../../ui/button/button.css";
+@import "../../ui/formInput/formInput.css";
 
 /* Common tags */
 *, *:after, *:before {
@@ -57,18 +59,31 @@ a {
   text-decoration: none;
 }
 
-button {
-  cursor: pointer;
-  transition: all .2s ease-in-out;
-  outline: none;
-  border: none;
-}
-
 abbr {
   text-decoration: none;
 }
 
+input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Roboto Flex', sans-serif;
+  color: var(--color-important);
+  font-weight: 400;
+  font-size: 14px;
+}
+
+input::placeholder {
+  color: var(--color-secondary);
+}
+
 /* CLASSES */
+
+/* Hidden */
+.hidden {
+  display: none !important;
+}
+
 .container {
   max-width: 1200px;
   padding: 0 20px;
@@ -143,6 +158,10 @@ abbr {
 }
 
 @media screen and (max-width: 991px) {
+  body {
+    background-image: none;
+  }
+
   .container {
     padding: 0 5px;
     margin: 0 -5px;

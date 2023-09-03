@@ -1,0 +1,55 @@
+.modalLogin {
+  max-width: 400px;
+  width: 100%;
+}
+
+.modalLogin__serviceBtns-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.modalLogin__form fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 300px;
+  width: 100%;
+}
+
+.modalLogin__form-captcha {
+  height: 75px;
+  background-color: var(--color-important);
+  margin: var(--inner-card-indent) auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  max-width: 300px;
+}
+
+.modalLogin__form-submitBtn {
+  margin: 0 auto;
+}
+
+.modalLogin__footerLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--inner-card-indent);
+}
+
+.modalLogin__footerLinks-item {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 420px) {
+  .modalLogin__footerLinks {
+    flex-direction: column;
+  }
+}

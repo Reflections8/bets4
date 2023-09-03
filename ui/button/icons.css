@@ -1,0 +1,14 @@
+[data-button-icon="steam"]:before {
+  content: url("../../assets/icons/steam.svg");
+  height: 20px;
+}
+
+[data-button-icon="vk"]:before {
+  content: url("../../assets/icons/vk.svg");
+  height: 12px;
+}
+
+[data-button-icon="logout"]:before {
+  content: url("../../assets/icons/logout.svg");
+  height: 14px;
+}

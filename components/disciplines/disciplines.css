@@ -123,6 +123,7 @@
 
   .disciplines__list-item {
     min-height: 45px;
+    max-height: 45px;
     border-radius: var(--border-radius-card);
     margin: 0 auto;
   }

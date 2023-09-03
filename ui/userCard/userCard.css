@@ -30,7 +30,7 @@
 }
 
 .userCard .userCard__userInfo-name {
-  max-width: 200px;
+  max-width: 140px;
 }
 
 .userCard__investBtn {
@@ -38,14 +38,11 @@
   display: flex;
   align-items: center;
   gap: 4px;
-  border-radius: 8px;
+  border-radius: var(--border-radius-button);
   background-color: var(--color-important);
   margin-left: auto;
   min-height: 25px;
-}
-
-.userCard__investBtn:hover {
-  background-color: var(--color-primary);
+  min-width: unset;
 }
 
 .userCard__investBtn-text {

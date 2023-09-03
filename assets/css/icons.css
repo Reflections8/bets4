@@ -47,7 +47,18 @@
   content: url("../../components/footer/img/steam.svg");
 }
 
-/* MATCH CARD */
+[data-link-custom-icon="registration"]:before {
+  content: url("../icons/registration.svg");
+}
+
+[data-link-custom-icon="forgot-password"]:before {
+  content: url("../icons/forgot-password.svg");
+  height: 16px;
+}
+
+
+
+/* ----- MATCH CARD ----- */
 [data-link-custom-icon="shield"]:before {
   content: url("../../ui/matchCard/img/shield.svg");
 }

@@ -100,6 +100,18 @@ header {
 .header__profile-logout {
   background-color: transparent;
   padding: 0;
+  min-width: unset;
+}
+
+.header__profile-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.header__profile-login-img {
+  filter: url(#filter-color-contrast);
 }
 
 .header__profile-logout-img:hover {

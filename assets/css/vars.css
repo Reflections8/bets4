@@ -9,6 +9,8 @@
   --bg-warning: #fba200;
   --bg-error: #9c0305;
 
+  --bg-important-primary-80: #141017CC;
+
 
   /* TEXT */
   /* simple */
@@ -37,10 +39,15 @@
   /* BORDER-RADIUS */
   --border-radius-card: 15px;
   --border-radius-card-content: 25px;
+  --border-radius-button: 8px;
+  --border-radius-input: 8px;
 
   /* INDENTS */
   --indent-card: 20px;
   --padding-card: 20px;
+
+  /* TODO: check again */
+  --inner-card-indent: 20px;
 }
 
 @media screen and (max-width: 991px) {

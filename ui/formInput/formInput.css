@@ -1,0 +1,18 @@
+.formInput {
+  position: relative;
+  border-radius: var(--border-radius-input);
+  width: 100%;
+}
+
+.formInput__icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+}
+
+.formInput__input {
+  width: 100%;
+  height: 100%;
+  padding: 10px 10px 10px 40px;
+}
