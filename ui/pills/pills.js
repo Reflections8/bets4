@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const pillsLabels = item.querySelectorAll('.pills__label');
     const pillsGlider = item.querySelector('.pills__glider');
 
-    const updateGlider = (label) => {
+    function updateGlider(label) {
       const labelWidth = label.clientWidth;
       const labelOffsetLeft = label.offsetLeft;
 
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Resize glider to default [0] checked label
     setTimeout(() => {
       updateGlider(pillsLabels[0]);
-    }, 0)
+    }, 300)
 
     // Set glider to current checked input
     window.addEventListener('resize', () => {
