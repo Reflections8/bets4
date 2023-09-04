@@ -84,7 +84,7 @@
 
 .matchCard__body-matchTypeBox-icon {
   max-width: 14px;
-  max-height: 14px;
+  max-height: 20px;
   filter: brightness(0) invert(1);
 }
 

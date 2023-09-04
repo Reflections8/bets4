@@ -196,10 +196,9 @@ header {
     width: 100%;
     z-index: 1000;
     transition: all .2s ease-in-out;
-    border-bottom-left-radius: var(--border-radius-card);
-    border-bottom-right-radius: var(--border-radius-card);
     overflow-y: scroll;
-    max-height: 100vh;
+    min-height: 100vh;
+    height: 100%;
   }
 
   .header__burgerMenu--Hidden {
@@ -235,12 +234,16 @@ header {
     display: flex;
     flex-direction: column;
     gap: 50px;
+    flex-grow: 1;
   }
 
   .header__burgerMenu-center .header__nav {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
   }
 
   .header__burgerMenu-center .header__nav-item-link.textlink {

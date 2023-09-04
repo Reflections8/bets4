@@ -1,7 +1,6 @@
 .userCard {
   position: relative;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   gap: 20px;
   align-items: center;
@@ -23,14 +22,7 @@
   align-items: center;
   gap: 4px;
   position: relative;
-}
-
-.userCard--WithButton .userCard__userInfo-name {
-  max-width: 135px;
-}
-
-.userCard .userCard__userInfo-name {
-  max-width: 140px;
+  overflow: hidden;
 }
 
 .userCard__investBtn {
@@ -52,7 +44,6 @@
 }
 
 .userCard__amount {
-  margin-left: auto;
   position: relative;
 }
 

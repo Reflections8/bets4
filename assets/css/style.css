@@ -10,10 +10,8 @@
 /* Link icons */
 @import "icons.css";
 
-
 /* Pages Root Styles */
 @import "pagesRootStyles.css";
-
 
 /* Components */
 @import "../../components/header/header.css";
@@ -52,6 +50,8 @@ body {
   background-repeat: no-repeat, repeat;
   background-position: center top;
   color: var(--color-primary);
+
+  overflow-x: hidden;
 }
 
 a {
@@ -165,5 +165,16 @@ input::placeholder {
   .container {
     padding: 0 5px;
     margin: 0 -5px;
+  }
+
+
+  /* Mobile hide */
+  [data-mobile-hide='true'][data-mobile-hide-type="soft"] {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  [data-mobile-hide='true'][data-mobile-hide-type="hard"] {
+    display: none;
   }
 }

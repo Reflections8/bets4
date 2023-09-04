@@ -16,17 +16,55 @@
   box-shadow: 0 0 8px 0 var(--bg-warning);
 }
 
-.disciplines__listWrapper {
-  width: 100%;
+.disciplines__gradientWrapper {
+  position: relative;
+  margin-left: auto;
+  overflow: hidden;
   margin-right: 20px;
 }
+
+.disciplines__gradientWrapper.disciplines__gradientWrapper--NotScrolled:before {
+  opacity: 0;
+}
+
+.disciplines__gradientWrapper:before {
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0) 97%, var(--bg-primary) 100%);
+  pointer-events: none;
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 20;
+  opacity: 1;
+}
+
+.disciplines__gradientWrapper:after {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 97%, var(--bg-primary) 100%);
+  pointer-events: none;
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 20;
+}
+
+.disciplines__listWrapper {
+  width: 100%;
+  position: relative;
+  padding-right: 20px;
+}
+
 
 .disciplines__list {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
-  gap: 10px;
+  gap: 20px;
 }
 
 .disciplines__list-item {
@@ -109,7 +147,7 @@
 }
 
 @media screen and (max-width: 991px) {
-  .disciplines__listWrapper {
+  .disciplines__gradientWrapper {
     display: none;
   }
 
@@ -143,7 +181,7 @@
   .disciplines__pills {
     width: 100%;
     border-right: none;
-    padding: 10px 20px;
+    padding: 10px var(--padding-card);
   }
 
   .disciplines__pills-container .pills__label {

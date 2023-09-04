@@ -18,3 +18,8 @@
   border-bottom: none;
   gap: 15px;
 }
+
+/* TODO: refactor indents in cards (all inner indent types) */
+.matchesList.matchesList--Soon {
+  padding-top: var(--inner-card-indent);
+}
