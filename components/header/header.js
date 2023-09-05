@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* Open logic */
   burgerIcon.addEventListener('click', () => {
     burgerMenu.classList.remove('header__burgerMenu--Hidden')
+    document.body.setAttribute('style', 'height: 100vh;')
   })
 
 
@@ -13,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   closeArrows.forEach(arrow => {
     arrow.addEventListener('click', () => {
       burgerMenu.classList.add('header__burgerMenu--Hidden')
+      document.body.removeAttribute('style')
     })
   })
 })

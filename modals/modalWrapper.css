@@ -44,6 +44,7 @@
 
 .modalContent__header-closeIcon {
   cursor: pointer;
+  padding: 8px;
 }
 
 .modalContent__header-closeIcon:hover {

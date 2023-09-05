@@ -18,6 +18,10 @@ button {
   gap: 4px;
 }
 
+button.bg-important-text {
+  color: var(--color-contrast);
+}
+
 button.bg-important-text:hover {
   filter: url(#filter-color-primary);
 }
