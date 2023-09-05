@@ -240,6 +240,11 @@ header {
   .header__burgerMenu-top .header__profile-logout {
     margin-left: auto;
     display: block;
+    filter: url(#filter-color-important);
+  }
+
+  .header__burgerMenu-top .header__profile-logout:hover {
+    filter: url(#filter-color-primary);
   }
 
   .header__burgerMenu-center {
