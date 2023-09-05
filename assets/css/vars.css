@@ -46,6 +46,9 @@
   --indent-card: 20px;
   --padding-card: 20px;
 
+  /* SAFARI 100vh PROBLEM HEIGHT VAR */
+  --app-height: 100%;
+
   /* TODO: check again */
   --inner-card-indent: 20px;
 }

@@ -17,4 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.removeAttribute('style')
     })
   })
+
+  // Resolve Safari 100vh problem
+  const setAppHeight = () => {
+    const doc = document.documentElement
+    doc.style.setProperty('--app-height', `${window.innerHeight}px`)
+  }
+  window.addEventListener('resize', setAppHeight)
+  setAppHeight()
 })

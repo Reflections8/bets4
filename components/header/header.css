@@ -197,7 +197,7 @@ header {
     z-index: 1000;
     transition: all .2s ease-in-out;
     overflow-y: scroll;
-    min-height: 100vh;
+    min-height: var(--app-height);
     height: 100%;
   }
 
