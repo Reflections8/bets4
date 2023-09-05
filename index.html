@@ -76,7 +76,7 @@
 		<!-- components/header -->
 		<header>
 				<div class="container">
-						<div class="card marginCard bg-primary header">
+						<div class="card marginCard bg-primary header header--Guest">
 
 								<!-- BURGER ICON (<= 991px) -->
 								<div class="header__burgerIcon">
@@ -86,7 +86,7 @@
 								</div>
 
 								<!-- BURGER MENU (<= 991px) -->
-								<div class="header__burgerMenu header__burgerMenu--Hidden">
+								<div class="header__burgerMenu  header__burgerMenu--Hidden">
 
 										<!-- top -->
 										<div class="header__burgerMenu-top bg-primary">
@@ -522,15 +522,11 @@
 								<!-- guest -->
 								<div class="header__profile header__profile--Guest">
 										<!-- logout btn-->
-										<button class="header__profile-login bg-important-text"
-														data-modal-button="login">
-										<span class="header__profile-login-text color-contrast">
-												Login
-										</span>
+										<a class="header__profile-login">
 												<img src="components/header/img/logout.svg"
 														 alt="logout"
 														 class="header__profile-login-img">
-										</button>
+										</a>
 								</div>
 
 						</div>

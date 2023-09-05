@@ -1,5 +1,6 @@
-.matchesList {
+.matchesList.paddingCard {
   border-bottom: 1px solid var(--bg-accent-primary);
+  padding-bottom: var(--inner-card-indent);
 }
 
 .matchesList__body {

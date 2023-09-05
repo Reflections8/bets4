@@ -164,7 +164,6 @@
 
 .matchCard--Short .matchCard__body-main-textInfo-key {
   font-size: 12px;
-  /*max-width: 90px;*/
 }
 
 .matchCard--Short .matchCard__headText-title {
@@ -254,6 +253,11 @@
     margin-left: unset;
   }
 
+  .matchCard--IconRight .matchCard__body {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   .matchCard--IconRight .matchCard__body-SideIcon {
     right: 6px;
     left: unset;
@@ -320,10 +324,6 @@
 }
 
 @media screen and (max-width: 380px) {
-  .matchCard__body-main-textInfo--FirstTeam {
-    max-width: 70px;
-  }
-
   .matchCard__body-main-textInfo-key {
     max-width: 70px;
   }

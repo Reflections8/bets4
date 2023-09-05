@@ -16,13 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* Close logic */
-  const closeArrows = document.querySelectorAll('.header__burgerMenu-bottom-arrowUp')
-  closeArrows.forEach(arrow => {
-    arrow.addEventListener('click', () => {
-      burgerMenu.classList.add('header__burgerMenu--Hidden')
-      document.body.removeAttribute('style')
-    })
+  const burgerMenuBottom = document.querySelector('.header__burgerMenu-bottom')
+
+  burgerMenuBottom.addEventListener('click', () => {
+    burgerMenu.classList.add('header__burgerMenu--Hidden')
+    document.body.removeAttribute('style')
   })
+
 
   // Resolve Safari 100vh problem
   const setAppHeight = () => {

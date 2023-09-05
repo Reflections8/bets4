@@ -14,6 +14,10 @@ header {
   background-size: contain;
 }
 
+.header--Guest {
+  background-image: none;
+}
+
 .header__burgerIcon {
   display: none;
 }
@@ -108,14 +112,18 @@ header {
   align-items: center;
   justify-content: center;
   gap: 4px;
+  width: 25px;
+  filter: url(#filter-color-important);
+  cursor: pointer;
+  padding: 4px;
+}
+
+.header__profile-login:hover {
+  filter: url(#filter-color-primary);
 }
 
 .header__profile-login-img {
-  filter: url(#filter-color-contrast);
-}
-
-.header__profile-logout-img:hover {
-  filter: url(#filter-color-primary)
+  width: 100%;
 }
 
 @media screen and (max-width: 1200px) {
@@ -134,6 +142,10 @@ header {
 }
 
 @media screen and (max-width: 991px) {
+  .header.header--Guest.marginCard {
+    padding: 5px 15px 5px 15px;
+  }
+
   .header__nav {
     display: none;
   }
@@ -196,9 +208,7 @@ header {
     width: 100%;
     z-index: 1000;
     transition: all .2s ease-in-out;
-    overflow-y: scroll;
-    min-height: var(--app-height);
-    height: 100%;
+    height: var(--app-height);
   }
 
   .header__burgerMenu--Hidden {
@@ -218,9 +228,15 @@ header {
     gap: 8px;
   }
 
+  .header__burgerMenu-top--Guest {
+    background-image: none;
+    padding: 30px 35px 30px 35px;
+  }
+
   .header__burgerMenu-top .header__profile-nameBlock {
     display: flex;
   }
+
   .header__burgerMenu-top .header__profile-logout {
     margin-left: auto;
     display: block;
@@ -235,6 +251,12 @@ header {
     flex-direction: column;
     gap: 50px;
     flex-grow: 1;
+    overflow-y: scroll;
+    scrollbar-width: none;
+  }
+
+  .header__burgerMenu-center::-webkit-scrollbar {
+    display: none;
   }
 
   .header__burgerMenu-center .header__nav {

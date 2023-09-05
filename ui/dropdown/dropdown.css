@@ -37,7 +37,7 @@
 /* TODO: styles */
 .dropdown {
   padding: 0 2px;
-  width: 93px;
+  width: 96px;
   position: absolute;
   display: inline-block;
   min-height: 2em;
@@ -56,6 +56,11 @@
 
 .dropdown__label {
   gap: 6px;
+}
+
+.dropdown__label-img {
+  max-width: 24px;
+  width: 100%;
 }
 
 .dropdown input:focus + label {

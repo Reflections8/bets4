@@ -36,7 +36,9 @@
 /* Common tags */
 *, *:after, *:before {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
+
 
 html {
   overflow-x: hidden;
