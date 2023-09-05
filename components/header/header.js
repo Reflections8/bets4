@@ -5,7 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
   /* Open logic */
   burgerIcon.addEventListener('click', () => {
     burgerMenu.classList.remove('header__burgerMenu--Hidden')
-    document.body.setAttribute('style', 'height: 100vh; overflow-y: hidden;')
+    document.body.setAttribute('style', 'position: fixed; width: 100vw;')
+  })
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 991) {
+      document.body.removeAttribute('style')
+    }
   })
 
 
