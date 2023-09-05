@@ -94,7 +94,6 @@
   align-items: center;
   gap: var(--indent-card);
   padding-left: 20px;
-  padding-right: 60px;
   padding-top: 8px;
   padding-bottom: 8px;
   width: 100%;
@@ -109,12 +108,12 @@
 
 .matchCard__body-main-textInfo--FirstTeam {
   max-width: 130px;
-  width: 100%;
+  /*width: 100%;*/
 }
 
 .matchCard__body-main-textInfo-key {
   font-size: 14px;
-  max-width: 130px;
+  /*max-width: 130px;*/
 }
 
 .matchCard__body-main-textInfo-value {
@@ -124,7 +123,7 @@
 
 .matchCard__body-main-LeagueImg {
   margin-left: auto;
-  max-width: 40px;
+  max-width: 120px;
   width: 100%;
   height: 100%;
   max-height: 55px;
@@ -149,10 +148,6 @@
 }
 
 /* SHORT CARD */
-.matchCard--Short .matchCard__body-main-textInfo--FirstTeam {
-  max-width: 90px;
-}
-
 .matchCard--Short .matchCard__headText-timeAgo {
   padding-left: 10px;
 }
@@ -169,7 +164,7 @@
 
 .matchCard--Short .matchCard__body-main-textInfo-key {
   font-size: 12px;
-  max-width: 90px;
+  /*max-width: 90px;*/
 }
 
 .matchCard--Short .matchCard__headText-title {
@@ -204,11 +199,34 @@
   border-bottom-right-radius: var(--border-radius-card);
 }
 
-@media screen and (max-width: 1200px) {
-  .matchCard--Short .matchCard__body-main-textInfo-key {
-    max-width: 70px;
-  }
+/* TODO: variant of flexible card */
+.matchCard__body-main-textInfo-key {
+  width: 100%;
+}
 
+.matchCard__body-main {
+  display: flex;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.matchCard__body-main-centerBlock {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.matchCard__body-main-textInfo--FirstTeam,
+.matchCard__body-main-textInfo--SecondTeam {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
   .matchCard--Short .matchCard__body-main {
     padding-left: 10px;
     padding-right: 5px;
@@ -218,9 +236,9 @@
 
 @media screen and (max-width: 991px) {
   .matchCard__body-SideIcon {
-    top: -12px;
+    top: -11px;
     left: 8px;
-    max-width: 6px;
+    max-width: 7px;
   }
 
   .matchCard__body {
@@ -265,10 +283,6 @@
     gap: 6px;
   }
 
-  .matchCard__body-main-textInfo--FirstTeam {
-    max-width: 100px;
-  }
-
   .matchCard__body-main-textInfo-key {
     max-width: 100px;
   }
@@ -285,15 +299,13 @@
   .matchCard__headText-timeAgo-value span:nth-child(1):after {
     content: ":";
   }
+
   .matchCard__headText-timeAgo-value span:nth-child(2) {
     display: none;
   }
+
   .matchCard__headText-timeAgo-value span:nth-child(4) {
     display: none;
-  }
-
-  .matchCard--Short .matchCard__body-main-textInfo-key {
-    max-width: 90px;
   }
 }
 
@@ -304,10 +316,6 @@
 
   .matchCard__headText-tabsGradientWrapper {
     max-width: 150px;
-  }
-
-  .matchCard--Short .matchCard__body-main-textInfo-key {
-    max-width: 70px;
   }
 }
 
