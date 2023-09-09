@@ -57,6 +57,11 @@
   z-index: 2;
 }
 
+.pills__link {
+  width: 100%;
+  max-width: unset;
+}
+
 .pills__label {
   display: flex;
   align-items: center;

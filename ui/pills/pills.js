@@ -41,8 +41,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     pillsLabels.forEach(label => {
       label.addEventListener('click', (e) => {
+        const currentLink = e.currentTarget.closest('a')
+        currentLink?.click()
 
         e.preventDefault()
+
         const currentForAttr = e.currentTarget.getAttribute('for')
         const currentInput = item.querySelector(`#${currentForAttr}`)
         currentInput.checked = true
