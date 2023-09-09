@@ -10,11 +10,36 @@
   min-height: 40px;
 }
 
+.userCard__imgWrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  max-width: 35px;
+}
+
+.userCard__imgWrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 80%;
+  background: linear-gradient(to right, transparent, var(--bg-accent-primary));
+  pointer-events: none;
+  z-index: 2;
+}
+
 .userCard__img {
   position: absolute;
   left: 0;
   top: 0;
   height: 100%;
+  border-top-left-radius: var(--border-radius-card);
+  border-bottom-left-radius: var(--border-radius-card);
+  width: 100%;
+  object-fit: cover;
 }
 
 .userCard__userInfo {
@@ -23,6 +48,7 @@
   gap: 4px;
   position: relative;
   overflow: hidden;
+  z-index: 3;
 }
 
 .userCard__investBtn {

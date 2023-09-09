@@ -15,8 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
         e.currentTarget.classList.add('tab--Active')
 
         /* Match card logic */
-        const currentTab = e.currentTarget.getAttribute('data-tab-content')
-
         const parentCard = e.currentTarget.closest('.matchCard')
 
         const firstTeamPercent = parentCard
@@ -30,14 +28,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const score = parentCard
           .querySelector('.matchCard__body-main-MatchScore')
 
-        /* Fetch JSON */
-        fetch('ui/matchCard/matchData.json')
-          .then(rawRes => rawRes.json()
-            .then(res => {
-              firstTeamPercent.innerText = res[currentTab].firstTeamPercent
-              secondTeamPercent.innerText = res[currentTab].secondTeamPercent
-              score.innerText = res[currentTab].score
-            }))
+
+        const currentTeam1Percent = e.currentTarget.getAttribute('data-tab-team1-percent')
+        const currentTeam2Percent = e.currentTarget.getAttribute('data-tab-team2-percent')
+        const currentScore = e.currentTarget.getAttribute('data-tab-score')
+
+        firstTeamPercent.innerText = currentTeam1Percent
+        secondTeamPercent.innerText = currentTeam2Percent
+        score.innerText = currentScore
+
       })
     })
   })

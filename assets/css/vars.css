@@ -1,4 +1,7 @@
 :root {
+  /* DARK IMAGE SUBSTRATE */
+  --dark-image-substrate: #ffffff;
+
   /* BACKGROUND */
   --bg-body: #3a343e;
   --bg-important-primary: #141017;

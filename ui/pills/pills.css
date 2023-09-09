@@ -76,7 +76,7 @@
   height: 5px;
 }
 
-.pills__label-img {
+.pills__label:before {
   transition: all .2s ease-in-out;
   filter: url(#filter-color-primary);
 }
@@ -98,7 +98,7 @@
   color: var(--color-contrast);
 }
 
-.pills__input:checked + label .pills__label-img {
+.pills__input:checked + label:before {
   filter: url(#filter-color-contrast);
 }
 

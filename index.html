@@ -93,23 +93,23 @@
 												<!-- balance -->
 												<div class="header__profile-balanceBlock">
 
-														<div class="header__profile-balanceBlock-row">
+														<a href="#" class="header__profile-balanceBlock-row">
 																<div class="header__profile-balanceBlock-row-amount">
 																		$15.03
 																</div>
 																<img src="components/header/img/coins.svg"
 																		 alt="coins"
 																		 class="header__profile-balanceBlock-row-icon">
-														</div>
+														</a>
 
-														<div class="header__profile-balanceBlock-row">
+														<a href="#" class="header__profile-balanceBlock-row">
 																<div class="header__profile-balanceBlock-row-amount">
 																		$12.24
 																</div>
 																<img src="components/header/img/steam.svg"
 																		 alt="steam"
 																		 class="header__profile-balanceBlock-row-icon">
-														</div>
+														</a>
 
 												</div>
 
@@ -155,7 +155,7 @@
 														<li class="disciplines__list-item disciplines__list-item--Active"
 																data-discipline="dota2">
 																<a class="disciplines__list-item-link">
-																		<img src="components/disciplines/img/games/dota.svg"
+																		<img src="components/disciplines/img/games/dota2.svg"
 																				 alt="dota2"
 																				 class="disciplines__list-item-link-icon">
 																</a>
@@ -165,7 +165,7 @@
 														<li class="disciplines__list-item disciplines__list-item--Active"
 																data-discipline="cs-go">
 																<a class="disciplines__list-item-link">
-																		<img src="components/disciplines/img/games/cs.svg"
+																		<img src="components/disciplines/img/games/cs_go.svg"
 																				 alt="cs"
 																				 class="disciplines__list-item-link-icon">
 																</a>
@@ -340,43 +340,35 @@
 												</nav>
 
 												<!-- ui/dropdown -->
-												<div class="header__burgerMenu-center-languageDropdown dropdownWrapper">
-										<span class="dropdown bg-important-secondary dropdown--LanguageSelect">
-											<input type="radio"
-														 name="header-language"
-														 value="header-en"
-														 checked="checked"
-														 id="header-language-en">
-											<label for="header-language-en"
-														 class="dropdown__label">
-													<img src="ui/dropdown/img/en.svg"
-															 alt="en"
-															 class="dropdown__label-img">
-													English
-											</label>
-    									<input type="radio"
-														 name="header-language"
-														 value="header-ru"
-														 id="header-language-ru">
-											<label for="header-language-ru"
-														 class="dropdown__label">
-													<img src="ui/dropdown/img/ru.svg"
-															 alt="en"
-															 class="dropdown__label-img">
-													Russian
-											</label>
-    									<input type="radio"
-														 name="header-language"
-														 value="header-ua"
-														 id="header-language-ua">
-											<label for="header-language-ua"
-														 class="dropdown__label">
-													<img src="ui/dropdown/img/ru.svg"
-															 alt="en"
-															 class="dropdown__label-img">
-													Ukrainian
-											</label>
-  									</span>
+												<div class="dropdown">
+
+														<div class="dropdown__select">
+																<a class="dropdown__select-defaultValue bg-important-secondary"
+																	 data-link-custom-icon="english">
+																		<abbr>English</abbr>
+																</a>
+
+																<div class="dropdown__select-list bg-important-secondary select-hide">
+
+																		<a href="#" class="dropdown__select-list-item"
+																			 data-link-custom-icon="english">
+																				<abbr>English</abbr>
+																		</a>
+
+																		<a href="#" class="dropdown__select-list-item"
+																			 data-link-custom-icon="russian">
+																				<abbr>Russian</abbr>
+																		</a>
+
+																		<a href="#" class="dropdown__select-list-item"
+																			 data-link-custom-icon="ukrainian">
+																				<abbr>Ukrainian</abbr>
+																		</a>
+
+																</div>
+
+														</div>
+
 												</div>
 
 										</div>
@@ -398,11 +390,11 @@
 								</div>
 
 								<!-- LOGO -->
-								<h1 class="header__logoWrapper">
-										<img src="assets/images/logo.png"
+								<a href="#" class="header__logoWrapper">
+										<img src="assets/images/logo.svg"
 												 alt="logo"
 												 class="header__logo">
-								</h1>
+								</a>
 
 								<!-- NAVIGATION -->
 								<nav class="header__nav">
@@ -482,23 +474,23 @@
 										<!-- balance -->
 										<div class="header__profile-balanceBlock">
 
-												<div class="header__profile-balanceBlock-row">
+												<a href="#" class="header__profile-balanceBlock-row">
 														<div class="header__profile-balanceBlock-row-amount">
 																$15.03
 														</div>
 														<img src="components/header/img/coins.svg"
 																 alt="coins"
 																 class="header__profile-balanceBlock-row-icon">
-												</div>
+												</a>
 
-												<div class="header__profile-balanceBlock-row">
+												<a href="#" class="header__profile-balanceBlock-row">
 														<div class="header__profile-balanceBlock-row-amount">
 																$12.24
 														</div>
 														<img src="components/header/img/steam.svg"
 																 alt="steam"
 																 class="header__profile-balanceBlock-row-icon">
-												</div>
+												</a>
 
 										</div>
 
@@ -553,11 +545,8 @@
 															 class="pills__input"
 															 checked/>
 												<label class="pills__label"
+															 data-pill-icon="cs_go"
 															 for="Classic">
-														<img src="ui/pills/img/cs.svg"
-																 alt="cs"
-																 loading="lazy"
-																 class="pills__label-img">
 														<span class="pills__label-text">
 														<abbr>Classic</abbr>
 												</span>
@@ -568,11 +557,9 @@
 															 id="FastBets"
 															 class="pills__input"
 															 name="tabs"/>
-												<label class="pills__label" for="FastBets">
-														<img src="ui/pills/img/fast-bets.svg"
-																 alt="fast-bets"
-																 loading="lazy"
-																 class="pills__label-img">
+												<label class="pills__label"
+															 for="FastBets"
+															 data-pill-icon="fast-bets">
 														<span class="pills__label-text">
 														<abbr>Fast Bets</abbr>
 												</span>
@@ -606,7 +593,7 @@
 														<li class="disciplines__list-item disciplines__list-item--Active"
 																data-discipline="dota2">
 																<a class="disciplines__list-item-link">
-																		<img src="components/disciplines/img/games/dota.svg"
+																		<img src="components/disciplines/img/games/dota2.svg"
 																				 alt="dota2"
 																				 class="disciplines__list-item-link-icon">
 																</a>
@@ -616,7 +603,7 @@
 														<li class="disciplines__list-item disciplines__list-item--Active"
 																data-discipline="cs-go">
 																<a class="disciplines__list-item-link">
-																		<img src="components/disciplines/img/games/cs.svg"
+																		<img src="components/disciplines/img/games/cs_go.svg"
 																				 alt="cs"
 																				 class="disciplines__list-item-link-icon">
 																</a>
@@ -835,16 +822,15 @@
 																			 data-icon-side="true">
 
 																				<!-- Left Absolute Icon -->
-																				<img src="ui/matchCard/img/coins.svg"
-																						 alt="coins"
-																						 class="matchCard__body-SideIcon"
-																						 loading="lazy">
+																				<span class="matchCard__body-SideIcon"
+																							data-card-side-icon="coins">
+																				</span>
 
 																				<!-- colored match type box -->
 																				<div class="matchCard__body-matchTypeBox"
 																						 data-match-discpiline="dota2">
-																						<img src="components/disciplines/img/games/dota.svg"
-																								 alt="dota"
+																						<img src="components/disciplines/img/games/dota2.svg"
+																								 alt="dota2"
 																								 class="matchCard__body-matchTypeBox-icon">
 																				</div>
 
@@ -903,7 +889,10 @@
 																						<img src="assets/images/leagues/european.png"
 																								 alt="european"
 																								 loading="lazy"
-																								 class="matchCard__body-main-LeagueImg">
+																								 class="matchCard__body-main-LeagueImg"
+																								 srcset="assets/images/leagues/european.png 30w,
+																										 assets/images/leagues/european.png 58w"
+																								 sizes="(max-width: 991px) 30px, 58px">
 
 																				</div>
 																		</a>
@@ -932,7 +921,10 @@
 
 																										<!-- tab -->
 																										<div class="tab tab--Active"
-																												 data-tab-content="main">
+																												 data-tab-content="main"
+																												 data-tab-team1-percent="10%"
+																												 data-tab-team2-percent="20%"
+																												 data-tab-score="VS">
 																												<div class="tab__content textlink color-primary"
 																														 data-link-custom-icon="shield">
 																												</div>
@@ -940,7 +932,10 @@
 
 																										<!-- tab -->
 																										<div class="tab"
-																												 data-tab-content="hc">
+																												 data-tab-content="hc"
+																												 data-tab-team1-percent="20%"
+																												 data-tab-team2-percent="30%"
+																												 data-tab-score="1:0">
 																												<div class="tab__content textlink color-primary"
 																														 data-link-custom-icon="hc">
 																														<div class="tab__text">
@@ -951,7 +946,10 @@
 
 																										<!-- tab -->
 																										<div class="tab"
-																												 data-tab-content="fb">
+																												 data-tab-content="fb"
+																												 data-tab-team1-percent="30%"
+																												 data-tab-team2-percent="40%"
+																												 data-tab-score="1:1">
 																												<div class="tab__content textlink color-primary"
 																														 data-link-custom-icon="fb">
 																														<div class="tab__text">
@@ -962,7 +960,10 @@
 
 																										<!-- tab -->
 																										<div class="tab"
-																												 data-tab-content="live">
+																												 data-tab-content="live"
+																												 data-tab-team1-percent="50%"
+																												 data-tab-team2-percent="50%"
+																												 data-tab-score="VS">
 																												<div class="tab__content">
 																														<span class="tab__content-redDot red-dot"></span>
 																														<div class="tab__text color-red">
@@ -973,7 +974,10 @@
 
 																										<!-- tab -->
 																										<div class="tab"
-																												 data-tab-content="game3">
+																												 data-tab-content="game2"
+																												 data-tab-team1-percent="60%"
+																												 data-tab-team2-percent="40%"
+																												 data-tab-score="2:2">
 																												<div class="tab__content textlink color-primary"
 																														 data-link-custom-icon="game3">
 																														<div class="tab__text">
@@ -984,7 +988,10 @@
 
 																										<!-- tab -->
 																										<div class="tab"
-																												 data-tab-content="game3">
+																												 data-tab-content="game3"
+																												 data-tab-team1-percent="70%"
+																												 data-tab-team2-percent="30%"
+																												 data-tab-score="2:2">
 																												<div class="tab__content textlink color-primary"
 																														 data-link-custom-icon="game3">
 																														<div class="tab__text">
@@ -1010,11 +1017,9 @@
 																		<a href="#" class="matchCard__body bg-accent-primary card"
 																			 data-icon-side="false">
 
-																				<!-- Left Absolute Icon -->
-																				<img src="ui/matchCard/img/coins.svg"
-																						 alt="coins"
-																						 class="matchCard__body-SideIcon"
-																						 loading="lazy">
+																				<span class="matchCard__body-SideIcon"
+																							data-card-side-icon="coins">
+																				</span>
 
 																				<!-- colored match type box -->
 																				<div class="matchCard__body-matchTypeBox"
@@ -1079,7 +1084,10 @@
 																						<img src="assets/images/leagues/european.png"
 																								 alt="european"
 																								 loading="lazy"
-																								 class="matchCard__body-main-LeagueImg">
+																								 class="matchCard__body-main-LeagueImg"
+																								 srcset="assets/images/leagues/european.png 30w,
+																										 assets/images/leagues/european.png 58w"
+																								 sizes="(max-width: 991px) 30px, 58px">
 
 																				</div>
 																		</a>
@@ -1113,11 +1121,8 @@
 																		<div class="matchCard__headText">
 
 																				<!-- time -->
-																				<div class="matchCard__headText-timeAgo">
-																						<img src="ui/matchCard/img/clock.svg"
-																								 alt="clock"
-																								 class="matchCard__headText-timeAgo-clockIcon">
-
+																				<div class="matchCard__headText-timeAgo"
+																						 data-link-custom-icon="clock">
 																						<div class="matchCard__headText-timeAgo-value">
 																								<span>1</span><span>h</span> <span>29</span> <span>min</span>
 																								<span>ago</span>
@@ -1136,17 +1141,15 @@
 																		<a href="#" class="matchCard__body bg-accent-primary card"
 																			 data-icon-side="true">
 
-																				<!-- Left Absolute Icon -->
-																				<img src="ui/matchCard/img/coins.svg"
-																						 alt="coins"
-																						 class="matchCard__body-SideIcon"
-																						 loading="lazy">
+																				<span class="matchCard__body-SideIcon"
+																							data-card-side-icon="coins">
+																				</span>
 
 																				<!-- colored match type box -->
 																				<div class="matchCard__body-matchTypeBox"
 																						 data-match-discpiline="dota2">
-																						<img src="components/disciplines/img/games/dota.svg"
-																								 alt="dota"
+																						<img src="components/disciplines/img/games/dota2.svg"
+																								 alt="dota2"
 																								 class="matchCard__body-matchTypeBox-icon">
 																				</div>
 
@@ -1205,7 +1208,10 @@
 																						<img src="assets/images/leagues/european.png"
 																								 alt="european"
 																								 loading="lazy"
-																								 class="matchCard__body-main-LeagueImg">
+																								 class="matchCard__body-main-LeagueImg"
+																								 srcset="assets/images/leagues/european.png 30w,
+																										 assets/images/leagues/european.png 58w"
+																								 sizes="(max-width: 991px) 30px, 58px">
 
 																				</div>
 																		</a>
@@ -1218,11 +1224,8 @@
 																		<div class="matchCard__headText">
 
 																				<!-- time -->
-																				<div class="matchCard__headText-timeAgo">
-																						<img src="ui/matchCard/img/clock.svg"
-																								 alt="clock"
-																								 class="matchCard__headText-timeAgo-clockIcon">
-
+																				<div class="matchCard__headText-timeAgo"
+																						 data-link-custom-icon="clock">
 																						<div class="matchCard__headText-timeAgo-value">
 																								<span>1</span><span>h</span> <span>29</span> <span>min</span>
 																								<span>ago</span>
@@ -1238,7 +1241,10 @@
 
 																										<!-- tab -->
 																										<div class="tab tab--Active"
-																												 data-tab-content="main">
+																												 data-tab-content="main"
+																												 data-tab-team1-percent="10%"
+																												 data-tab-team2-percent="20%"
+																												 data-tab-score="VS">
 																												<div class="tab__content textlink color-primary"
 																														 data-link-custom-icon="shield">
 																												</div>
@@ -1246,7 +1252,10 @@
 
 																										<!-- tab -->
 																										<div class="tab"
-																												 data-tab-content="hc">
+																												 data-tab-content="hc"
+																												 data-tab-team1-percent="20%"
+																												 data-tab-team2-percent="30%"
+																												 data-tab-score="1:0">
 																												<div class="tab__content textlink color-primary"
 																														 data-link-custom-icon="hc">
 																														<div class="tab__text">
@@ -1257,7 +1266,10 @@
 
 																										<!-- tab -->
 																										<div class="tab"
-																												 data-tab-content="fb">
+																												 data-tab-content="fb"
+																												 data-tab-team1-percent="30%"
+																												 data-tab-team2-percent="40%"
+																												 data-tab-score="1:1">
 																												<div class="tab__content textlink color-primary"
 																														 data-link-custom-icon="fb">
 																														<div class="tab__text">
@@ -1268,22 +1280,14 @@
 
 																										<!-- tab -->
 																										<div class="tab"
-																												 data-tab-content="live">
+																												 data-tab-content="live"
+																												 data-tab-team1-percent="50%"
+																												 data-tab-team2-percent="50%"
+																												 data-tab-score="VS">
 																												<div class="tab__content">
 																														<span class="tab__content-redDot red-dot"></span>
 																														<div class="tab__text color-red">
 																																Live
-																														</div>
-																												</div>
-																										</div>
-
-																										<!-- tab -->
-																										<div class="tab"
-																												 data-tab-content="game3">
-																												<div class="tab__content textlink color-primary"
-																														 data-link-custom-icon="game3">
-																														<div class="tab__text">
-																																Game 3
 																														</div>
 																												</div>
 																										</div>
@@ -1304,11 +1308,9 @@
 																		<a href="#" class="matchCard__body bg-accent-primary card"
 																			 data-icon-side="false">
 
-																				<!-- Left Absolute Icon -->
-																				<img src="ui/matchCard/img/coins.svg"
-																						 alt="coins"
-																						 class="matchCard__body-SideIcon"
-																						 loading="lazy">
+																				<span class="matchCard__body-SideIcon"
+																							data-card-side-icon="coins">
+																				</span>
 
 																				<!-- colored match type box -->
 																				<div class="matchCard__body-matchTypeBox"
@@ -1373,7 +1375,10 @@
 																						<img src="assets/images/leagues/european.png"
 																								 alt="european"
 																								 loading="lazy"
-																								 class="matchCard__body-main-LeagueImg">
+																								 class="matchCard__body-main-LeagueImg"
+																								 srcset="assets/images/leagues/european.png 30w,
+																										 assets/images/leagues/european.png 58w"
+																								 sizes="(max-width: 991px) 30px, 58px">
 
 																				</div>
 																		</a>
@@ -1385,12 +1390,8 @@
 																		<!-- head text -->
 																		<div class="matchCard__headText">
 
-																				<!-- time -->
-																				<div class="matchCard__headText-timeAgo">
-																						<img src="ui/matchCard/img/clock.svg"
-																								 alt="clock"
-																								 class="matchCard__headText-timeAgo-clockIcon">
-
+																				<div class="matchCard__headText-timeAgo"
+																						 data-link-custom-icon="clock">
 																						<div class="matchCard__headText-timeAgo-value">
 																								<span>1</span><span>h</span> <span>29</span> <span>min</span>
 																								<span>ago</span>
@@ -1409,17 +1410,15 @@
 																		<a href="#" class="matchCard__body bg-accent-primary card"
 																			 data-icon-side="false">
 
-																				<!-- Left Absolute Icon -->
-																				<img src="ui/matchCard/img/coins.svg"
-																						 alt="coins"
-																						 class="matchCard__body-SideIcon"
-																						 loading="lazy">
+																				<span class="matchCard__body-SideIcon"
+																							data-card-side-icon="coins">
+																				</span>
 
 																				<!-- colored match type box -->
 																				<div class="matchCard__body-matchTypeBox"
 																						 data-match-discpiline="dota2">
-																						<img src="components/disciplines/img/games/dota.svg"
-																								 alt="dota"
+																						<img src="components/disciplines/img/games/dota2.svg"
+																								 alt="dota2"
 																								 class="matchCard__body-matchTypeBox-icon">
 																				</div>
 
@@ -1478,7 +1477,10 @@
 																						<img src="assets/images/leagues/european.png"
 																								 alt="european"
 																								 loading="lazy"
-																								 class="matchCard__body-main-LeagueImg">
+																								 class="matchCard__body-main-LeagueImg"
+																								 srcset="assets/images/leagues/european.png 30w,
+																										 assets/images/leagues/european.png 58w"
+																								 sizes="(max-width: 991px) 30px, 58px">
 
 																				</div>
 																		</a>
@@ -1490,12 +1492,8 @@
 																		<!-- head text -->
 																		<div class="matchCard__headText">
 
-																				<!-- time -->
-																				<div class="matchCard__headText-timeAgo">
-																						<img src="ui/matchCard/img/clock.svg"
-																								 alt="clock"
-																								 class="matchCard__headText-timeAgo-clockIcon">
-
+																				<div class="matchCard__headText-timeAgo"
+																						 data-link-custom-icon="clock">
 																						<div class="matchCard__headText-timeAgo-value">
 																								<span>1</span><span>h</span> <span>29</span> <span>min</span>
 																								<span>ago</span>
@@ -1514,11 +1512,9 @@
 																		<a href="#" class="matchCard__body bg-accent-primary card"
 																			 data-icon-side="false">
 
-																				<!-- Left Absolute Icon -->
-																				<img src="ui/matchCard/img/coins.svg"
-																						 alt="coins"
-																						 class="matchCard__body-SideIcon"
-																						 loading="lazy">
+																				<span class="matchCard__body-SideIcon"
+																							data-card-side-icon="coins">
+																				</span>
 
 																				<!-- colored match type box -->
 																				<div class="matchCard__body-matchTypeBox"
@@ -1583,7 +1579,10 @@
 																						<img src="assets/images/leagues/european.png"
 																								 alt="european"
 																								 loading="lazy"
-																								 class="matchCard__body-main-LeagueImg">
+																								 class="matchCard__body-main-LeagueImg"
+																								 srcset="assets/images/leagues/european.png 30w,
+																										 assets/images/leagues/european.png 58w"
+																								 sizes="(max-width: 991px) 30px, 58px">
 
 																				</div>
 																		</a>
@@ -1595,12 +1594,8 @@
 																		<!-- head text -->
 																		<div class="matchCard__headText">
 
-																				<!-- time -->
-																				<div class="matchCard__headText-timeAgo">
-																						<img src="ui/matchCard/img/clock.svg"
-																								 alt="clock"
-																								 class="matchCard__headText-timeAgo-clockIcon">
-
+																				<div class="matchCard__headText-timeAgo"
+																						 data-link-custom-icon="clock">
 																						<div class="matchCard__headText-timeAgo-value">
 																								<span>1</span><span>h</span> <span>29</span> <span>min</span>
 																								<span>ago</span>
@@ -1619,17 +1614,15 @@
 																		<a href="#" class="matchCard__body bg-accent-primary card"
 																			 data-icon-side="true">
 
-																				<!-- Left Absolute Icon -->
-																				<img src="ui/matchCard/img/coins.svg"
-																						 alt="coins"
-																						 class="matchCard__body-SideIcon"
-																						 loading="lazy">
+																				<span class="matchCard__body-SideIcon"
+																							data-card-side-icon="coins">
+																				</span>
 
 																				<!-- colored match type box -->
 																				<div class="matchCard__body-matchTypeBox"
 																						 data-match-discpiline="dota2">
-																						<img src="components/disciplines/img/games/dota.svg"
-																								 alt="dota"
+																						<img src="components/disciplines/img/games/dota2.svg"
+																								 alt="dota2"
 																								 class="matchCard__body-matchTypeBox-icon">
 																				</div>
 
@@ -1688,7 +1681,10 @@
 																						<img src="assets/images/leagues/european.png"
 																								 alt="european"
 																								 loading="lazy"
-																								 class="matchCard__body-main-LeagueImg">
+																								 class="matchCard__body-main-LeagueImg"
+																								 srcset="assets/images/leagues/european.png 30w,
+																										 assets/images/leagues/european.png 58w"
+																								 sizes="(max-width: 991px) 30px, 58px">
 
 																				</div>
 																		</a>
@@ -1700,12 +1696,8 @@
 																		<!-- head text -->
 																		<div class="matchCard__headText">
 
-																				<!-- time -->
-																				<div class="matchCard__headText-timeAgo">
-																						<img src="ui/matchCard/img/clock.svg"
-																								 alt="clock"
-																								 class="matchCard__headText-timeAgo-clockIcon">
-
+																				<div class="matchCard__headText-timeAgo"
+																						 data-link-custom-icon="clock">
 																						<div class="matchCard__headText-timeAgo-value">
 																								<span>1</span><span>h</span> <span>29</span> <span>min</span>
 																								<span>ago</span>
@@ -1724,11 +1716,9 @@
 																		<a href="#" class="matchCard__body bg-accent-primary card"
 																			 data-icon-side="false">
 
-																				<!-- Left Absolute Icon -->
-																				<img src="ui/matchCard/img/coins.svg"
-																						 alt="coins"
-																						 class="matchCard__body-SideIcon"
-																						 loading="lazy">
+																				<span class="matchCard__body-SideIcon"
+																							data-card-side-icon="coins">
+																				</span>
 
 																				<!-- colored match type box -->
 																				<div class="matchCard__body-matchTypeBox"
@@ -1793,7 +1783,10 @@
 																						<img src="assets/images/leagues/european.png"
 																								 alt="european"
 																								 loading="lazy"
-																								 class="matchCard__body-main-LeagueImg">
+																								 class="matchCard__body-main-LeagueImg"
+																								 srcset="assets/images/leagues/european.png 30w,
+																										 assets/images/leagues/european.png 58w"
+																								 sizes="(max-width: 991px) 30px, 58px">
 
 																				</div>
 																		</a>
@@ -1805,12 +1798,8 @@
 																		<!-- head text -->
 																		<div class="matchCard__headText">
 
-																				<!-- time -->
-																				<div class="matchCard__headText-timeAgo">
-																						<img src="ui/matchCard/img/clock.svg"
-																								 alt="clock"
-																								 class="matchCard__headText-timeAgo-clockIcon">
-
+																				<div class="matchCard__headText-timeAgo"
+																						 data-link-custom-icon="clock">
 																						<div class="matchCard__headText-timeAgo-value">
 																								<span>1</span><span>h</span> <span>29</span> <span>min</span>
 																								<span>ago</span>
@@ -1829,17 +1818,15 @@
 																		<a href="#" class="matchCard__body bg-accent-primary card"
 																			 data-icon-side="false">
 
-																				<!-- Left Absolute Icon -->
-																				<img src="ui/matchCard/img/coins.svg"
-																						 alt="coins"
-																						 class="matchCard__body-SideIcon"
-																						 loading="lazy">
+																				<span class="matchCard__body-SideIcon"
+																							data-card-side-icon="coins">
+																				</span>
 
 																				<!-- colored match type box -->
 																				<div class="matchCard__body-matchTypeBox"
 																						 data-match-discpiline="dota2">
-																						<img src="components/disciplines/img/games/dota.svg"
-																								 alt="dota"
+																						<img src="components/disciplines/img/games/dota2.svg"
+																								 alt="dota2"
 																								 class="matchCard__body-matchTypeBox-icon">
 																				</div>
 
@@ -1898,7 +1885,10 @@
 																						<img src="assets/images/leagues/european.png"
 																								 alt="european"
 																								 loading="lazy"
-																								 class="matchCard__body-main-LeagueImg">
+																								 class="matchCard__body-main-LeagueImg"
+																								 srcset="assets/images/leagues/european.png 30w,
+																										 assets/images/leagues/european.png 58w"
+																								 sizes="(max-width: 991px) 30px, 58px">
 
 																				</div>
 																		</a>
@@ -1910,12 +1900,8 @@
 																		<!-- head text -->
 																		<div class="matchCard__headText">
 
-																				<!-- time -->
-																				<div class="matchCard__headText-timeAgo">
-																						<img src="ui/matchCard/img/clock.svg"
-																								 alt="clock"
-																								 class="matchCard__headText-timeAgo-clockIcon">
-
+																				<div class="matchCard__headText-timeAgo"
+																						 data-link-custom-icon="clock">
 																						<div class="matchCard__headText-timeAgo-value">
 																								<span>1</span><span>h</span> <span>29</span> <span>min</span>
 																								<span>ago</span>
@@ -1934,11 +1920,9 @@
 																		<a href="#" class="matchCard__body bg-accent-primary card"
 																			 data-icon-side="false">
 
-																				<!-- Left Absolute Icon -->
-																				<img src="ui/matchCard/img/coins.svg"
-																						 alt="coins"
-																						 class="matchCard__body-SideIcon"
-																						 loading="lazy">
+																				<span class="matchCard__body-SideIcon"
+																							data-card-side-icon="coins">
+																				</span>
 
 																				<!-- colored match type box -->
 																				<div class="matchCard__body-matchTypeBox"
@@ -2003,7 +1987,10 @@
 																						<img src="assets/images/leagues/european.png"
 																								 alt="european"
 																								 loading="lazy"
-																								 class="matchCard__body-main-LeagueImg">
+																								 class="matchCard__body-main-LeagueImg"
+																								 srcset="assets/images/leagues/european.png 30w,
+																										 assets/images/leagues/european.png 58w"
+																								 sizes="(max-width: 991px) 30px, 58px">
 
 																				</div>
 																		</a>
@@ -2078,8 +2065,8 @@
 																<!-- colored match type box -->
 																<div class="matchCard__body-matchTypeBox"
 																		 data-match-discpiline="dota2">
-																		<img src="components/disciplines/img/games/dota.svg"
-																				 alt="basketball"
+																		<img src="components/disciplines/img/games/dota2.svg"
+																				 alt="dota2"
 																				 class="matchCard__body-matchTypeBox-icon">
 																</div>
 
@@ -2087,7 +2074,7 @@
 
 																		<!-- text -->
 																		<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--FirstTeam">
-																				<div class="matchCard__body-main-textInfo-key text--ellipsis color-important fw-700"
+																				<div class="matchCard__body-main-textInfo-key text--ellipsis"
 																						 data-winner-icon="true">
 																						<abbr>
 																								Infamous
@@ -2118,7 +2105,8 @@
 
 																		<!-- text -->
 																		<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--SecondTeam">
-																				<div class="matchCard__body-main-textInfo-key text--ellipsis color-inactive">
+																				<div class="matchCard__body-main-textInfo-key text--ellipsis"
+																						 data-winner-icon="true">
 																						<abbr>
 																								Team Luccini
 																						</abbr>
@@ -2160,9 +2148,9 @@
 
 																<!-- colored match type box -->
 																<div class="matchCard__body-matchTypeBox"
-																		 data-match-discpiline="cs-go">
-																		<img src="components/disciplines/img/games/cs.svg"
-																				 alt="basketball"
+																		 data-match-discpiline="cs_go">
+																		<img src="components/disciplines/img/games/cs_go.svg"
+																				 alt="cs_go"
 																				 class="matchCard__body-matchTypeBox-icon">
 																</div>
 
@@ -2170,7 +2158,7 @@
 
 																		<!-- text -->
 																		<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--FirstTeam">
-																				<div class="matchCard__body-main-textInfo-key text--ellipsis color-important fw-700"
+																				<div class="matchCard__body-main-textInfo-key text--ellipsis"
 																						 data-winner-icon="true">
 																						<abbr>
 																								Infamous
@@ -2201,7 +2189,7 @@
 
 																		<!-- text -->
 																		<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--SecondTeam">
-																				<div class="matchCard__body-main-textInfo-key text--ellipsis color-inactive">
+																				<div class="matchCard__body-main-textInfo-key text--ellipsis">
 																						<abbr>
 																								Team Luccini
 																						</abbr>
@@ -2243,8 +2231,8 @@
 																<!-- colored match type box -->
 																<div class="matchCard__body-matchTypeBox"
 																		 data-match-discpiline="dota2">
-																		<img src="components/disciplines/img/games/dota.svg"
-																				 alt="basketball"
+																		<img src="components/disciplines/img/games/dota2.svg"
+																				 alt="dota2"
 																				 class="matchCard__body-matchTypeBox-icon">
 																</div>
 
@@ -2252,7 +2240,7 @@
 
 																		<!-- text -->
 																		<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--FirstTeam">
-																				<div class="matchCard__body-main-textInfo-key text--ellipsis color-important fw-700"
+																				<div class="matchCard__body-main-textInfo-key text--ellipsis"
 																						 data-winner-icon="true">
 																						<abbr>
 																								Infamous
@@ -2283,7 +2271,7 @@
 
 																		<!-- text -->
 																		<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--SecondTeam">
-																				<div class="matchCard__body-main-textInfo-key text--ellipsis color-inactive">
+																				<div class="matchCard__body-main-textInfo-key text--ellipsis">
 																						<abbr>
 																								Team Luccini
 																						</abbr>
@@ -2326,7 +2314,7 @@
 																<div class="matchCard__body-matchTypeBox"
 																		 data-match-discpiline="soccer">
 																		<img src="components/disciplines/img/games/soccer.svg"
-																				 alt="basketball"
+																				 alt="soccer"
 																				 class="matchCard__body-matchTypeBox-icon">
 																</div>
 
@@ -2334,7 +2322,7 @@
 
 																		<!-- text -->
 																		<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--FirstTeam">
-																				<div class="matchCard__body-main-textInfo-key text--ellipsis color-important fw-700"
+																				<div class="matchCard__body-main-textInfo-key text--ellipsis"
 																						 data-winner-icon="true">
 																						<abbr>
 																								Infamous
@@ -2365,7 +2353,7 @@
 
 																		<!-- text -->
 																		<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--SecondTeam">
-																				<div class="matchCard__body-main-textInfo-key text--ellipsis color-inactive">
+																				<div class="matchCard__body-main-textInfo-key text--ellipsis">
 																						<abbr>
 																								Team Luccini
 																						</abbr>
@@ -2408,8 +2396,8 @@
 																<!-- colored match type box -->
 																<div class="matchCard__body-matchTypeBox"
 																		 data-match-discpiline="dota2">
-																		<img src="components/disciplines/img/games/dota.svg"
-																				 alt="basketball"
+																		<img src="components/disciplines/img/games/dota2.svg"
+																				 alt="dota2"
 																				 class="matchCard__body-matchTypeBox-icon">
 																</div>
 
@@ -2417,7 +2405,7 @@
 
 																		<!-- text -->
 																		<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--FirstTeam">
-																				<div class="matchCard__body-main-textInfo-key text--ellipsis color-important fw-700"
+																				<div class="matchCard__body-main-textInfo-key text--ellipsis"
 																						 data-winner-icon="true">
 																						<abbr>
 																								Infamous
@@ -2448,7 +2436,7 @@
 
 																		<!-- text -->
 																		<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--SecondTeam">
-																				<div class="matchCard__body-main-textInfo-key text--ellipsis color-inactive">
+																				<div class="matchCard__body-main-textInfo-key text--ellipsis">
 																						<abbr>
 																								Team Luccini
 																						</abbr>
@@ -2490,9 +2478,9 @@
 
 																<!-- colored match type box -->
 																<div class="matchCard__body-matchTypeBox"
-																		 data-match-discpiline="cs-go">
-																		<img src="components/disciplines/img/games/cs.svg"
-																				 alt="basketball"
+																		 data-match-discpiline="cs_go">
+																		<img src="components/disciplines/img/games/cs_go.svg"
+																				 alt="cs_go"
 																				 class="matchCard__body-matchTypeBox-icon">
 																</div>
 
@@ -2500,7 +2488,7 @@
 
 																		<!-- text -->
 																		<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--FirstTeam">
-																				<div class="matchCard__body-main-textInfo-key text--ellipsis color-important fw-700"
+																				<div class="matchCard__body-main-textInfo-key text--ellipsis"
 																						 data-winner-icon="true">
 																						<abbr>
 																								Infamous
@@ -2531,7 +2519,7 @@
 
 																		<!-- text -->
 																		<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--SecondTeam">
-																				<div class="matchCard__body-main-textInfo-key text--ellipsis color-inactive">
+																				<div class="matchCard__body-main-textInfo-key text--ellipsis">
 																						<abbr>
 																								Team Luccini
 																						</abbr>
@@ -2573,8 +2561,8 @@
 																<!-- colored match type box -->
 																<div class="matchCard__body-matchTypeBox"
 																		 data-match-discpiline="dota2">
-																		<img src="components/disciplines/img/games/dota.svg"
-																				 alt="basketball"
+																		<img src="components/disciplines/img/games/dota2.svg"
+																				 alt="dota2"
 																				 class="matchCard__body-matchTypeBox-icon">
 																</div>
 
@@ -2582,7 +2570,7 @@
 
 																		<!-- text -->
 																		<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--FirstTeam">
-																				<div class="matchCard__body-main-textInfo-key text--ellipsis color-important fw-700"
+																				<div class="matchCard__body-main-textInfo-key text--ellipsis"
 																						 data-winner-icon="true">
 																						<abbr>
 																								Infamous
@@ -2613,7 +2601,7 @@
 
 																		<!-- text -->
 																		<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--SecondTeam">
-																				<div class="matchCard__body-main-textInfo-key text--ellipsis color-inactive">
+																				<div class="matchCard__body-main-textInfo-key text--ellipsis">
 																						<abbr>
 																								Team Luccini
 																						</abbr>
@@ -2656,7 +2644,7 @@
 																<div class="matchCard__body-matchTypeBox"
 																		 data-match-discpiline="soccer">
 																		<img src="components/disciplines/img/games/soccer.svg"
-																				 alt="basketball"
+																				 alt="dota2"
 																				 class="matchCard__body-matchTypeBox-icon">
 																</div>
 
@@ -2664,7 +2652,7 @@
 
 																		<!-- text -->
 																		<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--FirstTeam">
-																				<div class="matchCard__body-main-textInfo-key text--ellipsis color-important fw-700"
+																				<div class="matchCard__body-main-textInfo-key text--ellipsis"
 																						 data-winner-icon="true">
 																						<abbr>
 																								Infamous
@@ -2695,7 +2683,7 @@
 
 																		<!-- text -->
 																		<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--SecondTeam">
-																				<div class="matchCard__body-main-textInfo-key text--ellipsis color-inactive">
+																				<div class="matchCard__body-main-textInfo-key text--ellipsis">
 																						<abbr>
 																								Team Luccini
 																						</abbr>
@@ -2737,8 +2725,8 @@
 																<!-- colored match type box -->
 																<div class="matchCard__body-matchTypeBox"
 																		 data-match-discpiline="dota2">
-																		<img src="components/disciplines/img/games/dota.svg"
-																				 alt="basketball"
+																		<img src="components/disciplines/img/games/dota2.svg"
+																				 alt="dota2"
 																				 class="matchCard__body-matchTypeBox-icon">
 																</div>
 
@@ -2746,7 +2734,7 @@
 
 																		<!-- text -->
 																		<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--FirstTeam">
-																				<div class="matchCard__body-main-textInfo-key text--ellipsis color-important fw-700"
+																				<div class="matchCard__body-main-textInfo-key text--ellipsis"
 																						 data-winner-icon="true">
 																						<abbr>
 																								Infamous
@@ -2777,7 +2765,7 @@
 
 																		<!-- text -->
 																		<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--SecondTeam">
-																				<div class="matchCard__body-main-textInfo-key text--ellipsis color-inactive">
+																				<div class="matchCard__body-main-textInfo-key text--ellipsis">
 																						<abbr>
 																								Team Luccini
 																						</abbr>
@@ -2819,8 +2807,8 @@
 																<!-- colored match type box -->
 																<div class="matchCard__body-matchTypeBox"
 																		 data-match-discpiline="dota2">
-																		<img src="components/disciplines/img/games/dota.svg"
-																				 alt="basketball"
+																		<img src="components/disciplines/img/games/dota2.svg"
+																				 alt="dota2"
 																				 class="matchCard__body-matchTypeBox-icon">
 																</div>
 
@@ -2828,7 +2816,7 @@
 
 																		<!-- text -->
 																		<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--FirstTeam">
-																				<div class="matchCard__body-main-textInfo-key text--ellipsis color-important fw-700"
+																				<div class="matchCard__body-main-textInfo-key text--ellipsis"
 																						 data-winner-icon="true">
 																						<abbr>
 																								Infamous
@@ -2859,7 +2847,7 @@
 
 																		<!-- text -->
 																		<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--SecondTeam">
-																				<div class="matchCard__body-main-textInfo-key text--ellipsis color-inactive">
+																				<div class="matchCard__body-main-textInfo-key text--ellipsis">
 																						<abbr>
 																								Team Luccini
 																						</abbr>
@@ -2892,9 +2880,11 @@
 
 												<!-- ui/userCard -->
 												<li class="userCard userCard--WithButton card bg-accent-primary">
-														<img src="ui/userCard/img/1.png"
-																 alt="avatar"
-																 class="userCard__img">
+														<div class="userCard__imgWrapper">
+																<img src="ui/userCard/img/1.png"
+																		 alt="avatar"
+																		 class="userCard__img">
+														</div>
 
 														<div class="userCard__userInfo color-important">
 																<div class="userCard__userInfo-position">
@@ -2922,9 +2912,11 @@
 
 												<!-- ui/userCard -->
 												<li class="userCard userCard--WithButton card bg-accent-primary">
-														<img src="ui/userCard/img/2.png"
-																 alt="avatar"
-																 class="userCard__img">
+														<div class="userCard__imgWrapper">
+																<img src="ui/userCard/img/1.png"
+																		 alt="avatar"
+																		 class="userCard__img">
+														</div>
 
 														<div class="userCard__userInfo color-important">
 																<div class="userCard__userInfo-position">
@@ -2935,16 +2927,28 @@
 																</abbr>
 														</div>
 
+														<!-- Invest button -->
+														<button class="userCard__investBtn bg-important-text">
+																<img src="ui/userCard/img/investments.svg"
+																		 alt="investments" class="userCard__investBtn-icon">
+
+																<span class="userCard__investBtn-text color-contrast">
+																Invest
+														</span>
+														</button>
+
 														<div class="userCard__amount">
-																542.32$
+																42.32$
 														</div>
 												</li>
 
 												<!-- ui/userCard -->
 												<li class="userCard userCard--WithButton card bg-accent-primary">
-														<img src="ui/userCard/img/3.png"
-																 alt="avatar"
-																 class="userCard__img">
+														<div class="userCard__imgWrapper">
+																<img src="ui/userCard/img/1.png"
+																		 alt="avatar"
+																		 class="userCard__img">
+														</div>
 
 														<div class="userCard__userInfo color-important">
 																<div class="userCard__userInfo-position">
@@ -2955,16 +2959,28 @@
 																</abbr>
 														</div>
 
+														<!-- Invest button -->
+														<button class="userCard__investBtn bg-important-text">
+																<img src="ui/userCard/img/investments.svg"
+																		 alt="investments" class="userCard__investBtn-icon">
+
+																<span class="userCard__investBtn-text color-contrast">
+																Invest
+														</span>
+														</button>
+
 														<div class="userCard__amount">
-																542.32$
+																2.32$
 														</div>
 												</li>
 
 												<!-- ui/userCard -->
 												<li class="userCard userCard--WithButton card bg-accent-primary">
-														<img src="ui/userCard/img/4.png"
-																 alt="avatar"
-																 class="userCard__img">
+														<div class="userCard__imgWrapper">
+																<img src="ui/userCard/img/1.png"
+																		 alt="avatar"
+																		 class="userCard__img">
+														</div>
 
 														<div class="userCard__userInfo color-important">
 																<div class="userCard__userInfo-position">
@@ -2982,9 +2998,11 @@
 
 												<!-- ui/userCard -->
 												<li class="userCard userCard--WithButton card bg-accent-primary">
-														<img src="ui/userCard/img/1.png"
-																 alt="avatar"
-																 class="userCard__img">
+														<div class="userCard__imgWrapper">
+																<img src="ui/userCard/img/1.png"
+																		 alt="avatar"
+																		 class="userCard__img">
+														</div>
 
 														<div class="userCard__userInfo color-important">
 																<div class="userCard__userInfo-position">
@@ -3002,9 +3020,11 @@
 
 												<!-- ui/userCard -->
 												<li class="userCard userCard--WithButton card bg-accent-primary">
-														<img src="ui/userCard/img/2.png"
-																 alt="avatar"
-																 class="userCard__img">
+														<div class="userCard__imgWrapper">
+																<img src="ui/userCard/img/1.png"
+																		 alt="avatar"
+																		 class="userCard__img">
+														</div>
 
 														<div class="userCard__userInfo color-important">
 																<div class="userCard__userInfo-position">
@@ -3022,9 +3042,11 @@
 
 												<!-- ui/userCard -->
 												<li class="userCard userCard--WithButton card bg-accent-primary">
-														<img src="ui/userCard/img/3.png"
-																 alt="avatar"
-																 class="userCard__img">
+														<div class="userCard__imgWrapper">
+																<img src="ui/userCard/img/1.png"
+																		 alt="avatar"
+																		 class="userCard__img">
+														</div>
 
 														<div class="userCard__userInfo color-important">
 																<div class="userCard__userInfo-position">
@@ -3042,9 +3064,11 @@
 
 												<!-- ui/userCard -->
 												<li class="userCard userCard--WithButton card bg-accent-primary">
-														<img src="ui/userCard/img/4.png"
-																 alt="avatar"
-																 class="userCard__img">
+														<div class="userCard__imgWrapper">
+																<img src="ui/userCard/img/1.png"
+																		 alt="avatar"
+																		 class="userCard__img">
+														</div>
 
 														<div class="userCard__userInfo color-important">
 																<div class="userCard__userInfo-position">
@@ -3062,9 +3086,11 @@
 
 												<!-- ui/userCard -->
 												<li class="userCard userCard--WithButton card bg-accent-primary">
-														<img src="ui/userCard/img/1.png"
-																 alt="avatar"
-																 class="userCard__img">
+														<div class="userCard__imgWrapper">
+																<img src="ui/userCard/img/1.png"
+																		 alt="avatar"
+																		 class="userCard__img">
+														</div>
 
 														<div class="userCard__userInfo color-important">
 																<div class="userCard__userInfo-position">
@@ -3082,9 +3108,11 @@
 
 												<!-- ui/userCard -->
 												<li class="userCard userCard--WithButton card bg-accent-primary">
-														<img src="ui/userCard/img/2.png"
-																 alt="avatar"
-																 class="userCard__img">
+														<div class="userCard__imgWrapper">
+																<img src="ui/userCard/img/1.png"
+																		 alt="avatar"
+																		 class="userCard__img">
+														</div>
 
 														<div class="userCard__userInfo color-important">
 																<div class="userCard__userInfo-position">
@@ -3113,52 +3141,41 @@
 								<div class="footer__logoSection">
 
 										<!-- logo -->
-										<img src="assets/images/logo.png"
+										<img src="assets/images/logo.svg"
 												 alt="logo"
 												 loading="lazy"
 												 class="footer__logoSection-logo">
 
 										<!-- ui/dropdown -->
-										<div class="dropdownWrapper ">
-										<span class="dropdown bg-accent-primary dropdown--LanguageSelect">
-											<input type="radio"
-														 name="sortType"
-														 value="Relevance"
-														 checked="checked"
-														 id="language-en">
-											<label for="language-en"
-														 class="dropdown__label">
-													<img src="ui/dropdown/img/en.svg"
-															 alt="en"
-															 loading="lazy"
-															 class="dropdown__label-img">
-													English
-											</label>
-    									<input type="radio"
-														 name="sortType"
-														 value="Popularity"
-														 id="language-ru">
-											<label for="language-ru"
-														 class="dropdown__label">
-													<img src="ui/dropdown/img/ru.svg"
-															 alt="en"
-															 loading="lazy"
-															 class="dropdown__label-img">
-													Russian
-											</label>
-    									<input type="radio"
-														 name="sortType"
-														 value="PriceIncreasing"
-														 id="language-ua">
-											<label for="language-ua"
-														 class="dropdown__label">
-													<img src="ui/dropdown/img/ru.svg"
-															 alt="en"
-															 loading="lazy"
-															 class="dropdown__label-img">
-													Ukrainian
-											</label>
-  									</span>
+										<div class="dropdown">
+
+												<div class="dropdown__select">
+														<a class="dropdown__select-defaultValue bg-accent-primary"
+															 data-link-custom-icon="english">
+																<abbr>English</abbr>
+														</a>
+
+														<div class="dropdown__select-list bg-accent-primary select-hide">
+
+																<a href="#" class="dropdown__select-list-item"
+																	 data-link-custom-icon="english">
+																		<abbr>English</abbr>
+																</a>
+
+																<a href="#" class="dropdown__select-list-item"
+																	 data-link-custom-icon="russian">
+																		<abbr>Russian</abbr>
+																</a>
+
+																<a href="#" class="dropdown__select-list-item"
+																	 data-link-custom-icon="ukrainian">
+																		<abbr>Ukrainian</abbr>
+																</a>
+
+														</div>
+
+												</div>
+
 										</div>
 
 								</div>

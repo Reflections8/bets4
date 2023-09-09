@@ -11,7 +11,6 @@
 
 .matchCard__headText-tabsGradientWrapper {
   max-width: 280px;
-  width: 100%;
 }
 
 .matchCard__headText-tabs {
@@ -34,6 +33,8 @@
   gap: 6px;
   padding-left: 25px;
   margin-bottom: 4px;
+  max-width: 165px;
+  width: 100%;
 }
 
 .matchCard__headText-timeAgo-symbol {
@@ -43,6 +44,8 @@
 
 .matchCard__headText-title {
   max-width: 165px;
+  width: 100%;
+  text-align: right;
   font-size: 11px;
   padding-right: 10px;
   margin-bottom: 4px;
@@ -135,17 +138,51 @@
   background-color: var(--discipline-dota2);
 }
 
-.matchCard__body-matchTypeBox[data-match-discpiline='cs-go'] {
+.matchCard__body-matchTypeBox[data-match-discpiline='cs_go'] {
   background-color: var(--discipline-cs-go);
+}
+
+.matchCard__body-matchTypeBox[data-match-discpiline='overwatch'] {
+  background-color: var(--discipline-overwatch);
+}
+
+.matchCard__body-matchTypeBox[data-match-discpiline='hs'] {
+  background-color: var(--discipline-hs);
+}
+
+.matchCard__body-matchTypeBox[data-match-discpiline='soccer'] {
+  background-color: var(--discipline-soccer);
 }
 
 .matchCard__body-matchTypeBox[data-match-discpiline='basketball'] {
   background-color: var(--discipline-basketball);
 }
 
-.matchCard__body-matchTypeBox[data-match-discpiline='soccer'] {
-  background-color: var(--discipline-soccer);
+.matchCard__body-matchTypeBox[data-match-discpiline='hockey'] {
+  background-color: var(--discipline-hockey);
 }
+
+.matchCard__body-matchTypeBox[data-match-discpiline='lol'] {
+  background-color: var(--discipline-lol);
+}
+
+.matchCard__body-matchTypeBox[data-match-discpiline='sc'] {
+  background-color: var(--discipline-sc);
+}
+
+.matchCard__body-matchTypeBox[data-match-discpiline='valorant'] {
+  background-color: var(--discipline-valorant);
+}
+
+.matchCard__body-matchTypeBox[data-match-discpiline='other'] {
+  background-color: var(--discipline-other);
+}
+
+/* IMAGE BACKGROUND */
+.matchCard__body-main-teamImg--Substrate {
+  background-color: var(--dark-image-substrate);
+}
+
 
 /* SHORT CARD */
 .matchCard--Short .matchCard__headText-timeAgo {
@@ -164,6 +201,12 @@
 
 .matchCard--Short .matchCard__body-main-textInfo-key {
   font-size: 12px;
+  color: var(--color-inactive);
+}
+
+.matchCard--Short .matchCard__body-main-textInfo-key[data-winner-icon="true"] {
+  font-weight: 700;
+  color: var(--color-important);
 }
 
 .matchCard--Short .matchCard__headText-title {

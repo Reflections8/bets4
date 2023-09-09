@@ -1,3 +1,9 @@
+/* GLOBAL */
+[data-link-custom-icon]:before, [data-pill-icon]:before, [data-card-side-icon]:before {
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 [data-link-default-icon="important"]:after {
   content: url("../icons/link-important.svg");
   width: 9px;
@@ -56,9 +62,29 @@
   height: 16px;
 }
 
+[data-link-custom-icon="clock"]:before {
+  content: url("../../ui/matchCard/img/clock.svg");
+  height: 13px;
+}
+
+
+
 
 
 /* ----- MATCH CARD ----- */
+/* side icon */
+[data-card-side-icon="coins"]:before {
+  content: "";
+  background-image: url("/ui/matchCard/img/coins.svg");
+  width: 8px;
+  height: 15px;
+  position: absolute;
+  left: -4px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* tabs */
 [data-link-custom-icon="shield"]:before {
   content: url("../../ui/matchCard/img/shield.svg");
 }
@@ -75,6 +101,10 @@
   content: url("../../ui/matchCard/img/game3.svg");
 }
 
+
+
+
+
 /* WINNER CROWN */
 [data-winner-icon="true"] abbr {
   position: relative;
@@ -85,4 +115,45 @@
   content: url("../../assets/icons/crown.svg");
   position: relative;
   top: 1px;
+}
+
+
+
+
+
+/* LANGUAGES */
+[data-link-custom-icon="english"]:before {
+  content: "";
+  background-image: url("../../ui/dropdown/img/en.svg");
+  min-width: 19px;
+  height: 19px;
+}
+
+[data-link-custom-icon="russian"]:before {
+  content: "";
+  background-image: url("../../ui/dropdown/img/ru.svg");
+  min-width: 19px;
+  height: 19px;
+}
+
+[data-link-custom-icon="ukrainian"]:before {
+  content: "";
+  background-image: url("../../ui/dropdown/img/ru.svg");
+  min-width: 19px;
+  height: 19px;
+}
+
+/* PILLS */
+[data-pill-icon="cs_go"]:before {
+  content: "";
+  background-image: url("../../ui/pills/img/cs_go.svg");
+  width: 16px;
+  height: 16px;
+}
+
+[data-pill-icon="fast-bets"]:before {
+  content: "";
+  background-image: url("../../ui/pills/img/fast-bets.svg");
+  width: 16px;
+  height: 16px;
 }

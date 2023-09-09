@@ -77,6 +77,11 @@ header {
   display: flex;
   align-items: center;
   gap: 4px;
+  cursor: pointer;
+}
+
+.header__profile-balanceBlock-row:hover {
+  filter: url(#filter-color-primary);
 }
 
 .header__profile-balanceBlock-row-amount {
@@ -284,8 +289,6 @@ header {
 
   .header__burgerMenu-center .dropdown {
     margin: 0 auto;
-    left: 50%;
-    transform: translateX(-50%);
   }
 
   .header__burgerMenu-bottom {
