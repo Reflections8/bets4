@@ -1,0 +1,3446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+		<!-- Encoding -->
+		<meta charset="UTF-8">
+
+		<!-- Viewport -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Title/Description -->
+		<title>Bets4</title>
+		<meta name="description" content="Bets4">
+
+		<!-- Prevent auto zoom on input focus in Safari -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<!-- normalize.css -->
+		<link rel="stylesheet" href="assets/css/normalize.css">
+
+		<!-- Global CSS file -->
+		<link rel="stylesheet" href="assets/css/style.css">
+
+		<!-- Add this CSS file if page contains any modal windows -->
+		<link rel="stylesheet" href="modals/modalWrapper.css">
+
+</head>
+<body>
+
+<div id="root">
+		<!-- SVG filters -->
+		<div style="position: absolute">
+				<!-- 1) primary color -->
+				<svg width="0" height="0">
+						<filter id="filter-color-primary">
+								<feColorMatrix
+												color-interpolation-filters="sRGB"
+												type="matrix"
+												values="0.78 0   0   0   0
+                        0   0.78  0   0   0
+                        0   0   0.78  0   0
+                        0   0   0   1   0 "/>
+						</filter>
+				</svg>
+
+
+				<!-- 2) important color -->
+				<svg width="0" height="0">
+						<filter id="filter-color-important">
+								<feColorMatrix
+												type="matrix"
+												values="1 0 0 0 1
+              0 1 0 0 1
+              0 0 1 0 1
+              0 0 0 1 0"></feColorMatrix>
+						</filter>
+				</svg>
+
+				<!-- 3) color-contrast -->
+				<svg width="0" height="0">
+						<filter id="filter-color-contrast">
+								<feColorMatrix
+												color-interpolation-filters="sRGB"
+												type="matrix"
+												values="
+        0.078 0   0   0   0
+        0     0.063 0   0   0
+        0     0   0.090 0   0
+        0     0   0   1   0
+      "
+								/>
+						</filter>
+				</svg>
+		</div>
+
+		<!-- components/header -->
+		<header>
+				<div class="container">
+						<div class="card marginCard bg-primary header header--Guest">
+
+								<!-- BURGER ICON (<= 991px) -->
+								<div class="header__burgerIcon">
+										<div class="header__burgerIcon-line"></div>
+										<div class="header__burgerIcon-line"></div>
+										<div class="header__burgerIcon-line"></div>
+								</div>
+
+								<!-- BURGER MENU (<= 991px) -->
+								<div class="header__burgerMenu header__burgerMenu--Hidden">
+
+										<!-- top -->
+										<div class="header__burgerMenu-top bg-primary">
+												<!-- balance -->
+												<div class="header__profile-balanceBlock">
+
+														<a href="#" class="header__profile-balanceBlock-row">
+																<div class="header__profile-balanceBlock-row-amount">
+																		$15.03
+																</div>
+																<img src="components/header/img/coins.svg"
+																		 alt="coins"
+																		 class="header__profile-balanceBlock-row-icon">
+														</a>
+
+														<a href="#" class="header__profile-balanceBlock-row">
+																<div class="header__profile-balanceBlock-row-amount">
+																		$12.24
+																</div>
+																<img src="components/header/img/steam.svg"
+																		 alt="steam"
+																		 class="header__profile-balanceBlock-row-icon">
+														</a>
+
+												</div>
+
+												<!-- name -->
+												<a href="#" class="header__profile-nameBlock">
+														<div class="header__profile-nameBlock-name">
+																[Im]mortal
+														</div>
+														<div class="header__profile-nameBlock-name-text">
+																profile
+														</div>
+												</a>
+
+												<!-- logout btn-->
+												<button class="header__profile-logout"
+																data-modal-button="login">
+														<img src="components/header/img/logout.svg"
+																 alt="logout"
+																 class="header__profile-logout-img">
+												</button>
+
+												<!-- guest -->
+												<div class="hidden header__profile header__profile--Guest">
+														<!-- logout btn-->
+														<button class="header__profile-login bg-important-text"
+																		data-modal-button="login">
+										<span class="header__profile-login-text color-contrast">
+												Login
+										</span>
+																<img src="components/header/img/logout.svg"
+																		 alt="logout"
+																		 class="header__profile-login-img">
+														</button>
+												</div>
+										</div>
+
+										<!-- center -->
+										<div class="header__burgerMenu-center">
+
+												<ul class="disciplines__list">
+
+														<!-- item -->
+														<li class="disciplines__list-item disciplines__list-item--Active"
+																data-discipline="dota2">
+																<a class="disciplines__list-item-link">
+																		<img src="components/disciplines/img/games/dota2.svg"
+																				 alt="dota2"
+																				 class="disciplines__list-item-link-icon">
+																</a>
+														</li>
+
+														<!-- item -->
+														<li class="disciplines__list-item disciplines__list-item--Active"
+																data-discipline="cs-go">
+																<a class="disciplines__list-item-link">
+																		<img src="components/disciplines/img/games/cs_go.svg"
+																				 alt="cs"
+																				 class="disciplines__list-item-link-icon">
+																</a>
+														</li>
+
+														<!-- item -->
+														<li class="disciplines__list-item disciplines__list-item--Active"
+																data-discipline="overwatch">
+																<a class="disciplines__list-item-link">
+																		<img src="components/disciplines/img/games/ow.svg"
+																				 alt="overwatch"
+																				 class="disciplines__list-item-link-icon">
+																</a>
+														</li>
+
+														<!-- item -->
+														<li class="disciplines__list-item disciplines__list-item--Active"
+																data-discipline="hs">
+																<a class="disciplines__list-item-link">
+																		<img src="components/disciplines/img/games/HS.svg"
+																				 alt="hs"
+																				 class="disciplines__list-item-link-icon">
+																</a>
+														</li>
+
+														<!-- item -->
+														<li class="disciplines__list-item disciplines__list-item--Active"
+																data-discipline="soccer">
+																<a class="disciplines__list-item-link">
+																		<img src="components/disciplines/img/games/soccer.svg"
+																				 alt="soccer"
+																				 class="disciplines__list-item-link-icon">
+																</a>
+														</li>
+
+														<!-- item -->
+														<li class="disciplines__list-item disciplines__list-item--Active"
+																data-discipline="basketball">
+																<a class="disciplines__list-item-link">
+																		<img src="components/disciplines/img/games/basketball.svg"
+																				 alt="basketball"
+																				 class="disciplines__list-item-link-icon">
+																</a>
+														</li>
+
+														<!-- item -->
+														<li class="disciplines__list-item disciplines__list-item--Active"
+																data-discipline="hockey">
+																<a class="disciplines__list-item-link">
+																		<img src="components/disciplines/img/games/hockey.svg"
+																				 alt="hockey"
+																				 class="disciplines__list-item-link-icon">
+																</a>
+														</li>
+
+														<!-- item -->
+														<li class="disciplines__list-item disciplines__list-item--Active"
+																data-discipline="lol">
+																<a class="disciplines__list-item-link">
+																		<img src="components/disciplines/img/games/lol.svg"
+																				 alt="lol"
+																				 class="disciplines__list-item-link-icon">
+																</a>
+														</li>
+
+														<!-- item -->
+														<li class="disciplines__list-item disciplines__list-item--Active"
+																data-discipline="sc">
+																<a class="disciplines__list-item-link">
+																		<img src="components/disciplines/img/games/sc.svg"
+																				 alt="sc"
+																				 class="disciplines__list-item-link-icon">
+																</a>
+														</li>
+
+														<!-- item -->
+														<li class="disciplines__list-item disciplines__list-item--Active"
+																data-discipline="valorant">
+																<a class="disciplines__list-item-link">
+																		<img src="components/disciplines/img/games/valorant.svg"
+																				 alt="valorant"
+																				 class="disciplines__list-item-link-icon">
+																</a>
+														</li>
+
+														<!-- item -->
+														<li class="disciplines__list-item disciplines__list-item--Active"
+																data-discipline="other">
+																<a class="disciplines__list-item-link">
+																		<img src="components/disciplines/img/games/other.svg"
+																				 alt="other"
+																				 class="disciplines__list-item-link-icon">
+																</a>
+														</li>
+
+												</ul>
+
+												<nav class="header__nav header__nav--Mobile">
+
+														<!-- nav item -->
+														<div class="header__nav-item">
+
+																<!-- ui/textlink -->
+																<a href="#"
+																	 class="header__nav-item-link textlink color-important"
+																	 data-link-custom-icon="bets">
+																		My bets
+																</a>
+
+														</div>
+
+														<!-- nav item -->
+														<div class="header__nav-item">
+
+																<!-- ui/textlink -->
+																<a href="#"
+																	 class="header__nav-item-link textlink color-important"
+																	 data-link-custom-icon="investments">
+																		Investments
+																</a>
+
+														</div>
+
+														<!-- nav item -->
+														<div class="header__nav-item">
+
+																<!-- ui/textlink -->
+																<a href="#"
+																	 class="header__nav-item-link textlink color-important"
+																	 data-link-custom-icon="items">
+																		My items
+																</a>
+
+														</div>
+
+														<!-- nav item -->
+														<div class="header__nav-item">
+
+																<!-- ui/textlink -->
+																<a href="#"
+																	 class="header__nav-item-link textlink color-important"
+																	 data-link-custom-icon="payments">
+																		Payments
+																</a>
+
+														</div>
+
+														<!-- nav item -->
+														<div class="header__nav-item">
+
+																<!-- ui/textlink -->
+																<a href="#"
+																	 class="header__nav-item-link textlink color-important"
+																	 data-link-custom-icon="market">
+																		Market
+																</a>
+
+														</div>
+
+														<!-- nav item -->
+														<div class="header__nav-item">
+
+																<!-- ui/textlink -->
+																<a href="#"
+																	 class="header__nav-item-link textlink color-important"
+																	 data-link-custom-icon="support">
+																		Support
+																</a>
+
+														</div>
+
+												</nav>
+
+												<!-- ui/dropdown -->
+												<div class="dropdown">
+
+														<div class="dropdown__select">
+																<a class="dropdown__select-defaultValue bg-important-secondary"
+																	 data-link-custom-icon="english">
+																		<abbr>English</abbr>
+																</a>
+
+																<div class="dropdown__select-list bg-important-secondary select-hide">
+
+																		<a href="#" class="dropdown__select-list-item"
+																			 data-link-custom-icon="english">
+																				<abbr>English</abbr>
+																		</a>
+
+																		<a href="#" class="dropdown__select-list-item"
+																			 data-link-custom-icon="russian">
+																				<abbr>Russian</abbr>
+																		</a>
+
+																		<a href="#" class="dropdown__select-list-item"
+																			 data-link-custom-icon="ukrainian">
+																				<abbr>Ukrainian</abbr>
+																		</a>
+
+																</div>
+
+														</div>
+
+												</div>
+
+										</div>
+
+										<!-- bottom -->
+										<div class="header__burgerMenu-bottom">
+												<img src="assets/icons/arrow-up.svg"
+														 alt="arrow-up"
+														 class="header__burgerMenu-bottom-arrowUp">
+
+												<img src="assets/images/logo.png"
+														 alt="logo"
+														 class="header__burgerMenu-bottom-logo">
+
+												<img src="assets/icons/arrow-up.svg"
+														 alt="arrow-up"
+														 class="header__burgerMenu-bottom-arrowUp">
+										</div>
+								</div>
+
+								<!-- LOGO -->
+								<a href="#" class="header__logoWrapper">
+										<img src="assets/images/logo.svg"
+												 alt="logo"
+												 class="header__logo">
+								</a>
+
+								<!-- NAVIGATION -->
+								<nav class="header__nav">
+
+										<!-- nav item -->
+										<div class="header__nav-item">
+
+												<!-- ui/textlink -->
+												<a href="#"
+													 class="header__nav-item-link textlink color-important"
+													 data-link-custom-icon="bets">
+														My bets
+												</a>
+
+												<span class="header__nav-item-simpleText color-primary">and</span>
+
+												<!-- ui/textlink -->
+												<a href="#"
+													 class="header__nav-item-link textlink color-important"
+													 data-link-custom-icon="investments">
+														Investments
+												</a>
+
+										</div>
+
+										<!-- nav item -->
+										<div class="header__nav-item">
+
+												<!-- ui/textlink -->
+												<a href="#"
+													 class="header__nav-item-link textlink color-important"
+													 data-link-custom-icon="items">
+														My items
+												</a>
+
+												<span class="header__nav-item-simpleText">and</span>
+
+												<!-- ui/textlink -->
+												<a href="#"
+													 class="header__nav-item-link textlink color-important"
+													 data-link-custom-icon="payments">
+														Payments
+												</a>
+
+										</div>
+
+										<!-- nav item -->
+										<div class="header__nav-item">
+
+												<!-- ui/textlink -->
+												<a href="#"
+													 class="header__nav-item-link textlink color-important"
+													 data-link-custom-icon="market">
+														Market
+												</a>
+
+										</div>
+
+										<!-- nav item -->
+										<div class="header__nav-item">
+
+												<!-- ui/textlink -->
+												<a href="#"
+													 class="header__nav-item-link textlink color-important"
+													 data-link-custom-icon="support">
+														Support
+												</a>
+
+										</div>
+
+								</nav>
+
+								<!-- PROFILE -->
+								<!-- logged user -->
+								<div class="header__profile header__profile--User hidden">
+
+										<!-- balance -->
+										<div class="header__profile-balanceBlock">
+
+												<a href="#" class="header__profile-balanceBlock-row">
+														<div class="header__profile-balanceBlock-row-amount">
+																$15.03
+														</div>
+														<img src="components/header/img/coins.svg"
+																 alt="coins"
+																 class="header__profile-balanceBlock-row-icon">
+												</a>
+
+												<a href="#" class="header__profile-balanceBlock-row">
+														<div class="header__profile-balanceBlock-row-amount">
+																$12.24
+														</div>
+														<img src="components/header/img/steam.svg"
+																 alt="steam"
+																 class="header__profile-balanceBlock-row-icon">
+												</a>
+
+										</div>
+
+										<!-- name -->
+										<a href="#" class="header__profile-nameBlock">
+												<div class="header__profile-nameBlock-name">
+														[Im]mortal
+												</div>
+												<div class="header__profile-nameBlock-name-text">
+														profile
+												</div>
+										</a>
+
+										<!-- logout btn-->
+										<button class="header__profile-logout"
+														data-modal-button="login">
+												<img src="components/header/img/logout.svg"
+														 alt="logout"
+														 class="header__profile-logout-img">
+										</button>
+								</div>
+
+								<!-- guest -->
+								<div class="header__profile header__profile--Guest">
+										<!-- logout btn-->
+										<a class="header__profile-login"
+											 data-modal-button="login">
+												<img src="components/header/img/logout.svg"
+														 alt="logout"
+														 class="header__profile-login-img">
+										</a>
+								</div>
+
+						</div>
+				</div>
+		</header>
+
+		<!-- components/disciplines -->
+		<div>
+				<div class="container">
+						<div class="card marginCard disciplines bg-primary">
+
+								<div class="disciplines__pills pillsContainer">
+
+										<!-- ui/pills -->
+										<div class="pills disciplines__pills-container bg-accent-secondary">
+
+												<!-- item -->
+												<a href="#"
+													 class="pills__link">
+														<input type="radio"
+																	 id="Classic"
+																	 name="tabs"
+																	 class="pills__input"
+																	 checked/>
+														<label class="pills__label"
+																	 data-pill-icon="cs_go"
+																	 for="Classic">
+															<span class="pills__label-text">
+																<abbr>Classic</abbr>
+															</span>
+														</label>
+												</a>
+
+												<!-- item -->
+												<a href="#"
+													 class="pills__link">
+														<input type="radio"
+																	 id="FastBets"
+																	 class="pills__input"
+																	 name="tabs"/>
+														<label class="pills__label"
+																	 for="FastBets"
+																	 data-pill-icon="fast-bets">
+														<span class="pills__label-text">
+														<abbr>Fast Bets</abbr>
+												</span>
+														</label>
+												</a>
+
+												<!-- item -->
+												<a href="#"
+													 class="pills__link">
+														<input type="radio"
+																	 id="Live"
+																	 class="pills__input"
+																	 name="tabs"/>
+														<label class="pills__label color-red"
+																	 for="Live">
+												<span class="pills__label-redDot red-dot"
+															data-red-dot-animation-duration="3"></span>
+																<span class="pills__label-text">
+														<abbr>Live</abbr>
+												</span>
+														</label>
+												</a>
+
+												<span class="pills__glider disciplines__pills-container-glider bg-warning"></span>
+										</div>
+
+								</div>
+
+								<!-- list -->
+								<div class="disciplines__gradientWrapper disciplines__gradientWrapper--NotScrolled">
+										<div class="disciplines__listWrapper">
+												<ul class="disciplines__list">
+
+														<!-- item -->
+														<li class="disciplines__list-item disciplines__list-item--Active"
+																data-discipline="dota2">
+																<a class="disciplines__list-item-link">
+																		<img src="components/disciplines/img/games/dota2.svg"
+																				 alt="dota2"
+																				 class="disciplines__list-item-link-icon">
+																</a>
+														</li>
+
+														<!-- item -->
+														<li class="disciplines__list-item disciplines__list-item--Active"
+																data-discipline="cs-go">
+																<a class="disciplines__list-item-link">
+																		<img src="components/disciplines/img/games/cs_go.svg"
+																				 alt="cs"
+																				 class="disciplines__list-item-link-icon">
+																</a>
+														</li>
+
+														<!-- item -->
+														<li class="disciplines__list-item disciplines__list-item--Active"
+																data-discipline="overwatch">
+																<a class="disciplines__list-item-link">
+																		<img src="components/disciplines/img/games/ow.svg"
+																				 alt="overwatch"
+																				 class="disciplines__list-item-link-icon">
+																</a>
+														</li>
+
+														<!-- item -->
+														<li class="disciplines__list-item disciplines__list-item--Active"
+																data-discipline="hs">
+																<a class="disciplines__list-item-link">
+																		<img src="components/disciplines/img/games/HS.svg"
+																				 alt="hs"
+																				 class="disciplines__list-item-link-icon">
+																</a>
+														</li>
+
+														<!-- item -->
+														<li class="disciplines__list-item disciplines__list-item--Active"
+																data-discipline="soccer">
+																<a class="disciplines__list-item-link">
+																		<img src="components/disciplines/img/games/soccer.svg"
+																				 alt="soccer"
+																				 class="disciplines__list-item-link-icon">
+																</a>
+														</li>
+
+														<!-- item -->
+														<li class="disciplines__list-item disciplines__list-item--Active"
+																data-discipline="basketball">
+																<a class="disciplines__list-item-link">
+																		<img src="components/disciplines/img/games/basketball.svg"
+																				 alt="basketball"
+																				 class="disciplines__list-item-link-icon">
+																</a>
+														</li>
+
+														<!-- item -->
+														<li class="disciplines__list-item disciplines__list-item--Active"
+																data-discipline="hockey">
+																<a class="disciplines__list-item-link">
+																		<img src="components/disciplines/img/games/hockey.svg"
+																				 alt="hockey"
+																				 class="disciplines__list-item-link-icon">
+																</a>
+														</li>
+
+														<!-- item -->
+														<li class="disciplines__list-item disciplines__list-item--Active"
+																data-discipline="lol">
+																<a class="disciplines__list-item-link">
+																		<img src="components/disciplines/img/games/lol.svg"
+																				 alt="lol"
+																				 class="disciplines__list-item-link-icon">
+																</a>
+														</li>
+
+														<!-- item -->
+														<li class="disciplines__list-item disciplines__list-item--Active"
+																data-discipline="sc">
+																<a class="disciplines__list-item-link">
+																		<img src="components/disciplines/img/games/sc.svg"
+																				 alt="sc"
+																				 class="disciplines__list-item-link-icon">
+																</a>
+														</li>
+
+														<!-- item -->
+														<li class="disciplines__list-item disciplines__list-item--Active"
+																data-discipline="valorant">
+																<a class="disciplines__list-item-link">
+																		<img src="components/disciplines/img/games/valorant.svg"
+																				 alt="valorant"
+																				 class="disciplines__list-item-link-icon">
+																</a>
+														</li>
+
+														<!-- item -->
+														<li class="disciplines__list-item disciplines__list-item--Active"
+																data-discipline="other">
+																<a class="disciplines__list-item-link">
+																		<img src="components/disciplines/img/games/other.svg"
+																				 alt="other"
+																				 class="disciplines__list-item-link-icon">
+																</a>
+														</li>
+
+												</ul>
+										</div>
+								</div>
+
+						</div>
+				</div>
+		</div>
+
+		<!-- MAIN PAGE CONTENT -->
+		<div class="container">
+				<div class="rootContent rootContent--index marginCard">
+
+						<!-- Matches List Wrapper -->
+						<main class="rootContent__main matchesListWrapper card bg-primary">
+
+								<!-- components/sectionTabs -->
+								<div class="pillsContainer sectionTabs">
+
+										<!-- ui/pills -->
+										<div class="pills sectionTabs__pills sectionTabs__pills--index bg-accent-secondary">
+
+												<!-- item -->
+												<input type="radio"
+															 id="UpcomingMatches"
+															 name="section-tabs"
+															 class="pills__input"
+															 checked/>
+												<label class="pills__label"
+															 for="UpcomingMatches">
+												<span class="threeDots pills__label-img">
+														<span class="threeDots__dot bg-important-text"></span>
+														<span class="threeDots__dot bg-important-text"></span>
+														<span class="threeDots__dot bg-important-text"></span>
+												</span>
+														<span class="pills__label-text">
+														<abbr>Upcoming</abbr>
+												</span>
+												</label>
+
+												<!-- item -->
+												<input type="radio"
+															 id="Ended"
+															 class="pills__input"
+															 name="section-tabs"/>
+												<label class="pills__label" for="Ended">
+														<!-- ui/threeDots -->
+														<span class="threeDots threeDots--Vertical pills__label-img">
+														<span class="threeDots__dot bg-important-text"></span>
+														<span class="threeDots__dot bg-important-text"></span>
+														<span class="threeDots__dot bg-important-text"></span>
+												</span>
+														<span class="pills__label-text">
+														<abbr>Ended</abbr>
+												</span>
+												</label>
+
+												<!-- item -->
+												<input type="radio"
+															 id="Top10Users"
+															 class="pills__input"
+															 name="section-tabs"/>
+												<label class="pills__label"
+															 for="Top10Users">
+														<img src="assets/icons/star.svg"
+																 alt="star"
+																 loading="lazy"
+																 class="pills__label-img">
+														<span class="pills__label-text">
+														<abbr>TOP 10 users daily</abbr>
+												</span>
+												</label>
+
+												<span class="pills__glider color-contrast--Bg"></span>
+										</div>
+
+								</div>
+
+								<div class="sectionTabs__ActiveContent">
+
+										<!-- UPCOMING MATCHES -->
+										<div data-section-content="UpcomingMatches">
+												<!-- components/matchesList -->
+												<section class="matchesList matchesList--Live paddingCard">
+
+														<!-- ui/card -->
+														<div class="card__header">
+																<h2 class="color-red card__header-title">
+												<span class="card__header-title-symbol red-dot"
+															data-red-dot-animation-duration="5"></span>
+																		Live
+																</h2>
+														</div>
+
+														<div class="matchesList__body">
+
+																<!-- ui/matchCard -->
+																<div class="matchCard">
+
+																		<!-- head text -->
+																		<div class="matchCard__headText">
+
+																				<!-- time -->
+																				<div class="matchCard__headText-timeAgo">
+																						<span class="matchCard__headText-timeAgo-symbol red-dot"></span>
+																						<div class="matchCard__headText-timeAgo-value color-red">
+																								<span>1</span><span>h</span> <span>29</span> <span>min</span>
+																								<span>ago</span>
+																						</div>
+																				</div>
+
+																				<!-- title -->
+																				<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
+																						<abbr>
+																								EUROPE: Europa Conference League
+																						</abbr>
+																				</a>
+																		</div>
+
+																		<!-- body -->
+																		<a href="#" class="matchCard__body bg-accent-primary card"
+																			 data-icon-side="true">
+
+																				<!-- Left Absolute Icon -->
+																				<span class="matchCard__body-SideIcon"
+																							data-card-side-icon="coins">
+																				</span>
+
+																				<!-- colored match type box -->
+																				<div class="matchCard__body-matchTypeBox"
+																						 data-match-discpiline="dota2">
+																						<img src="components/disciplines/img/games/dota2.svg"
+																								 alt="dota2"
+																								 class="matchCard__body-matchTypeBox-icon">
+																				</div>
+
+																				<div class="matchCard__body-main">
+
+																						<!-- text -->
+																						<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--FirstTeam">
+																								<abbr class="matchCard__body-main-textInfo-key text--ellipsis color-important">
+																										PENTA SportsPENTA SportsPENTA SportsPENTA SportsPENTA SportsPENTA
+																										Sports
+																								</abbr>
+																								<div class="matchCard__body-main-textInfo-value text--ellipsis color-primary">
+																										48%
+																								</div>
+																						</div>
+
+																						<div class="matchCard__body-main-centerBlock">
+																								<!-- First Team -->
+																								<img alt="1nf"
+																										 loading="lazy"
+																										 class="matchCard__body-main-teamImg"
+																										 srcset="assets/images/teams/991/1nf.png 30w,
+																										 assets/images/teams/1nf.png 58w"
+																										 sizes="(max-width: 991px) 30px, 58px">
+
+																								<!-- text -->
+																								<div class="matchCard__body-main-textInfo">
+																										<div class="matchCard__body-main-MatchScore matchCard__body-main-textInfo-key text--ellipsis color-important">
+																												VS
+																										</div>
+																										<div class="matchCard__body-main-textInfo-value text--ellipsis color-primary">
+																												Bo3
+																										</div>
+																								</div>
+
+																								<!-- Second Team -->
+																								<img alt="infinity"
+																										 loading="lazy"
+																										 class="matchCard__body-main-teamImg"
+																										 srcset="assets/images/teams/991/infinity.png 30w,
+																										 assets/images/teams/infinity.png 58w"
+																										 sizes="(max-width: 991px) 30px, 58px">
+																						</div>
+
+																						<!-- text -->
+																						<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--SecondTeam">
+																								<abbr class="matchCard__body-main-textInfo-key color-important text--ellipsis">
+																										Team Singularity
+																								</abbr>
+																								<div class="matchCard__body-main-textInfo-value text--ellipsis color-primary">
+																										52%
+																								</div>
+																						</div>
+
+																						<!-- League -->
+																						<img src="assets/images/leagues/european.png"
+																								 alt="european"
+																								 loading="lazy"
+																								 class="matchCard__body-main-LeagueImg"
+																								 srcset="assets/images/leagues/european.png 30w,
+																										 assets/images/leagues/european.png 58w"
+																								 sizes="(max-width: 991px) 30px, 58px">
+
+																				</div>
+																		</a>
+																</div>
+
+																<!-- ui/matchCard -->
+																<div class="matchCard">
+
+																		<!-- head text -->
+																		<div class="matchCard__headText">
+
+																				<!-- time -->
+																				<div class="matchCard__headText-timeAgo">
+																						<span class="matchCard__headText-timeAgo-symbol red-dot"></span>
+																						<div class="matchCard__headText-timeAgo-value color-red">
+																								<span>1</span><span>h</span> <span>29</span> <span>min</span>
+																								<span>ago</span>
+																						</div>
+																				</div>
+
+																				<!-- ui/tabs -->
+																				<div class="matchCard__headText-tabsGradientWrapper tabsGradientWrapper">
+																						<div class="matchCard__headText-tabs tabs">
+
+																								<div class="tabs__wrapper">
+
+																										<!-- tab -->
+																										<div class="tab tab--Active"
+																												 data-tab-content="main"
+																												 data-tab-team1-percent="10%"
+																												 data-tab-team2-percent="20%"
+																												 data-tab-score="VS">
+																												<div class="tab__content textlink color-primary"
+																														 data-link-custom-icon="shield">
+																												</div>
+																										</div>
+
+																										<!-- tab -->
+																										<div class="tab"
+																												 data-tab-content="hc"
+																												 data-tab-team1-percent="20%"
+																												 data-tab-team2-percent="30%"
+																												 data-tab-score="1:0">
+																												<div class="tab__content textlink color-primary"
+																														 data-link-custom-icon="hc">
+																														<div class="tab__text">
+																																HC
+																														</div>
+																												</div>
+																										</div>
+
+																										<!-- tab -->
+																										<div class="tab"
+																												 data-tab-content="fb"
+																												 data-tab-team1-percent="30%"
+																												 data-tab-team2-percent="40%"
+																												 data-tab-score="1:1">
+																												<div class="tab__content textlink color-primary"
+																														 data-link-custom-icon="fb">
+																														<div class="tab__text">
+																																FB
+																														</div>
+																												</div>
+																										</div>
+
+																										<!-- tab -->
+																										<div class="tab"
+																												 data-tab-content="live"
+																												 data-tab-team1-percent="50%"
+																												 data-tab-team2-percent="50%"
+																												 data-tab-score="VS">
+																												<div class="tab__content">
+																														<span class="tab__content-redDot red-dot"></span>
+																														<div class="tab__text color-red">
+																																Live
+																														</div>
+																												</div>
+																										</div>
+
+																										<!-- tab -->
+																										<div class="tab"
+																												 data-tab-content="game2"
+																												 data-tab-team1-percent="60%"
+																												 data-tab-team2-percent="40%"
+																												 data-tab-score="2:2">
+																												<div class="tab__content textlink color-primary"
+																														 data-link-custom-icon="game3">
+																														<div class="tab__text">
+																																Game 2
+																														</div>
+																												</div>
+																										</div>
+
+																										<!-- tab -->
+																										<div class="tab"
+																												 data-tab-content="game3"
+																												 data-tab-team1-percent="70%"
+																												 data-tab-team2-percent="30%"
+																												 data-tab-score="2:2">
+																												<div class="tab__content textlink color-primary"
+																														 data-link-custom-icon="game3">
+																														<div class="tab__text">
+																																Game 3
+																														</div>
+																												</div>
+																										</div>
+																								</div>
+
+																						</div>
+																				</div>
+
+
+																				<!-- title -->
+																				<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
+																						<abbr>
+																								WNBA
+																						</abbr>
+																				</a>
+																		</div>
+
+																		<!-- body -->
+																		<a href="#" class="matchCard__body bg-accent-primary card"
+																			 data-icon-side="false">
+
+																				<span class="matchCard__body-SideIcon"
+																							data-card-side-icon="coins">
+																				</span>
+
+																				<!-- colored match type box -->
+																				<div class="matchCard__body-matchTypeBox"
+																						 data-match-discpiline="basketball">
+																						<img src="components/disciplines/img/games/basketball.svg"
+																								 alt="basketball"
+																								 class="matchCard__body-matchTypeBox-icon">
+																				</div>
+
+																				<div class="matchCard__body-main">
+
+																						<!-- text -->
+																						<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--FirstTeam">
+																								<abbr class="matchCard__body-main-textInfo-key text--ellipsis color-important">
+																										PENTA Sports
+																										Sports
+																								</abbr>
+																								<div class="matchCard__body-main-textInfo-value text--ellipsis color-primary">
+																										48%
+																								</div>
+																						</div>
+
+																						<div class="matchCard__body-main-centerBlock">
+																								<!-- First Team -->
+																								<img alt="1nf"
+																										 loading="lazy"
+																										 class="matchCard__body-main-teamImg"
+																										 srcset="assets/images/teams/991/1nf.png 30w,
+																										 assets/images/teams/1nf.png 58w"
+																										 sizes="(max-width: 991px) 30px, 58px">
+
+																								<!-- text -->
+																								<div class="matchCard__body-main-textInfo">
+																										<div class="matchCard__body-main-MatchScore matchCard__body-main-textInfo-key text--ellipsis color-important">
+																												VS
+																										</div>
+																										<div class="matchCard__body-main-textInfo-value text--ellipsis color-primary">
+																												Bo3
+																										</div>
+																								</div>
+
+																								<!-- Second Team -->
+																								<img alt="infinity"
+																										 loading="lazy"
+																										 class="matchCard__body-main-teamImg"
+																										 srcset="assets/images/teams/991/infinity.png 30w,
+																										 assets/images/teams/infinity.png 58w"
+																										 sizes="(max-width: 991px) 30px, 58px">
+																						</div>
+
+																						<!-- text -->
+																						<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--SecondTeam">
+																								<abbr class="matchCard__body-main-textInfo-key color-important text--ellipsis">
+																										Team Singularity Team Team Team Team
+																								</abbr>
+																								<div class="matchCard__body-main-textInfo-value text--ellipsis color-primary">
+																										52%
+																								</div>
+																						</div>
+
+																						<!-- League -->
+																						<img src="assets/images/leagues/european.png"
+																								 alt="european"
+																								 loading="lazy"
+																								 class="matchCard__body-main-LeagueImg"
+																								 srcset="assets/images/leagues/european.png 30w,
+																										 assets/images/leagues/european.png 58w"
+																								 sizes="(max-width: 991px) 30px, 58px">
+
+																				</div>
+																		</a>
+																</div>
+														</div>
+
+												</section>
+
+												<!-- components/matchesList -->
+												<section class="matchesList matchesList--Soon paddingCard">
+
+														<!-- ui/card -->
+														<div class="card__header">
+																<h2 class="color-important card__header-title">
+																		<!-- ui/threeDots -->
+																		<span class="threeDots">
+														<span class="threeDots__dot bg-important-text"></span>
+														<span class="threeDots__dot bg-important-text"></span>
+														<span class="threeDots__dot bg-important-text"></span>
+												</span>
+																		Soon
+																</h2>
+														</div>
+
+														<div class="matchesList__body">
+
+																<!-- ui/matchCard -->
+																<div class="matchCard">
+
+																		<!-- head text -->
+																		<div class="matchCard__headText">
+
+																				<!-- time -->
+																				<div class="matchCard__headText-timeAgo"
+																						 data-link-custom-icon="clock">
+																						<div class="matchCard__headText-timeAgo-value">
+																								<span>1</span><span>h</span> <span>29</span> <span>min</span>
+																								<span>ago</span>
+																						</div>
+																				</div>
+
+																				<!-- title -->
+																				<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
+																						<abbr>
+																								EUROPE: Europa Conference League
+																						</abbr>
+																				</a>
+																		</div>
+
+																		<!-- body -->
+																		<a href="#" class="matchCard__body bg-accent-primary card"
+																			 data-icon-side="true">
+
+																				<span class="matchCard__body-SideIcon"
+																							data-card-side-icon="coins">
+																				</span>
+
+																				<!-- colored match type box -->
+																				<div class="matchCard__body-matchTypeBox"
+																						 data-match-discpiline="dota2">
+																						<img src="components/disciplines/img/games/dota2.svg"
+																								 alt="dota2"
+																								 class="matchCard__body-matchTypeBox-icon">
+																				</div>
+
+																				<div class="matchCard__body-main">
+
+																						<!-- text -->
+																						<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--FirstTeam">
+																								<abbr class="matchCard__body-main-textInfo-key text--ellipsis color-important">
+																										PENTA Sports
+																										Sports
+																								</abbr>
+																								<div class="matchCard__body-main-textInfo-value text--ellipsis color-primary">
+																										48%
+																								</div>
+																						</div>
+
+																						<div class="matchCard__body-main-centerBlock">
+																								<!-- First Team -->
+																								<img alt="1nf"
+																										 loading="lazy"
+																										 class="matchCard__body-main-teamImg"
+																										 srcset="assets/images/teams/991/1nf.png 30w,
+																										 assets/images/teams/1nf.png 58w"
+																										 sizes="(max-width: 991px) 30px, 58px">
+
+																								<!-- text -->
+																								<div class="matchCard__body-main-textInfo">
+																										<div class="matchCard__body-main-MatchScore matchCard__body-main-textInfo-key text--ellipsis color-important">
+																												VS
+																										</div>
+																										<div class="matchCard__body-main-textInfo-value text--ellipsis color-primary">
+																												Bo3
+																										</div>
+																								</div>
+
+																								<!-- Second Team -->
+																								<img alt="infinity"
+																										 loading="lazy"
+																										 class="matchCard__body-main-teamImg"
+																										 srcset="assets/images/teams/991/infinity.png 30w,
+																										 assets/images/teams/infinity.png 58w"
+																										 sizes="(max-width: 991px) 30px, 58px">
+																						</div>
+
+																						<!-- text -->
+																						<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--SecondTeam">
+																								<abbr class="matchCard__body-main-textInfo-key color-important text--ellipsis">
+																										Team Singularity
+																								</abbr>
+																								<div class="matchCard__body-main-textInfo-value text--ellipsis color-primary">
+																										52%
+																								</div>
+																						</div>
+
+																						<!-- League -->
+																						<img src="assets/images/leagues/european.png"
+																								 alt="european"
+																								 loading="lazy"
+																								 class="matchCard__body-main-LeagueImg"
+																								 srcset="assets/images/leagues/european.png 30w,
+																										 assets/images/leagues/european.png 58w"
+																								 sizes="(max-width: 991px) 30px, 58px">
+
+																				</div>
+																		</a>
+																</div>
+
+																<!-- ui/matchCard -->
+																<div class="matchCard">
+
+																		<!-- head text -->
+																		<div class="matchCard__headText">
+
+																				<!-- time -->
+																				<div class="matchCard__headText-timeAgo"
+																						 data-link-custom-icon="clock">
+																						<div class="matchCard__headText-timeAgo-value">
+																								<span>1</span><span>h</span> <span>29</span> <span>min</span>
+																								<span>ago</span>
+																						</div>
+																				</div>
+
+																				<!-- ui/tabs -->
+																				<div class="matchCard__headText-tabsGradientWrapper tabsGradientWrapper">
+
+																						<div class="matchCard__headText-tabs tabs">
+
+																								<div class="tabs__wrapper">
+
+																										<!-- tab -->
+																										<div class="tab tab--Active"
+																												 data-tab-content="main"
+																												 data-tab-team1-percent="10%"
+																												 data-tab-team2-percent="20%"
+																												 data-tab-score="VS">
+																												<div class="tab__content textlink color-primary"
+																														 data-link-custom-icon="shield">
+																												</div>
+																										</div>
+
+																										<!-- tab -->
+																										<div class="tab"
+																												 data-tab-content="hc"
+																												 data-tab-team1-percent="20%"
+																												 data-tab-team2-percent="30%"
+																												 data-tab-score="1:0">
+																												<div class="tab__content textlink color-primary"
+																														 data-link-custom-icon="hc">
+																														<div class="tab__text">
+																																HC
+																														</div>
+																												</div>
+																										</div>
+
+																										<!-- tab -->
+																										<div class="tab"
+																												 data-tab-content="fb"
+																												 data-tab-team1-percent="30%"
+																												 data-tab-team2-percent="40%"
+																												 data-tab-score="1:1">
+																												<div class="tab__content textlink color-primary"
+																														 data-link-custom-icon="fb">
+																														<div class="tab__text">
+																																FB
+																														</div>
+																												</div>
+																										</div>
+
+																										<!-- tab -->
+																										<div class="tab"
+																												 data-tab-content="live"
+																												 data-tab-team1-percent="50%"
+																												 data-tab-team2-percent="50%"
+																												 data-tab-score="VS">
+																												<div class="tab__content">
+																														<span class="tab__content-redDot red-dot"></span>
+																														<div class="tab__text color-red">
+																																Live
+																														</div>
+																												</div>
+																										</div>
+																								</div>
+
+																						</div>
+																				</div>
+
+																				<!-- title -->
+																				<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
+																						<abbr title="WNBA">
+																								WNBA
+																						</abbr>
+																				</a>
+																		</div>
+
+																		<!-- body -->
+																		<a href="#" class="matchCard__body bg-accent-primary card"
+																			 data-icon-side="false">
+
+																				<span class="matchCard__body-SideIcon"
+																							data-card-side-icon="coins">
+																				</span>
+
+																				<!-- colored match type box -->
+																				<div class="matchCard__body-matchTypeBox"
+																						 data-match-discpiline="basketball">
+																						<img src="components/disciplines/img/games/basketball.svg"
+																								 alt="basketball"
+																								 class="matchCard__body-matchTypeBox-icon">
+																				</div>
+
+																				<div class="matchCard__body-main">
+
+																						<!-- text -->
+																						<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--FirstTeam">
+																								<abbr class="matchCard__body-main-textInfo-key text--ellipsis color-important">
+																										PENTA Sports
+																										Sports
+																								</abbr>
+																								<div class="matchCard__body-main-textInfo-value text--ellipsis color-primary">
+																										48%
+																								</div>
+																						</div>
+
+																						<div class="matchCard__body-main-centerBlock">
+																								<!-- First Team -->
+																								<img alt="1nf"
+																										 loading="lazy"
+																										 class="matchCard__body-main-teamImg"
+																										 srcset="assets/images/teams/991/1nf.png 30w,
+																										 assets/images/teams/1nf.png 58w"
+																										 sizes="(max-width: 991px) 30px, 58px">
+
+																								<!-- text -->
+																								<div class="matchCard__body-main-textInfo">
+																										<div class="matchCard__body-main-MatchScore matchCard__body-main-textInfo-key text--ellipsis color-important">
+																												VS
+																										</div>
+																										<div class="matchCard__body-main-textInfo-value text--ellipsis color-primary">
+																												Bo3
+																										</div>
+																								</div>
+
+																								<!-- Second Team -->
+																								<img alt="infinity"
+																										 loading="lazy"
+																										 class="matchCard__body-main-teamImg"
+																										 srcset="assets/images/teams/991/infinity.png 30w,
+																										 assets/images/teams/infinity.png 58w"
+																										 sizes="(max-width: 991px) 30px, 58px">
+																						</div>
+
+																						<!-- text -->
+																						<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--SecondTeam">
+																								<abbr class="matchCard__body-main-textInfo-key color-important text--ellipsis">
+																										Team Singularity
+																								</abbr>
+																								<div class="matchCard__body-main-textInfo-value text--ellipsis color-primary">
+																										52%
+																								</div>
+																						</div>
+
+																						<!-- League -->
+																						<img src="assets/images/leagues/european.png"
+																								 alt="european"
+																								 loading="lazy"
+																								 class="matchCard__body-main-LeagueImg"
+																								 srcset="assets/images/leagues/european.png 30w,
+																										 assets/images/leagues/european.png 58w"
+																								 sizes="(max-width: 991px) 30px, 58px">
+
+																				</div>
+																		</a>
+																</div>
+
+																<!-- ui/matchCard -->
+																<div class="matchCard">
+
+																		<!-- head text -->
+																		<div class="matchCard__headText">
+
+																				<div class="matchCard__headText-timeAgo"
+																						 data-link-custom-icon="clock">
+																						<div class="matchCard__headText-timeAgo-value">
+																								<span>1</span><span>h</span> <span>29</span> <span>min</span>
+																								<span>ago</span>
+																						</div>
+																				</div>
+
+																				<!-- title -->
+																				<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
+																						<abbr>
+																								EUROPE: Europa Conference League
+																						</abbr>
+																				</a>
+																		</div>
+
+																		<!-- body -->
+																		<a href="#" class="matchCard__body bg-accent-primary card"
+																			 data-icon-side="false">
+
+																				<span class="matchCard__body-SideIcon"
+																							data-card-side-icon="coins">
+																				</span>
+
+																				<!-- colored match type box -->
+																				<div class="matchCard__body-matchTypeBox"
+																						 data-match-discpiline="dota2">
+																						<img src="components/disciplines/img/games/dota2.svg"
+																								 alt="dota2"
+																								 class="matchCard__body-matchTypeBox-icon">
+																				</div>
+
+																				<div class="matchCard__body-main">
+
+																						<!-- text -->
+																						<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--FirstTeam">
+																								<abbr class="matchCard__body-main-textInfo-key text--ellipsis color-important">
+																										PENTA Sports
+																										Sports
+																								</abbr>
+																								<div class="matchCard__body-main-textInfo-value text--ellipsis color-primary">
+																										48%
+																								</div>
+																						</div>
+
+																						<div class="matchCard__body-main-centerBlock">
+																								<!-- First Team -->
+																								<img alt="1nf"
+																										 loading="lazy"
+																										 class="matchCard__body-main-teamImg"
+																										 srcset="assets/images/teams/991/1nf.png 30w,
+																										 assets/images/teams/1nf.png 58w"
+																										 sizes="(max-width: 991px) 30px, 58px">
+
+																								<!-- text -->
+																								<div class="matchCard__body-main-textInfo">
+																										<div class="matchCard__body-main-MatchScore matchCard__body-main-textInfo-key text--ellipsis color-important">
+																												VS
+																										</div>
+																										<div class="matchCard__body-main-textInfo-value text--ellipsis color-primary">
+																												Bo3
+																										</div>
+																								</div>
+
+																								<!-- Second Team -->
+																								<img alt="infinity"
+																										 loading="lazy"
+																										 class="matchCard__body-main-teamImg"
+																										 srcset="assets/images/teams/991/infinity.png 30w,
+																										 assets/images/teams/infinity.png 58w"
+																										 sizes="(max-width: 991px) 30px, 58px">
+																						</div>
+
+																						<!-- text -->
+																						<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--SecondTeam">
+																								<abbr class="matchCard__body-main-textInfo-key color-important text--ellipsis">
+																										Team Singularity
+																								</abbr>
+																								<div class="matchCard__body-main-textInfo-value text--ellipsis color-primary">
+																										52%
+																								</div>
+																						</div>
+
+																						<!-- League -->
+																						<img src="assets/images/leagues/european.png"
+																								 alt="european"
+																								 loading="lazy"
+																								 class="matchCard__body-main-LeagueImg"
+																								 srcset="assets/images/leagues/european.png 30w,
+																										 assets/images/leagues/european.png 58w"
+																								 sizes="(max-width: 991px) 30px, 58px">
+
+																				</div>
+																		</a>
+																</div>
+
+																<!-- ui/matchCard -->
+																<div class="matchCard">
+
+																		<!-- head text -->
+																		<div class="matchCard__headText">
+
+																				<div class="matchCard__headText-timeAgo"
+																						 data-link-custom-icon="clock">
+																						<div class="matchCard__headText-timeAgo-value">
+																								<span>1</span><span>h</span> <span>29</span> <span>min</span>
+																								<span>ago</span>
+																						</div>
+																				</div>
+
+																				<!-- title -->
+																				<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
+																						<abbr>
+																								EUROPE: Europa Conference League
+																						</abbr>
+																				</a>
+																		</div>
+
+																		<!-- body -->
+																		<a href="#" class="matchCard__body bg-accent-primary card"
+																			 data-icon-side="false">
+
+																				<span class="matchCard__body-SideIcon"
+																							data-card-side-icon="coins">
+																				</span>
+
+																				<!-- colored match type box -->
+																				<div class="matchCard__body-matchTypeBox"
+																						 data-match-discpiline="soccer">
+																						<img src="components/disciplines/img/games/soccer.svg"
+																								 alt="soccer"
+																								 class="matchCard__body-matchTypeBox-icon">
+																				</div>
+
+																				<div class="matchCard__body-main">
+
+																						<!-- text -->
+																						<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--FirstTeam">
+																								<abbr class="matchCard__body-main-textInfo-key text--ellipsis color-important">
+																										PENTA Sports
+																										Sports
+																								</abbr>
+																								<div class="matchCard__body-main-textInfo-value text--ellipsis color-primary">
+																										48%
+																								</div>
+																						</div>
+
+																						<div class="matchCard__body-main-centerBlock">
+																								<!-- First Team -->
+																								<img alt="1nf"
+																										 loading="lazy"
+																										 class="matchCard__body-main-teamImg"
+																										 srcset="assets/images/teams/991/1nf.png 30w,
+																										 assets/images/teams/1nf.png 58w"
+																										 sizes="(max-width: 991px) 30px, 58px">
+
+																								<!-- text -->
+																								<div class="matchCard__body-main-textInfo">
+																										<div class="matchCard__body-main-MatchScore matchCard__body-main-textInfo-key text--ellipsis color-important">
+																												VS
+																										</div>
+																										<div class="matchCard__body-main-textInfo-value text--ellipsis color-primary">
+																												Bo3
+																										</div>
+																								</div>
+
+																								<!-- Second Team -->
+																								<img alt="infinity"
+																										 loading="lazy"
+																										 class="matchCard__body-main-teamImg"
+																										 srcset="assets/images/teams/991/infinity.png 30w,
+																										 assets/images/teams/infinity.png 58w"
+																										 sizes="(max-width: 991px) 30px, 58px">
+																						</div>
+
+																						<!-- text -->
+																						<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--SecondTeam">
+																								<abbr class="matchCard__body-main-textInfo-key color-important text--ellipsis">
+																										Team Singularity
+																								</abbr>
+																								<div class="matchCard__body-main-textInfo-value text--ellipsis color-primary">
+																										52%
+																								</div>
+																						</div>
+
+																						<!-- League -->
+																						<img src="assets/images/leagues/european.png"
+																								 alt="european"
+																								 loading="lazy"
+																								 class="matchCard__body-main-LeagueImg"
+																								 srcset="assets/images/leagues/european.png 30w,
+																										 assets/images/leagues/european.png 58w"
+																								 sizes="(max-width: 991px) 30px, 58px">
+
+																				</div>
+																		</a>
+																</div>
+
+																<!-- ui/matchCard -->
+																<div class="matchCard">
+
+																		<!-- head text -->
+																		<div class="matchCard__headText">
+
+																				<div class="matchCard__headText-timeAgo"
+																						 data-link-custom-icon="clock">
+																						<div class="matchCard__headText-timeAgo-value">
+																								<span>1</span><span>h</span> <span>29</span> <span>min</span>
+																								<span>ago</span>
+																						</div>
+																				</div>
+
+																				<!-- title -->
+																				<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
+																						<abbr>
+																								EUROPE: Europa Conference League
+																						</abbr>
+																				</a>
+																		</div>
+
+																		<!-- body -->
+																		<a href="#" class="matchCard__body bg-accent-primary card"
+																			 data-icon-side="true">
+
+																				<span class="matchCard__body-SideIcon"
+																							data-card-side-icon="coins">
+																				</span>
+
+																				<!-- colored match type box -->
+																				<div class="matchCard__body-matchTypeBox"
+																						 data-match-discpiline="dota2">
+																						<img src="components/disciplines/img/games/dota2.svg"
+																								 alt="dota2"
+																								 class="matchCard__body-matchTypeBox-icon">
+																				</div>
+
+																				<div class="matchCard__body-main">
+
+																						<!-- text -->
+																						<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--FirstTeam">
+																								<abbr class="matchCard__body-main-textInfo-key text--ellipsis color-important">
+																										PENTA Sports
+																										Sports
+																								</abbr>
+																								<div class="matchCard__body-main-textInfo-value text--ellipsis color-primary">
+																										48%
+																								</div>
+																						</div>
+
+																						<div class="matchCard__body-main-centerBlock">
+																								<!-- First Team -->
+																								<img alt="1nf"
+																										 loading="lazy"
+																										 class="matchCard__body-main-teamImg"
+																										 srcset="assets/images/teams/991/1nf.png 30w,
+																										 assets/images/teams/1nf.png 58w"
+																										 sizes="(max-width: 991px) 30px, 58px">
+
+																								<!-- text -->
+																								<div class="matchCard__body-main-textInfo">
+																										<div class="matchCard__body-main-MatchScore matchCard__body-main-textInfo-key text--ellipsis color-important">
+																												VS
+																										</div>
+																										<div class="matchCard__body-main-textInfo-value text--ellipsis color-primary">
+																												Bo3
+																										</div>
+																								</div>
+
+																								<!-- Second Team -->
+																								<img alt="infinity"
+																										 loading="lazy"
+																										 class="matchCard__body-main-teamImg"
+																										 srcset="assets/images/teams/991/infinity.png 30w,
+																										 assets/images/teams/infinity.png 58w"
+																										 sizes="(max-width: 991px) 30px, 58px">
+																						</div>
+
+																						<!-- text -->
+																						<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--SecondTeam">
+																								<abbr class="matchCard__body-main-textInfo-key color-important text--ellipsis">
+																										Team Singularity
+																								</abbr>
+																								<div class="matchCard__body-main-textInfo-value text--ellipsis color-primary">
+																										52%
+																								</div>
+																						</div>
+
+																						<!-- League -->
+																						<img src="assets/images/leagues/european.png"
+																								 alt="european"
+																								 loading="lazy"
+																								 class="matchCard__body-main-LeagueImg"
+																								 srcset="assets/images/leagues/european.png 30w,
+																										 assets/images/leagues/european.png 58w"
+																								 sizes="(max-width: 991px) 30px, 58px">
+
+																				</div>
+																		</a>
+																</div>
+
+																<!-- ui/matchCard -->
+																<div class="matchCard">
+
+																		<!-- head text -->
+																		<div class="matchCard__headText">
+
+																				<div class="matchCard__headText-timeAgo"
+																						 data-link-custom-icon="clock">
+																						<div class="matchCard__headText-timeAgo-value">
+																								<span>1</span><span>h</span> <span>29</span> <span>min</span>
+																								<span>ago</span>
+																						</div>
+																				</div>
+
+																				<!-- title -->
+																				<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
+																						<abbr title="WNBA">
+																								WNBA
+																						</abbr>
+																				</a>
+																		</div>
+
+																		<!-- body -->
+																		<a href="#" class="matchCard__body bg-accent-primary card"
+																			 data-icon-side="false">
+
+																				<span class="matchCard__body-SideIcon"
+																							data-card-side-icon="coins">
+																				</span>
+
+																				<!-- colored match type box -->
+																				<div class="matchCard__body-matchTypeBox"
+																						 data-match-discpiline="basketball">
+																						<img src="components/disciplines/img/games/basketball.svg"
+																								 alt="basketball"
+																								 class="matchCard__body-matchTypeBox-icon">
+																				</div>
+
+																				<div class="matchCard__body-main">
+
+																						<!-- text -->
+																						<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--FirstTeam">
+																								<abbr class="matchCard__body-main-textInfo-key text--ellipsis color-important">
+																										PENTA Sports
+																										Sports
+																								</abbr>
+																								<div class="matchCard__body-main-textInfo-value text--ellipsis color-primary">
+																										48%
+																								</div>
+																						</div>
+
+																						<div class="matchCard__body-main-centerBlock">
+																								<!-- First Team -->
+																								<img alt="1nf"
+																										 loading="lazy"
+																										 class="matchCard__body-main-teamImg"
+																										 srcset="assets/images/teams/991/1nf.png 30w,
+																										 assets/images/teams/1nf.png 58w"
+																										 sizes="(max-width: 991px) 30px, 58px">
+
+																								<!-- text -->
+																								<div class="matchCard__body-main-textInfo">
+																										<div class="matchCard__body-main-MatchScore matchCard__body-main-textInfo-key text--ellipsis color-important">
+																												VS
+																										</div>
+																										<div class="matchCard__body-main-textInfo-value text--ellipsis color-primary">
+																												Bo3
+																										</div>
+																								</div>
+
+																								<!-- Second Team -->
+																								<img alt="infinity"
+																										 loading="lazy"
+																										 class="matchCard__body-main-teamImg"
+																										 srcset="assets/images/teams/991/infinity.png 30w,
+																										 assets/images/teams/infinity.png 58w"
+																										 sizes="(max-width: 991px) 30px, 58px">
+																						</div>
+
+																						<!-- text -->
+																						<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--SecondTeam">
+																								<abbr class="matchCard__body-main-textInfo-key color-important text--ellipsis">
+																										Team Singularity
+																								</abbr>
+																								<div class="matchCard__body-main-textInfo-value text--ellipsis color-primary">
+																										52%
+																								</div>
+																						</div>
+
+																						<!-- League -->
+																						<img src="assets/images/leagues/european.png"
+																								 alt="european"
+																								 loading="lazy"
+																								 class="matchCard__body-main-LeagueImg"
+																								 srcset="assets/images/leagues/european.png 30w,
+																										 assets/images/leagues/european.png 58w"
+																								 sizes="(max-width: 991px) 30px, 58px">
+
+																				</div>
+																		</a>
+																</div>
+
+																<!-- ui/matchCard -->
+																<div class="matchCard">
+
+																		<!-- head text -->
+																		<div class="matchCard__headText">
+
+																				<div class="matchCard__headText-timeAgo"
+																						 data-link-custom-icon="clock">
+																						<div class="matchCard__headText-timeAgo-value">
+																								<span>1</span><span>h</span> <span>29</span> <span>min</span>
+																								<span>ago</span>
+																						</div>
+																				</div>
+
+																				<!-- title -->
+																				<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
+																						<abbr>
+																								EUROPE: Europa Conference League
+																						</abbr>
+																				</a>
+																		</div>
+
+																		<!-- body -->
+																		<a href="#" class="matchCard__body bg-accent-primary card"
+																			 data-icon-side="false">
+
+																				<span class="matchCard__body-SideIcon"
+																							data-card-side-icon="coins">
+																				</span>
+
+																				<!-- colored match type box -->
+																				<div class="matchCard__body-matchTypeBox"
+																						 data-match-discpiline="dota2">
+																						<img src="components/disciplines/img/games/dota2.svg"
+																								 alt="dota2"
+																								 class="matchCard__body-matchTypeBox-icon">
+																				</div>
+
+																				<div class="matchCard__body-main">
+
+																						<!-- text -->
+																						<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--FirstTeam">
+																								<abbr class="matchCard__body-main-textInfo-key text--ellipsis color-important">
+																										PENTA Sports
+																										Sports
+																								</abbr>
+																								<div class="matchCard__body-main-textInfo-value text--ellipsis color-primary">
+																										48%
+																								</div>
+																						</div>
+
+																						<div class="matchCard__body-main-centerBlock">
+																								<!-- First Team -->
+																								<img alt="1nf"
+																										 loading="lazy"
+																										 class="matchCard__body-main-teamImg"
+																										 srcset="assets/images/teams/991/1nf.png 30w,
+																										 assets/images/teams/1nf.png 58w"
+																										 sizes="(max-width: 991px) 30px, 58px">
+
+																								<!-- text -->
+																								<div class="matchCard__body-main-textInfo">
+																										<div class="matchCard__body-main-MatchScore matchCard__body-main-textInfo-key text--ellipsis color-important">
+																												VS
+																										</div>
+																										<div class="matchCard__body-main-textInfo-value text--ellipsis color-primary">
+																												Bo3
+																										</div>
+																								</div>
+
+																								<!-- Second Team -->
+																								<img alt="infinity"
+																										 loading="lazy"
+																										 class="matchCard__body-main-teamImg"
+																										 srcset="assets/images/teams/991/infinity.png 30w,
+																										 assets/images/teams/infinity.png 58w"
+																										 sizes="(max-width: 991px) 30px, 58px">
+																						</div>
+
+																						<!-- text -->
+																						<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--SecondTeam">
+																								<abbr class="matchCard__body-main-textInfo-key color-important text--ellipsis">
+																										Team Singularity
+																								</abbr>
+																								<div class="matchCard__body-main-textInfo-value text--ellipsis color-primary">
+																										52%
+																								</div>
+																						</div>
+
+																						<!-- League -->
+																						<img src="assets/images/leagues/european.png"
+																								 alt="european"
+																								 loading="lazy"
+																								 class="matchCard__body-main-LeagueImg"
+																								 srcset="assets/images/leagues/european.png 30w,
+																										 assets/images/leagues/european.png 58w"
+																								 sizes="(max-width: 991px) 30px, 58px">
+
+																				</div>
+																		</a>
+																</div>
+
+																<!-- ui/matchCard -->
+																<div class="matchCard">
+
+																		<!-- head text -->
+																		<div class="matchCard__headText">
+
+																				<div class="matchCard__headText-timeAgo"
+																						 data-link-custom-icon="clock">
+																						<div class="matchCard__headText-timeAgo-value">
+																								<span>1</span><span>h</span> <span>29</span> <span>min</span>
+																								<span>ago</span>
+																						</div>
+																				</div>
+
+																				<!-- title -->
+																				<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
+																						<abbr>
+																								EUROPE: Europa Conference League
+																						</abbr>
+																				</a>
+																		</div>
+
+																		<!-- body -->
+																		<a href="#" class="matchCard__body bg-accent-primary card"
+																			 data-icon-side="false">
+
+																				<span class="matchCard__body-SideIcon"
+																							data-card-side-icon="coins">
+																				</span>
+
+																				<!-- colored match type box -->
+																				<div class="matchCard__body-matchTypeBox"
+																						 data-match-discpiline="soccer">
+																						<img src="components/disciplines/img/games/soccer.svg"
+																								 alt="soccer"
+																								 class="matchCard__body-matchTypeBox-icon">
+																				</div>
+
+																				<div class="matchCard__body-main">
+
+																						<!-- text -->
+																						<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--FirstTeam">
+																								<abbr class="matchCard__body-main-textInfo-key text--ellipsis color-important">
+																										PENTA Sports
+																										Sports
+																								</abbr>
+																								<div class="matchCard__body-main-textInfo-value text--ellipsis color-primary">
+																										48%
+																								</div>
+																						</div>
+
+																						<div class="matchCard__body-main-centerBlock">
+																								<!-- First Team -->
+																								<img alt="1nf"
+																										 loading="lazy"
+																										 class="matchCard__body-main-teamImg"
+																										 srcset="assets/images/teams/991/1nf.png 30w,
+																										 assets/images/teams/1nf.png 58w"
+																										 sizes="(max-width: 991px) 30px, 58px">
+
+																								<!-- text -->
+																								<div class="matchCard__body-main-textInfo">
+																										<div class="matchCard__body-main-MatchScore matchCard__body-main-textInfo-key text--ellipsis color-important">
+																												VS
+																										</div>
+																										<div class="matchCard__body-main-textInfo-value text--ellipsis color-primary">
+																												Bo3
+																										</div>
+																								</div>
+
+																								<!-- Second Team -->
+																								<img alt="infinity"
+																										 loading="lazy"
+																										 class="matchCard__body-main-teamImg"
+																										 srcset="assets/images/teams/991/infinity.png 30w,
+																										 assets/images/teams/infinity.png 58w"
+																										 sizes="(max-width: 991px) 30px, 58px">
+																						</div>
+
+																						<!-- text -->
+																						<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--SecondTeam">
+																								<abbr class="matchCard__body-main-textInfo-key color-important text--ellipsis">
+																										Team Singularity
+																								</abbr>
+																								<div class="matchCard__body-main-textInfo-value text--ellipsis color-primary">
+																										52%
+																								</div>
+																						</div>
+
+																						<!-- League -->
+																						<img src="assets/images/leagues/european.png"
+																								 alt="european"
+																								 loading="lazy"
+																								 class="matchCard__body-main-LeagueImg"
+																								 srcset="assets/images/leagues/european.png 30w,
+																										 assets/images/leagues/european.png 58w"
+																								 sizes="(max-width: 991px) 30px, 58px">
+
+																				</div>
+																		</a>
+																</div>
+
+														</div>
+
+												</section>
+										</div>
+
+								</div>
+						</main>
+
+						<aside class="rootContent__aside card">
+
+								<!-- ENDED -->
+								<section class="card paddingCard bg-primary"
+												 data-section-content="Ended">
+										<!-- ui/card -->
+										<div class="card__header">
+												<h2 class="color-important card__header-title"
+														data-mobile-hide="true"
+														data-mobile-hide-type="soft">
+														<!-- ui/threeDots -->
+														<span class="threeDots threeDots--Vertical">
+														<span class="threeDots__dot bg-important-text"></span>
+														<span class="threeDots__dot bg-important-text"></span>
+														<span class="threeDots__dot bg-important-text"></span>
+												</span>
+														Ended
+												</h2>
+
+												<!-- ui/textlink -->
+												<a href="#"
+													 class="textlink color-primary card__header-link"
+													 data-link-custom-icon="false"
+													 data-link-default-icon="primary">
+														All ended matches
+												</a>
+										</div>
+
+										<div class="matchesList matchesList--Short">
+												<!-- ui/matchCard -->
+												<div class="matchCard matchCard--IconRight matchCard--Short">
+
+														<!-- head text -->
+														<div class="matchCard__headText">
+
+																<!-- time -->
+																<div class="matchCard__headText-timeAgo color-primary">
+																		2016.07.03 06:21
+																</div>
+
+																<!-- title -->
+																<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
+																		<abbr>
+																				ProDota Cup #8 NA (very long league name)
+																		</abbr>
+																</a>
+														</div>
+
+														<!-- body -->
+														<a href="#" class="matchCard__body bg-accent-primary card"
+															 data-icon-side="true">
+
+																<!-- Side Absolute Icon -->
+																<img src="ui/matchCard/img/coins.svg"
+																		 alt="coins"
+																		 class="matchCard__body-SideIcon"
+																		 loading="lazy">
+
+																<!-- colored match type box -->
+																<div class="matchCard__body-matchTypeBox"
+																		 data-match-discpiline="dota2">
+																		<img src="components/disciplines/img/games/dota2.svg"
+																				 alt="dota2"
+																				 class="matchCard__body-matchTypeBox-icon">
+																</div>
+
+																<div class="matchCard__body-main">
+
+																		<!-- text -->
+																		<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--FirstTeam">
+																				<div class="matchCard__body-main-textInfo-key text--ellipsis"
+																						 data-winner-icon="true">
+																						<abbr>
+																								Infamous
+																						</abbr>
+																				</div>
+																		</div>
+
+																		<div class="matchCard__body-main-centerBlock">
+																				<!-- First Team -->
+																				<img src="assets/images/teams/short/1nf.png"
+																						 alt="1nf"
+																						 loading="lazy"
+																						 class="matchCard__body-main-teamImg">
+
+																				<!-- text -->
+																				<div class="matchCard__body-main-textInfo">
+																						<div class="matchCard__body-main-textInfo-key text--ellipsis color-important">
+																								2:0
+																						</div>
+																				</div>
+
+																				<!-- Second Team -->
+																				<img src="assets/images/teams/short/infinity.png"
+																						 alt="infinity"
+																						 loading="lazy"
+																						 class="matchCard__body-main-teamImg">
+																		</div>
+
+																		<!-- text -->
+																		<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--SecondTeam">
+																				<div class="matchCard__body-main-textInfo-key text--ellipsis"
+																						 data-winner-icon="true">
+																						<abbr>
+																								Team Luccini
+																						</abbr>
+																				</div>
+																		</div>
+
+																</div>
+														</a>
+												</div>
+
+												<!-- ui/matchCard -->
+												<div class="matchCard matchCard--IconRight matchCard--Short">
+
+														<!-- head text -->
+														<div class="matchCard__headText">
+
+																<!-- time -->
+																<div class="matchCard__headText-timeAgo color-primary">
+																		2016.07.03 06:21
+																</div>
+
+																<!-- title -->
+																<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
+																		<abbr>
+																				ProDota Cup #8 NA (very long league name)
+																		</abbr>
+																</a>
+														</div>
+
+														<!-- body -->
+														<a href="#" class="matchCard__body bg-accent-primary card"
+															 data-icon-side="true">
+
+																<!-- Side Absolute Icon -->
+																<img src="ui/matchCard/img/coins.svg"
+																		 alt="coins"
+																		 class="matchCard__body-SideIcon"
+																		 loading="lazy">
+
+																<!-- colored match type box -->
+																<div class="matchCard__body-matchTypeBox"
+																		 data-match-discpiline="cs_go">
+																		<img src="components/disciplines/img/games/cs_go.svg"
+																				 alt="cs_go"
+																				 class="matchCard__body-matchTypeBox-icon">
+																</div>
+
+																<div class="matchCard__body-main">
+
+																		<!-- text -->
+																		<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--FirstTeam">
+																				<div class="matchCard__body-main-textInfo-key text--ellipsis"
+																						 data-winner-icon="true">
+																						<abbr>
+																								Infamous
+																						</abbr>
+																				</div>
+																		</div>
+
+																		<div class="matchCard__body-main-centerBlock">
+																				<!-- First Team -->
+																				<img src="assets/images/teams/short/1nf.png"
+																						 alt="1nf"
+																						 loading="lazy"
+																						 class="matchCard__body-main-teamImg">
+
+																				<!-- text -->
+																				<div class="matchCard__body-main-textInfo">
+																						<div class="matchCard__body-main-textInfo-key text--ellipsis color-important">
+																								2:0
+																						</div>
+																				</div>
+
+																				<!-- Second Team -->
+																				<img src="assets/images/teams/short/infinity.png"
+																						 alt="infinity"
+																						 loading="lazy"
+																						 class="matchCard__body-main-teamImg">
+																		</div>
+
+																		<!-- text -->
+																		<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--SecondTeam">
+																				<div class="matchCard__body-main-textInfo-key text--ellipsis">
+																						<abbr>
+																								Team Luccini
+																						</abbr>
+																				</div>
+																		</div>
+
+																</div>
+														</a>
+												</div>
+
+												<!-- ui/matchCard -->
+												<div class="matchCard matchCard--IconRight matchCard--Short">
+
+														<!-- head text -->
+														<div class="matchCard__headText">
+
+																<!-- time -->
+																<div class="matchCard__headText-timeAgo color-primary">
+																		2016.07.03 06:21
+																</div>
+
+																<!-- title -->
+																<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
+																		<abbr>
+																				ProDota Cup #8 NA (very long league name)
+																		</abbr>
+																</a>
+														</div>
+
+														<!-- body -->
+														<a href="#" class="matchCard__body bg-accent-primary card">
+
+																<!-- Side Absolute Icon -->
+																<img src="ui/matchCard/img/coins.svg"
+																		 alt="coins"
+																		 class="matchCard__body-SideIcon"
+																		 loading="lazy">
+
+																<!-- colored match type box -->
+																<div class="matchCard__body-matchTypeBox"
+																		 data-match-discpiline="dota2">
+																		<img src="components/disciplines/img/games/dota2.svg"
+																				 alt="dota2"
+																				 class="matchCard__body-matchTypeBox-icon">
+																</div>
+
+																<div class="matchCard__body-main">
+
+																		<!-- text -->
+																		<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--FirstTeam">
+																				<div class="matchCard__body-main-textInfo-key text--ellipsis"
+																						 data-winner-icon="true">
+																						<abbr>
+																								Infamous
+																						</abbr>
+																				</div>
+																		</div>
+
+																		<div class="matchCard__body-main-centerBlock">
+																				<!-- First Team -->
+																				<img src="assets/images/teams/short/1nf.png"
+																						 alt="1nf"
+																						 loading="lazy"
+																						 class="matchCard__body-main-teamImg">
+
+																				<!-- text -->
+																				<div class="matchCard__body-main-textInfo">
+																						<div class="matchCard__body-main-textInfo-key text--ellipsis color-important">
+																								2:0
+																						</div>
+																				</div>
+
+																				<!-- Second Team -->
+																				<img src="assets/images/teams/short/infinity.png"
+																						 alt="infinity"
+																						 loading="lazy"
+																						 class="matchCard__body-main-teamImg">
+																		</div>
+
+																		<!-- text -->
+																		<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--SecondTeam">
+																				<div class="matchCard__body-main-textInfo-key text--ellipsis">
+																						<abbr>
+																								Team Luccini
+																						</abbr>
+																				</div>
+																		</div>
+
+																</div>
+														</a>
+												</div>
+
+												<!-- ui/matchCard -->
+												<div class="matchCard matchCard--IconRight matchCard--Short">
+
+														<!-- head text -->
+														<div class="matchCard__headText">
+
+																<!-- time -->
+																<div class="matchCard__headText-timeAgo color-primary">
+																		2016.07.03 06:21
+																</div>
+
+																<!-- title -->
+																<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
+																		<abbr>
+																				ProDota Cup #8 NA (very long league name)
+																		</abbr>
+																</a>
+														</div>
+
+														<!-- body -->
+														<a href="#" class="matchCard__body bg-accent-primary card">
+
+																<!-- Side Absolute Icon -->
+																<img src="ui/matchCard/img/coins.svg"
+																		 alt="coins"
+																		 class="matchCard__body-SideIcon"
+																		 loading="lazy">
+
+																<!-- colored match type box -->
+																<div class="matchCard__body-matchTypeBox"
+																		 data-match-discpiline="soccer">
+																		<img src="components/disciplines/img/games/soccer.svg"
+																				 alt="soccer"
+																				 class="matchCard__body-matchTypeBox-icon">
+																</div>
+
+																<div class="matchCard__body-main">
+
+																		<!-- text -->
+																		<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--FirstTeam">
+																				<div class="matchCard__body-main-textInfo-key text--ellipsis"
+																						 data-winner-icon="true">
+																						<abbr>
+																								Infamous
+																						</abbr>
+																				</div>
+																		</div>
+
+																		<div class="matchCard__body-main-centerBlock">
+																				<!-- First Team -->
+																				<img src="assets/images/teams/short/1nf.png"
+																						 alt="1nf"
+																						 loading="lazy"
+																						 class="matchCard__body-main-teamImg">
+
+																				<!-- text -->
+																				<div class="matchCard__body-main-textInfo">
+																						<div class="matchCard__body-main-textInfo-key text--ellipsis color-important">
+																								2:0
+																						</div>
+																				</div>
+
+																				<!-- Second Team -->
+																				<img src="assets/images/teams/short/infinity.png"
+																						 alt="infinity"
+																						 loading="lazy"
+																						 class="matchCard__body-main-teamImg">
+																		</div>
+
+																		<!-- text -->
+																		<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--SecondTeam">
+																				<div class="matchCard__body-main-textInfo-key text--ellipsis">
+																						<abbr>
+																								Team Luccini
+																						</abbr>
+																				</div>
+																		</div>
+
+																</div>
+														</a>
+												</div>
+
+												<!-- ui/matchCard -->
+												<div class="matchCard matchCard--IconRight matchCard--Short">
+
+														<!-- head text -->
+														<div class="matchCard__headText">
+
+																<!-- time -->
+																<div class="matchCard__headText-timeAgo color-primary">
+																		2016.07.03 06:21
+																</div>
+
+																<!-- title -->
+																<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
+																		<abbr>
+																				ProDota Cup #8 NA (very long league name)
+																		</abbr>
+																</a>
+														</div>
+
+														<!-- body -->
+														<a href="#" class="matchCard__body bg-accent-primary card"
+															 data-icon-side="true">
+
+																<!-- Side Absolute Icon -->
+																<img src="ui/matchCard/img/coins.svg"
+																		 alt="coins"
+																		 class="matchCard__body-SideIcon"
+																		 loading="lazy">
+
+																<!-- colored match type box -->
+																<div class="matchCard__body-matchTypeBox"
+																		 data-match-discpiline="dota2">
+																		<img src="components/disciplines/img/games/dota2.svg"
+																				 alt="dota2"
+																				 class="matchCard__body-matchTypeBox-icon">
+																</div>
+
+																<div class="matchCard__body-main">
+
+																		<!-- text -->
+																		<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--FirstTeam">
+																				<div class="matchCard__body-main-textInfo-key text--ellipsis"
+																						 data-winner-icon="true">
+																						<abbr>
+																								Infamous
+																						</abbr>
+																				</div>
+																		</div>
+
+																		<div class="matchCard__body-main-centerBlock">
+																				<!-- First Team -->
+																				<img src="assets/images/teams/short/1nf.png"
+																						 alt="1nf"
+																						 loading="lazy"
+																						 class="matchCard__body-main-teamImg">
+
+																				<!-- text -->
+																				<div class="matchCard__body-main-textInfo">
+																						<div class="matchCard__body-main-textInfo-key text--ellipsis color-important">
+																								2:0
+																						</div>
+																				</div>
+
+																				<!-- Second Team -->
+																				<img src="assets/images/teams/short/infinity.png"
+																						 alt="infinity"
+																						 loading="lazy"
+																						 class="matchCard__body-main-teamImg">
+																		</div>
+
+																		<!-- text -->
+																		<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--SecondTeam">
+																				<div class="matchCard__body-main-textInfo-key text--ellipsis">
+																						<abbr>
+																								Team Luccini
+																						</abbr>
+																				</div>
+																		</div>
+
+																</div>
+														</a>
+												</div>
+
+												<!-- ui/matchCard -->
+												<div class="matchCard matchCard--IconRight matchCard--Short">
+
+														<!-- head text -->
+														<div class="matchCard__headText">
+
+																<!-- time -->
+																<div class="matchCard__headText-timeAgo color-primary">
+																		2016.07.03 06:21
+																</div>
+
+																<!-- title -->
+																<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
+																		<abbr>
+																				ProDota Cup #8 NA (very long league name)
+																		</abbr>
+																</a>
+														</div>
+
+														<!-- body -->
+														<a href="#" class="matchCard__body bg-accent-primary card"
+															 data-icon-side="true">
+
+																<!-- Side Absolute Icon -->
+																<img src="ui/matchCard/img/coins.svg"
+																		 alt="coins"
+																		 class="matchCard__body-SideIcon"
+																		 loading="lazy">
+
+																<!-- colored match type box -->
+																<div class="matchCard__body-matchTypeBox"
+																		 data-match-discpiline="cs_go">
+																		<img src="components/disciplines/img/games/cs_go.svg"
+																				 alt="cs_go"
+																				 class="matchCard__body-matchTypeBox-icon">
+																</div>
+
+																<div class="matchCard__body-main">
+
+																		<!-- text -->
+																		<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--FirstTeam">
+																				<div class="matchCard__body-main-textInfo-key text--ellipsis"
+																						 data-winner-icon="true">
+																						<abbr>
+																								Infamous
+																						</abbr>
+																				</div>
+																		</div>
+
+																		<div class="matchCard__body-main-centerBlock">
+																				<!-- First Team -->
+																				<img src="assets/images/teams/short/1nf.png"
+																						 alt="1nf"
+																						 loading="lazy"
+																						 class="matchCard__body-main-teamImg">
+
+																				<!-- text -->
+																				<div class="matchCard__body-main-textInfo">
+																						<div class="matchCard__body-main-textInfo-key text--ellipsis color-important">
+																								2:0
+																						</div>
+																				</div>
+
+																				<!-- Second Team -->
+																				<img src="assets/images/teams/short/infinity.png"
+																						 alt="infinity"
+																						 loading="lazy"
+																						 class="matchCard__body-main-teamImg">
+																		</div>
+
+																		<!-- text -->
+																		<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--SecondTeam">
+																				<div class="matchCard__body-main-textInfo-key text--ellipsis">
+																						<abbr>
+																								Team Luccini
+																						</abbr>
+																				</div>
+																		</div>
+
+																</div>
+														</a>
+												</div>
+
+												<!-- ui/matchCard -->
+												<div class="matchCard matchCard--IconRight matchCard--Short">
+
+														<!-- head text -->
+														<div class="matchCard__headText">
+
+																<!-- time -->
+																<div class="matchCard__headText-timeAgo color-primary">
+																		2016.07.03 06:21
+																</div>
+
+																<!-- title -->
+																<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
+																		<abbr>
+																				ProDota Cup #8 NA (very long league name)
+																		</abbr>
+																</a>
+														</div>
+
+														<!-- body -->
+														<a href="#" class="matchCard__body bg-accent-primary card">
+
+																<!-- Side Absolute Icon -->
+																<img src="ui/matchCard/img/coins.svg"
+																		 alt="coins"
+																		 class="matchCard__body-SideIcon"
+																		 loading="lazy">
+
+																<!-- colored match type box -->
+																<div class="matchCard__body-matchTypeBox"
+																		 data-match-discpiline="dota2">
+																		<img src="components/disciplines/img/games/dota2.svg"
+																				 alt="dota2"
+																				 class="matchCard__body-matchTypeBox-icon">
+																</div>
+
+																<div class="matchCard__body-main">
+
+																		<!-- text -->
+																		<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--FirstTeam">
+																				<div class="matchCard__body-main-textInfo-key text--ellipsis"
+																						 data-winner-icon="true">
+																						<abbr>
+																								Infamous
+																						</abbr>
+																				</div>
+																		</div>
+
+																		<div class="matchCard__body-main-centerBlock">
+																				<!-- First Team -->
+																				<img src="assets/images/teams/short/1nf.png"
+																						 alt="1nf"
+																						 loading="lazy"
+																						 class="matchCard__body-main-teamImg">
+
+																				<!-- text -->
+																				<div class="matchCard__body-main-textInfo">
+																						<div class="matchCard__body-main-textInfo-key text--ellipsis color-important">
+																								2:0
+																						</div>
+																				</div>
+
+																				<!-- Second Team -->
+																				<img src="assets/images/teams/short/infinity.png"
+																						 alt="infinity"
+																						 loading="lazy"
+																						 class="matchCard__body-main-teamImg">
+																		</div>
+
+																		<!-- text -->
+																		<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--SecondTeam">
+																				<div class="matchCard__body-main-textInfo-key text--ellipsis">
+																						<abbr>
+																								Team Luccini
+																						</abbr>
+																				</div>
+																		</div>
+
+																</div>
+														</a>
+												</div>
+
+												<!-- ui/matchCard -->
+												<div class="matchCard matchCard--IconRight matchCard--Short">
+
+														<!-- head text -->
+														<div class="matchCard__headText">
+
+																<!-- time -->
+																<div class="matchCard__headText-timeAgo color-primary">
+																		2016.07.03 06:21
+																</div>
+
+																<!-- title -->
+																<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
+																		<abbr>
+																				ProDota Cup #8 NA (very long league name)
+																		</abbr>
+																</a>
+														</div>
+
+														<!-- body -->
+														<a href="#" class="matchCard__body bg-accent-primary card">
+
+																<!-- Side Absolute Icon -->
+																<img src="ui/matchCard/img/coins.svg"
+																		 alt="coins"
+																		 class="matchCard__body-SideIcon"
+																		 loading="lazy">
+
+																<!-- colored match type box -->
+																<div class="matchCard__body-matchTypeBox"
+																		 data-match-discpiline="soccer">
+																		<img src="components/disciplines/img/games/soccer.svg"
+																				 alt="dota2"
+																				 class="matchCard__body-matchTypeBox-icon">
+																</div>
+
+																<div class="matchCard__body-main">
+
+																		<!-- text -->
+																		<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--FirstTeam">
+																				<div class="matchCard__body-main-textInfo-key text--ellipsis"
+																						 data-winner-icon="true">
+																						<abbr>
+																								Infamous
+																						</abbr>
+																				</div>
+																		</div>
+
+																		<div class="matchCard__body-main-centerBlock">
+																				<!-- First Team -->
+																				<img src="assets/images/teams/short/1nf.png"
+																						 alt="1nf"
+																						 loading="lazy"
+																						 class="matchCard__body-main-teamImg">
+
+																				<!-- text -->
+																				<div class="matchCard__body-main-textInfo">
+																						<div class="matchCard__body-main-textInfo-key text--ellipsis color-important">
+																								2:0
+																						</div>
+																				</div>
+
+																				<!-- Second Team -->
+																				<img src="assets/images/teams/short/infinity.png"
+																						 alt="infinity"
+																						 loading="lazy"
+																						 class="matchCard__body-main-teamImg">
+																		</div>
+
+																		<!-- text -->
+																		<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--SecondTeam">
+																				<div class="matchCard__body-main-textInfo-key text--ellipsis">
+																						<abbr>
+																								Team Luccini
+																						</abbr>
+																				</div>
+																		</div>
+
+																</div>
+														</a>
+												</div>
+
+												<!-- ui/matchCard -->
+												<div class="matchCard matchCard--IconRight matchCard--Short">
+
+														<!-- head text -->
+														<div class="matchCard__headText">
+
+																<!-- time -->
+																<div class="matchCard__headText-timeAgo color-primary">
+																		2016.07.03 06:21
+																</div>
+
+																<!-- title -->
+																<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
+																		<abbr>
+																				ProDota Cup #8 NA (very long league name)
+																		</abbr>
+																</a>
+														</div>
+
+														<!-- body -->
+														<a href="#" class="matchCard__body bg-accent-primary card">
+
+																<!-- Side Absolute Icon -->
+																<img src="ui/matchCard/img/coins.svg"
+																		 alt="coins"
+																		 class="matchCard__body-SideIcon"
+																		 loading="lazy">
+
+																<!-- colored match type box -->
+																<div class="matchCard__body-matchTypeBox"
+																		 data-match-discpiline="dota2">
+																		<img src="components/disciplines/img/games/dota2.svg"
+																				 alt="dota2"
+																				 class="matchCard__body-matchTypeBox-icon">
+																</div>
+
+																<div class="matchCard__body-main">
+
+																		<!-- text -->
+																		<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--FirstTeam">
+																				<div class="matchCard__body-main-textInfo-key text--ellipsis"
+																						 data-winner-icon="true">
+																						<abbr>
+																								Infamous
+																						</abbr>
+																				</div>
+																		</div>
+
+																		<div class="matchCard__body-main-centerBlock">
+																				<!-- First Team -->
+																				<img src="assets/images/teams/short/1nf.png"
+																						 alt="1nf"
+																						 loading="lazy"
+																						 class="matchCard__body-main-teamImg">
+
+																				<!-- text -->
+																				<div class="matchCard__body-main-textInfo">
+																						<div class="matchCard__body-main-textInfo-key text--ellipsis color-important">
+																								2:0
+																						</div>
+																				</div>
+
+																				<!-- Second Team -->
+																				<img src="assets/images/teams/short/infinity.png"
+																						 alt="infinity"
+																						 loading="lazy"
+																						 class="matchCard__body-main-teamImg">
+																		</div>
+
+																		<!-- text -->
+																		<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--SecondTeam">
+																				<div class="matchCard__body-main-textInfo-key text--ellipsis">
+																						<abbr>
+																								Team Luccini
+																						</abbr>
+																				</div>
+																		</div>
+
+																</div>
+														</a>
+												</div>
+
+												<!-- ui/matchCard -->
+												<div class="matchCard matchCard--IconRight matchCard--Short">
+
+														<!-- head text -->
+														<div class="matchCard__headText">
+
+																<!-- time -->
+																<div class="matchCard__headText-timeAgo color-primary">
+																		2016.07.03 06:21
+																</div>
+
+																<!-- title -->
+																<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
+																		<abbr>
+																				ProDota Cup #8 NA (very long league name)
+																		</abbr>
+																</a>
+														</div>
+
+														<!-- body -->
+														<a href="#" class="matchCard__body bg-accent-primary card">
+
+																<!-- Side Absolute Icon -->
+																<img src="ui/matchCard/img/coins.svg"
+																		 alt="coins"
+																		 class="matchCard__body-SideIcon"
+																		 loading="lazy">
+
+																<!-- colored match type box -->
+																<div class="matchCard__body-matchTypeBox"
+																		 data-match-discpiline="dota2">
+																		<img src="components/disciplines/img/games/dota2.svg"
+																				 alt="dota2"
+																				 class="matchCard__body-matchTypeBox-icon">
+																</div>
+
+																<div class="matchCard__body-main">
+
+																		<!-- text -->
+																		<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--FirstTeam">
+																				<div class="matchCard__body-main-textInfo-key text--ellipsis"
+																						 data-winner-icon="true">
+																						<abbr>
+																								Infamous
+																						</abbr>
+																				</div>
+																		</div>
+
+																		<div class="matchCard__body-main-centerBlock">
+																				<!-- First Team -->
+																				<img src="assets/images/teams/short/1nf.png"
+																						 alt="1nf"
+																						 loading="lazy"
+																						 class="matchCard__body-main-teamImg">
+
+																				<!-- text -->
+																				<div class="matchCard__body-main-textInfo">
+																						<div class="matchCard__body-main-textInfo-key text--ellipsis color-important">
+																								2:0
+																						</div>
+																				</div>
+
+																				<!-- Second Team -->
+																				<img src="assets/images/teams/short/infinity.png"
+																						 alt="infinity"
+																						 loading="lazy"
+																						 class="matchCard__body-main-teamImg">
+																		</div>
+
+																		<!-- text -->
+																		<div class="matchCard__body-main-textInfo matchCard__body-main-textInfo--SecondTeam">
+																				<div class="matchCard__body-main-textInfo-key text--ellipsis">
+																						<abbr>
+																								Team Luccini
+																						</abbr>
+																				</div>
+																		</div>
+
+																</div>
+														</a>
+												</div>
+										</div>
+								</section>
+
+								<!-- TOP 10 USERS -->
+								<section class="card paddingCard bg-primary"
+												 data-section-content="Top10Users">
+										<!-- ui/card -->
+										<div class="card__header">
+												<h2 class="color-important card__header-title"
+														data-mobile-hide="true"
+														data-mobile-hide-type="hard">
+														<img src="assets/icons/star.svg"
+																 alt="star"
+																 class="card__header-title-icon">
+														TOP 10 users daily
+												</h2>
+										</div>
+
+										<!-- components/userList -->
+										<ol class="userList">
+
+												<!-- ui/userCard -->
+												<li class="userCard userCard--WithButton card bg-accent-primary">
+														<div class="userCard__imgWrapper">
+																<img src="ui/userCard/img/1.png"
+																		 alt="avatar"
+																		 class="userCard__img">
+														</div>
+
+														<div class="userCard__userInfo color-important">
+																<div class="userCard__userInfo-position">
+																		1.
+																</div>
+																<abbr class="userCard__userInfo-name text--ellipsis">
+																		doc
+																</abbr>
+														</div>
+
+														<!-- Invest button -->
+														<button class="userCard__investBtn bg-important-text">
+																<img src="ui/userCard/img/investments.svg"
+																		 alt="investments" class="userCard__investBtn-icon">
+
+																<span class="userCard__investBtn-text color-contrast">
+																Invest
+														</span>
+														</button>
+
+														<div class="userCard__amount">
+																542.32$
+														</div>
+												</li>
+
+												<!-- ui/userCard -->
+												<li class="userCard userCard--WithButton card bg-accent-primary">
+														<div class="userCard__imgWrapper">
+																<img src="ui/userCard/img/1.png"
+																		 alt="avatar"
+																		 class="userCard__img">
+														</div>
+
+														<div class="userCard__userInfo color-important">
+																<div class="userCard__userInfo-position">
+																		2.
+																</div>
+																<abbr class="userCard__userInfo-name text--ellipsis">
+																		M.Ø.S csgoatse.cs.m lorem ipsum
+																</abbr>
+														</div>
+
+														<!-- Invest button -->
+														<button class="userCard__investBtn bg-important-text">
+																<img src="ui/userCard/img/investments.svg"
+																		 alt="investments" class="userCard__investBtn-icon">
+
+																<span class="userCard__investBtn-text color-contrast">
+																Invest
+														</span>
+														</button>
+
+														<div class="userCard__amount">
+																42.32$
+														</div>
+												</li>
+
+												<!-- ui/userCard -->
+												<li class="userCard userCard--WithButton card bg-accent-primary">
+														<div class="userCard__imgWrapper">
+																<img src="ui/userCard/img/1.png"
+																		 alt="avatar"
+																		 class="userCard__img">
+														</div>
+
+														<div class="userCard__userInfo color-important">
+																<div class="userCard__userInfo-position">
+																		3.
+																</div>
+																<abbr class="userCard__userInfo-name text--ellipsis">
+																		.Sunrise
+																</abbr>
+														</div>
+
+														<!-- Invest button -->
+														<button class="userCard__investBtn bg-important-text">
+																<img src="ui/userCard/img/investments.svg"
+																		 alt="investments" class="userCard__investBtn-icon">
+
+																<span class="userCard__investBtn-text color-contrast">
+																Invest
+														</span>
+														</button>
+
+														<div class="userCard__amount">
+																2.32$
+														</div>
+												</li>
+
+												<!-- ui/userCard -->
+												<li class="userCard userCard--WithButton card bg-accent-primary">
+														<div class="userCard__imgWrapper">
+																<img src="ui/userCard/img/1.png"
+																		 alt="avatar"
+																		 class="userCard__img">
+														</div>
+
+														<div class="userCard__userInfo color-important">
+																<div class="userCard__userInfo-position">
+																		4.
+																</div>
+																<abbr class="userCard__userInfo-name text--ellipsis">
+																		HADEKORIS
+																</abbr>
+														</div>
+
+														<div class="userCard__amount">
+																542.32$
+														</div>
+												</li>
+
+												<!-- ui/userCard -->
+												<li class="userCard userCard--WithButton card bg-accent-primary">
+														<div class="userCard__imgWrapper">
+																<img src="ui/userCard/img/1.png"
+																		 alt="avatar"
+																		 class="userCard__img">
+														</div>
+
+														<div class="userCard__userInfo color-important">
+																<div class="userCard__userInfo-position">
+																		5.
+																</div>
+																<abbr class="userCard__userInfo-name text--ellipsis">
+																		vk.com/hot_game_info
+																</abbr>
+														</div>
+
+														<div class="userCard__amount">
+																542.32$
+														</div>
+												</li>
+
+												<!-- ui/userCard -->
+												<li class="userCard userCard--WithButton card bg-accent-primary">
+														<div class="userCard__imgWrapper">
+																<img src="ui/userCard/img/1.png"
+																		 alt="avatar"
+																		 class="userCard__img">
+														</div>
+
+														<div class="userCard__userInfo color-important">
+																<div class="userCard__userInfo-position">
+																		6.
+																</div>
+																<abbr class="userCard__userInfo-name text--ellipsis">
+																		M.Ø.S csgoatse.cs.m lorem ipsum
+																</abbr>
+														</div>
+
+														<div class="userCard__amount">
+																542.32$
+														</div>
+												</li>
+
+												<!-- ui/userCard -->
+												<li class="userCard userCard--WithButton card bg-accent-primary">
+														<div class="userCard__imgWrapper">
+																<img src="ui/userCard/img/1.png"
+																		 alt="avatar"
+																		 class="userCard__img">
+														</div>
+
+														<div class="userCard__userInfo color-important">
+																<div class="userCard__userInfo-position">
+																		7.
+																</div>
+																<abbr class="userCard__userInfo-name text--ellipsis">
+																		M.Ø.S csgoatse.cs.m lorem ipsum
+																</abbr>
+														</div>
+
+														<div class="userCard__amount">
+																542.32$
+														</div>
+												</li>
+
+												<!-- ui/userCard -->
+												<li class="userCard userCard--WithButton card bg-accent-primary">
+														<div class="userCard__imgWrapper">
+																<img src="ui/userCard/img/1.png"
+																		 alt="avatar"
+																		 class="userCard__img">
+														</div>
+
+														<div class="userCard__userInfo color-important">
+																<div class="userCard__userInfo-position">
+																		8.
+																</div>
+																<abbr class="userCard__userInfo-name text--ellipsis">
+																		M.Ø.S csgoatse.cs.m lorem ipsum
+																</abbr>
+														</div>
+
+														<div class="userCard__amount">
+																542.32$
+														</div>
+												</li>
+
+												<!-- ui/userCard -->
+												<li class="userCard userCard--WithButton card bg-accent-primary">
+														<div class="userCard__imgWrapper">
+																<img src="ui/userCard/img/1.png"
+																		 alt="avatar"
+																		 class="userCard__img">
+														</div>
+
+														<div class="userCard__userInfo color-important">
+																<div class="userCard__userInfo-position">
+																		9.
+																</div>
+																<abbr class="userCard__userInfo-name text--ellipsis">
+																		M.Ø.S csgoatse.cs.m lorem ipsum
+																</abbr>
+														</div>
+
+														<div class="userCard__amount">
+																542.32$
+														</div>
+												</li>
+
+												<!-- ui/userCard -->
+												<li class="userCard userCard--WithButton card bg-accent-primary">
+														<div class="userCard__imgWrapper">
+																<img src="ui/userCard/img/1.png"
+																		 alt="avatar"
+																		 class="userCard__img">
+														</div>
+
+														<div class="userCard__userInfo color-important">
+																<div class="userCard__userInfo-position">
+																		10.
+																</div>
+																<abbr class="userCard__userInfo-name text--ellipsis">
+																		M.Ø.S csgoatse.cs.m lorem ipsum
+																</abbr>
+														</div>
+
+														<div class="userCard__amount">
+																542.32$
+														</div>
+												</li>
+										</ol>
+								</section>
+						</aside>
+				</div>
+		</div>
+
+		<footer>
+				<div class="container">
+						<div class="card marginCard bg-primary footer">
+
+								<!-- LOGO SECTION -->
+								<div class="footer__logoSection">
+
+										<!-- logo -->
+										<img src="assets/images/logo.svg"
+												 alt="logo"
+												 loading="lazy"
+												 class="footer__logoSection-logo">
+
+										<!-- ui/dropdown -->
+										<div class="dropdown">
+
+												<div class="dropdown__select">
+														<a class="dropdown__select-defaultValue bg-accent-primary"
+															 data-link-custom-icon="english">
+																<abbr>English</abbr>
+														</a>
+
+														<div class="dropdown__select-list bg-accent-primary select-hide">
+
+																<a href="#" class="dropdown__select-list-item"
+																	 data-link-custom-icon="english">
+																		<abbr>English</abbr>
+																</a>
+
+																<a href="#" class="dropdown__select-list-item"
+																	 data-link-custom-icon="russian">
+																		<abbr>Russian</abbr>
+																</a>
+
+																<a href="#" class="dropdown__select-list-item"
+																	 data-link-custom-icon="ukrainian">
+																		<abbr>Ukrainian</abbr>
+																</a>
+
+														</div>
+
+												</div>
+
+										</div>
+
+								</div>
+
+								<!-- CONTENT -->
+								<div class="footer__content-main">
+
+										<div class="footer__content-main-info">
+
+												<!-- item -->
+												<div class="footer__content-main-info-item">
+
+														<div class="footer__content-main-info-item-key color-primary">
+																Support (RU/EN):
+														</div>
+
+														<!-- ui/textlink -->
+														<a href="mailto:support@bets4.pro"
+															 class="footer__content-main-info-item-value textlink color-important"
+															 data-link-custom-icon="mail">
+																<!-- text -->
+																support@bets4.pro
+														</a>
+												</div>
+
+												<!-- item -->
+												<div class="footer__content-main-info-item">
+
+														<div class="footer__content-main-info-item-key color-primary">
+																Our social pages:
+														</div>
+
+														<div class="footer__content-main-info-item-value footer__content-main-info-item-value--Socials">
+
+																<!-- item -->
+																<a href="" class="footer__content-main-info-item-value--Socials-item">
+																		<img src="components/footer/img/facebook.svg"
+																				 alt="facebook"
+																				 loading="lazy"
+																				 class="footer__content-main-info-item-value--Socials-item-img">
+																</a>
+
+																<!-- item -->
+																<a href="" class="footer__content-main-info-item-value--Socials-item">
+																		<img src="components/footer/img/vk.svg"
+																				 alt="vk"
+																				 loading="lazy"
+																				 class="footer__content-main-info-item-value--Socials-item-img">
+																</a>
+														</div>
+
+												</div>
+
+												<!-- item -->
+												<div class="footer__content-main-info-item footer__content-main-info-item--Info">
+
+														<div class="footer__content-main-info-item-key color-primary">
+																<img src="components/footer/img/info.svg"
+																		 alt="info"
+																		 loading="lazy"
+																		 class="footer__content-main-info-item-key-img">
+																Info:
+														</div>
+
+														<!-- ui/textlink -->
+														<a href="#"
+															 class="footer__content-main-info-item-value textlink color-important"
+															 data-link-default-icon="important">
+																Rules
+														</a>
+
+														<!-- ui/textlink -->
+														<a href="#"
+															 class="footer__content-main-info-item-value textlink color-important"
+															 data-link-default-icon="important">
+																News
+														</a>
+
+														<!-- ui/textlink -->
+														<a href="#"
+															 class="footer__content-main-info-item-value textlink color-important"
+															 data-link-default-icon="important">
+																Agreement
+														</a>
+												</div>
+
+										</div>
+
+										<div class="footer__content-main-copyright">
+												<span class="footer__content-main-copyright-sign">©</span>
+												<span>2016-2023</span>
+												<span class="footer__content-main-copyright-sitename">Bets4.pro</span>
+												<span class="color-inactive">beta v.2.0.0</span>
+												<span>| Powered by</span>
+												<!-- ui/textlink -->
+												<a href="#"
+													 class="footer__content-main-copyright-steam textlink color-primary"
+													 data-link-custom-icon="steam">
+														Steam
+												</a>
+												<span>| Managed by</span>
+												<span class="footer__content-main-copyright-llc">MAAK LLC</span>
+										</div>
+								</div>
+						</div>
+				</div>
+		</footer>
+
+		<!-- MODAL WRAPPER -->
+		<div class="modalWrapper modalWrapper--Hidden">
+
+				<!-- 1) LOGIN MODAL -->
+				<div class="modalContent modalLogin bg-primary"
+						 data-modal-content="login">
+
+						<!-- HEADER -->
+						<div class="modalContent__header">
+
+								<div class="modalContent__header-title">
+										<img src="assets/icons/logout.svg"
+												 alt="login"
+												 loading="lazy"
+												 class="modalContent__header-icon">
+
+										<div class="modalContent__header-title-text">
+												Authorization
+										</div>
+								</div>
+
+								<img src="assets/icons/cross.svg"
+										 alt="close"
+										 loading="lazy"
+										 class="modalContent__header-closeIcon">
+
+						</div>
+
+						<!-- SIGN IN SERVICES -->
+						<div class="modalContent__block modalLogin__serviceBtns">
+
+								<div class="modalContent__block-title">
+										Sign in through:
+								</div>
+
+								<div class="modalContent__block-content modalLogin__serviceBtns-wrapper">
+										<!-- ui/button -->
+										<button class="button bg-important-text"
+														data-button-size="small"
+														data-button-icon="steam"
+										>
+												Steam
+										</button>
+
+										<!-- ui/button -->
+										<button class="button bg-important-text"
+														data-button-size="small"
+														data-button-icon="vk">
+												VK
+										</button>
+								</div>
+						</div>
+
+						<!-- LOGIN FORM -->
+						<form name="loginForm"
+									action="#"
+									class="modalContent__block modalLogin__form">
+								<div class="modalContent__block-title">
+										Or use e-mail and password:
+								</div>
+
+								<div class="modalContent__block-content">
+
+										<fieldset>
+												<!-- ui/formInput -->
+												<div class="formInput modalLogin__form-input bg-accent-secondary">
+
+														<label>
+																<img src="ui/formInput/img/mail.svg"
+																		 alt="email"
+																		 class="formInput__icon">
+																<input type="email"
+																			 name="email"
+																			 class="formInput__input"
+																			 placeholder="E-mail">
+														</label>
+												</div>
+
+												<!-- ui/formInput -->
+												<div class="formInput modalLogin__form-input bg-accent-secondary">
+
+														<label>
+																<img src="ui/formInput/img/lock.svg"
+																		 alt="password"
+																		 class="formInput__icon">
+																<input type="password"
+																			 name="password"
+																			 class="formInput__input"
+																			 placeholder="Password">
+														</label>
+												</div>
+										</fieldset>
+
+										<div class="modalLogin__form-captcha">
+												CAPTCHA WILL BE HERE
+										</div>
+
+										<!-- ui/button | submit button-->
+										<button class="button bg-important-text modalLogin__form-submitBtn"
+														data-button-icon="logout"
+														data-button-icon-position="right"
+														type="submit"
+										>
+												Login
+										</button>
+								</div>
+						</form>
+
+						<!-- FOOTER LINKS -->
+						<div class="modalLogin__footerLinks">
+								<!-- ui/textlink -->
+								<a href="#"
+									 class="modalLogin__footerLinks-item textlink color-primary"
+									 data-link-custom-icon="registration">
+										Registration
+								</a>
+
+								<!-- ui/textlink -->
+								<a href="#"
+									 class="modalLogin__footerLinks-item textlink color-primary"
+									 data-link-custom-icon="forgot-password">
+										Forgot your password?
+								</a>
+						</div>
+
+				</div>
+		</div>
+</div>
+
+
+<!-- Global script -->
+<script src="assets/js/index.js"></script>
+
+<!-- Section tabs -->
+<script src="ui/sectionTabs/sectionTabs.js"></script>
+
+<!-- Component scripts -->
+<script src="components/header/header.js"></script>
+<script src="components/footer/footer.js"></script>
+<script src="components/disciplines/disciplines.js"></script>
+
+<!-- UI scripts -->
+<script src="ui/pills/pills.js"></script>
+<script src="ui/tabs/tabs.js"></script>
+<script src="ui/dropdown/dropdown.js"></script>
+
+<!-- Add this JS file if page contains any modal windows -->
+<script src="modals/modalWrapper.js"></script>
+
+</body>
+</html>
