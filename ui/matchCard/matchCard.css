@@ -1,8 +1,15 @@
+@import "matchCard--Expandable.css";
+@import "matchCard--FastBet.css";
+
 [data-section-content='UpcomingMatches'] .matchCard__body {
   min-height: 73px;
 }
 
-/* Head text */
+.matchCard__body {
+  z-index: 1;
+}
+
+  /* Head text */
 .matchCard__headText {
   display: flex;
   align-items: center;
@@ -55,7 +62,7 @@
 .matchCard__body {
   display: flex;
   align-items: stretch;
-  margin-left: 5px;
+  /*margin-left: 5px;*/
   position: relative;
 }
 
@@ -95,7 +102,7 @@
 .matchCard__body-main {
   display: flex;
   align-items: center;
-  gap: var(--indent-card);
+  gap: 5%;
   padding-left: 20px;
   padding-top: 8px;
   padding-bottom: 8px;
@@ -107,6 +114,7 @@
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  text-align: center;
 }
 
 .matchCard__body-main-textInfo--FirstTeam {
@@ -265,8 +273,8 @@
   overflow: hidden;
   text-overflow: ellipsis;
   text-align: center;
-  max-width: 100%;
 }
+
 
 @media screen and (max-width: 1200px) {
   .matchCard--Short .matchCard__body-main {
@@ -274,9 +282,18 @@
     padding-right: 5px;
     gap: 12px;
   }
+
+  .matchCard__body-main-LeagueImg {
+    max-width: 90px;
+  }
 }
 
 @media screen and (max-width: 991px) {
+  .matchCard__body-main-textInfo--FirstTeam,
+  .matchCard__body-main-textInfo--SecondTeam {
+    max-width: 100%;
+  }
+
   .matchCard__body-SideIcon {
     top: -11px;
     left: 8px;

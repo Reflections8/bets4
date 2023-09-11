@@ -1,0 +1,144 @@
+/* ----- EXPANDABLE ----- */
+.matchCard--Expandable .matchCard__body {
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+.matchCard--Expandable .matchCard__body:hover {
+  box-shadow: 0 0 5px 2px rgba(255, 255, 255, .1);
+}
+
+.matchCard--Expandable .matchCard__body .matchCard__body-main-textInfo-arrow {
+  filter: url(#filter-color-primary);
+  transition: all .2s ease-in-out;
+  transform: rotate(180deg);
+}
+
+.matchCard--Expandable .matchCard__body .matchCard__body-main-textInfo-arrow--Rotated {
+  transform: rotate(0deg);
+}
+
+.matchCard--Expandable__accordion {
+  border-radius: var(--border-radius-card);
+  padding: calc(10px + 22px) 25px 10px 50px;
+  border: 1px solid var(--bg-accent-primary);
+  position: relative;
+  z-index: 0;
+  top: -22px;
+  margin-bottom: -22px;
+}
+
+.matchCard--Expandable__accordion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  transition: all .2s ease-in-out;
+  max-height: 300px; /* to make transition works */
+}
+
+.matchCard--Expandable__accordion--Hidden {
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 0;
+}
+
+.matchCard--Expandable__accordion--Hidden .matchCard--Expandable__accordion-row {
+  padding-top: 0;
+  padding-bottom: 0;
+  max-height: 0;
+  opacity: 0;
+}
+
+.matchCard--Expandable__accordion-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  padding-left: 26px;
+  max-height: 30px;
+  transition: all .2s ease-in-out;
+}
+
+.matchCard--Expandable__accordion-row-btn:nth-child(1) {
+  margin-right: 60px;
+}
+
+.matchCard--Expandable__accordion-row-rowTitle {
+  max-width: 145px;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  filter: url(#filter-color-primary);
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  gap: 4px;
+  justify-content: center;
+}
+
+.matchCard--Expandable__accordion-row-rowTitle abbr {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* BUTTONS */
+.betButton {
+  max-width: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.betButton[data-match-card-button="disabled"] {
+  border: 1px solid var(--bg-accent-primary);
+  background-color: var(--bg-important-secondary);
+  color: var(--color-inactive);
+  cursor: not-allowed;
+}
+
+.betButton span {
+  display: flex;
+  align-items: center;
+  max-width: 100px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.betButton:not([data-match-card-button="disabled"]) span:nth-child(2):before {
+  content: "|";
+}
+
+.betButton[data-match-card-button="disabled"] span:nth-child(2):before {
+  content: "";
+  display: inline-block;
+  background-image: url("img/sandclock.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  min-width: 8px;
+  min-height: 20px;
+}
+
+.betButton[data-match-card-button="not-checked"] {
+  border: 1px solid var(--bg-accent-primary);
+  background-color: var(--bg-important-secondary);
+  color: var(--color-primary);
+}
+
+.betButton[data-match-card-button="not-checked"]:hover {
+  background-color: var(--bg-important-primary);
+}
+
+.betButton[data-match-card-button="checked"] {
+  border: 1px solid var(--color-money);
+  background-color: var(--color-money);
+  color: var(--color-contrast);
+  box-shadow: 0 0 8px 0 var(--color-money);
+}

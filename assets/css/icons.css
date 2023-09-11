@@ -2,6 +2,7 @@
 [data-link-custom-icon]:before, [data-pill-icon]:before, [data-card-side-icon]:before {
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 [data-link-default-icon="important"]:after {
@@ -10,6 +11,30 @@
   height: 9px;
   display: flex;
   align-items: center;
+}
+
+[data-link-custon-icon-position="start"]:before {
+  order: 0;
+}
+
+[data-link-custon-icon-position="end"]:before {
+  order: 2;
+}
+
+[data-icon-color="important"]:before {
+  filter: url(#filter-color-important);
+}
+
+[data-icon-color="primary"]:before {
+  filter: url(#filter-color-primary);
+}
+
+[data-icon-color="contrast"]:before {
+  filter: url(#filter-color-contrast);
+}
+
+[data-icon-color="red"]:before {
+  filter: url(#filter-color-red);
 }
 
 [data-link-default-icon="primary"]:after {
@@ -67,8 +92,14 @@
   height: 13px;
 }
 
-
-
+[data-link-custom-icon="arrow-single"]:before {
+  content: "";
+  background-image: url("../icons/arrow-single.svg");
+  transform: rotate(180deg);
+  width: 9px;
+  height: 5px;
+  margin-top: 1px;
+}
 
 
 /* ----- MATCH CARD ----- */
@@ -78,6 +109,17 @@
   background-image: url("/ui/matchCard/img/coins.svg");
   width: 8px;
   height: 15px;
+  position: absolute;
+  left: -4px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+[data-card-side-icon="cross"]:before {
+  content: "";
+  background-image: url("../icons/cross.svg");
+  width: 8px;
+  height: 8px;
   position: absolute;
   left: -4px;
   top: 50%;
@@ -101,8 +143,12 @@
   content: url("../../ui/matchCard/img/game3.svg");
 }
 
-
-
+[data-link-custom-icon="expand"]:before {
+  content: "";
+  background-image: url("../icons/expand.svg");
+  min-width: 10px;
+  min-height: 10px;
+}
 
 
 /* WINNER CROWN */
@@ -117,9 +163,15 @@
   top: 1px;
 }
 
+.matchCard__body-main-textInfo--SecondTeam [data-winner-icon="true"]:before {
+  content: "";
+}
 
-
-
+.matchCard__body-main-textInfo--SecondTeam [data-winner-icon="true"]:after {
+  content: url("../../assets/icons/crown.svg");
+  position: relative;
+  top: 1px;
+}
 
 /* LANGUAGES */
 [data-link-custom-icon="english"]:before {
@@ -156,4 +208,37 @@
   background-image: url("../../ui/pills/img/fast-bets.svg");
   width: 16px;
   height: 16px;
+}
+
+/* BET ACCORDIONS */
+[data-card-bet-icon]:before {
+  content: "";
+  display: inline-block;
+  min-width: 10px;
+  min-height: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+[data-card-bet-icon="game3"]:before {
+  background-image: url("../../ui/matchCard/img/game3.svg");
+  min-width: 12px;
+  min-height: 14px;
+}
+
+/* TODO: maybe do all icons in this format */
+/* MISC */
+[data-before-icon]:before, [data-after-icon]:after {
+  content: "";
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  min-width: 14px;
+  min-height: 14px;
+}
+
+[data-before-icon="fast-bets"]:before {
+  content: "";
+  background-image: url("../icons/fast-bets.svg");
 }

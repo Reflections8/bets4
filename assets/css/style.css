@@ -125,7 +125,6 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   gap: var(--indent-card);
-  padding-right: 20px;
 }
 
 /* Red dot */

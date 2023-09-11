@@ -17,6 +17,11 @@
   font-size: 18px;
 }
 
+.card__header-collapseButton {
+  cursor: pointer;
+  font-size: 12px;
+}
+
 .card__header-title-symbol {
   width: 5px;
   height: 5px;
@@ -26,6 +31,11 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+/* FAST BETS */
+.card__header--FastBets-modalLink {
+  cursor: pointer;
 }
 
 @media screen and (max-width: 991px) {

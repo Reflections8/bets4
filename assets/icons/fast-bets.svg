@@ -1,0 +1,19 @@
+<svg id="express-bets" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 2px;
+      }
+
+      .cls-2 {
+        stroke-linejoin: round;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <circle id="e" class="cls-1" cx="12" cy="12" r="3"/>
+  <path id="e2" class="cls-2" d="M521,218.829A3,3,0,1,1,524.828,215" transform="translate(-514 -208)"/>
+  <path id="e3" class="cls-2" d="M517,214.829A3,3,0,1,1,520.828,211" transform="translate(-514 -208)"/>
+</svg>

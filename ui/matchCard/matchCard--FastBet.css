@@ -1,0 +1,94 @@
+.matchCard--Short.matchCard--FastBet .matchCard__body-main {
+  padding: 5px;
+  justify-content: space-between;
+}
+
+.matchCard--FastBet .matchCard__body-SideIcon:before {
+  left: -10px;
+  cursor: pointer;
+}
+
+.matchCard--FastBet [data-icon-color="important"]:before {
+  filter: url(#filter-color-important);
+}
+
+.matchCard--FastBet [data-icon-color="primary"]:before {
+  filter: url(#filter-color-primary);
+}
+
+.matchCard--FastBet [data-icon-color="contrast"]:before {
+  filter: url(#filter-color-contrast);
+}
+
+.matchCard--FastBet [data-icon-color="red"]:before {
+  filter: url(#filter-color-red);
+}
+
+.matchCard--FastBet__body-main-teamBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 5px;
+  font-size: 12px;
+  border-radius: 12px;
+  max-width: 41%;
+  width: 100%;
+}
+
+.matchCard--FastBet__body-main .matchCard--FastBet__body-main-teamBox:last-of-type {
+  flex-direction: row-reverse;
+}
+
+.matchCard--FastBet__body-main-teamBox-name {
+  flex-grow: 1;
+  text-align: center;
+  padding: 0 5px;
+}
+
+.matchCard--FastBet__body-main-centerIconBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.matchCard--FastBet__body-main-centerIconBox-redDot {
+  width: 3px;
+  height: 3px;
+  order: -1;
+  margin-right: 2px;
+  margin-left: 2px;
+}
+
+[data-icon-live-dot="false"] span {
+  display: none;
+}
+
+.matchCard--FastBet__accordion {
+  margin-right: 5px;
+
+  border-radius: var(--border-radius-card);
+  padding: calc(10px + 22px) 20px 10px 5px;
+  border: 1px solid var(--bg-accent-primary);
+  position: relative;
+  z-index: 0;
+  top: -22px;
+  margin-bottom: -22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  font-size: 12px;
+}
+
+.matchCard--FastBet__accordion-coef {
+  max-width: 41%;
+  width: 100%;
+  text-align: center;
+}
+
+.matchCard--FastBet__accordion-betType {
+  max-width: 41%;
+  width: 100%;
+  text-align: center;
+}
