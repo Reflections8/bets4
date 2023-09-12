@@ -1,0 +1,61 @@
+.notificationBox {
+  border-radius: var(--border-radius-card);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  transition: all .2s ease-in-out;
+}
+
+.notificationBox__closeIcon {
+  cursor: pointer;
+}
+
+.notificationBox__closeIcon:before {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  min-width: 10px;
+  min-height: 10px;
+}
+
+.notificationBox__iconWrapper {
+  width: 100%;
+  height: 100%;
+  max-width: 25%;
+  padding: 7%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+[data-notification-icon]:before {
+  content: "";
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 45px;
+  height: 45px ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.notificationBox__content {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 75%;
+  padding: 10px 20px 20px 0;
+}
+
+.notificationBox__content-title {
+  font-weight: 700;
+}
+
+.notificationBox__content-text {
+  font-weight: 400;
+}

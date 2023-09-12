@@ -190,7 +190,7 @@
 
 [data-link-custom-icon="ukrainian"]:before {
   content: "";
-  background-image: url("../../ui/dropdown/img/ru.svg");
+  background-image: url("../../ui/dropdown/img/ua.svg");
   min-width: 19px;
   height: 19px;
 }
@@ -241,4 +241,17 @@
 [data-before-icon="fast-bets"]:before {
   content: "";
   background-image: url("../icons/fast-bets.svg");
+}
+
+[data-before-icon="cross"]:before {
+  content: "";
+  background-image: url("../icons/cross.svg");
+}
+
+/* NOTIFICATIONS */
+[data-notification-icon="lock"]:before {
+  background-image: url("../../ui/notificationBox/img/lock.svg");
+}
+[data-notification-icon="pulse-dot"]:before {
+  background-image: url("../../ui/notificationBox/img/pulse-dot.svg");
 }

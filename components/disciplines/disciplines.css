@@ -18,9 +18,9 @@
 
 .disciplines__gradientWrapper {
   position: relative;
-  margin-left: auto;
   overflow: hidden;
   margin-right: 20px;
+  width: 100%;
 }
 
 .disciplines__gradientWrapper.disciplines__gradientWrapper--NotScrolled:before {
@@ -56,13 +56,14 @@
   width: 100%;
   position: relative;
   padding-right: 20px;
+  padding-left: 20px;
 }
 
 
 .disciplines__list {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 100%;
   gap: 20px;
 }

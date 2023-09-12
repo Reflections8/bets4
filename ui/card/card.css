@@ -3,6 +3,12 @@
   border-radius: var(--border-radius-card);
 }
 
+.card--NewFastBet {
+  gap: var(--inner-card-indent);
+  display: flex;
+  flex-direction: column;
+}
+
 .card__header {
   display: flex;
   align-items: center;

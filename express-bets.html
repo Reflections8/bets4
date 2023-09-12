@@ -1727,7 +1727,7 @@
 						<aside class="rootContent__aside card">
 
 								<!-- NEW FAST BET -->
-								<section class="card paddingCard bg-primary"
+								<section class="card--NewFastBet card paddingCard bg-primary"
 												 data-section-content="NewFastBet">
 										<!-- ui/card -->
 										<div class="card__header card__header--FastBets">
@@ -1830,27 +1830,202 @@
 														<!-- accordion (static) -->
 														<div class="matchCard--FastBet__accordion">
 
-																<div class="matchCard--FastBet__accordion-coef">
-																		x1.512
+																<div class="matchCard--FastBet__accordion-coef text--ellipsis">
+																		<abbr>x1.512</abbr>
 																</div>
 
-																<div class="matchCard--FastBet__accordion-centerText">
-																		1
+																<div class="matchCard--FastBet__accordion-centerText text--ellipsis color-red fw-700">
+																		<abbr></abbr>
 																</div>
 
-																<!-- center icon -->
-																<div class="matchCard--FastBet__accordion-betType"
-																		 data-card-bet-icon="game3"
-																		 data-icon-color="red"
+																<div class="matchCard--FastBet__accordion-betTypeWrapper"
 																		 data-icon-live-dot="true">
-																		<span class="matchCard--FastBet__body-main-centerIconBox-redDot red-dot"></span>
-																		Game 3
+
+																		<!-- red-dot -->
+																		<span class="matchCard--FastBet__accordion-betTypeWrapper-red-dot red-dot"
+																					data-red-dot-animation-duration="5"></span>
+
+																		<!-- icon -->
+																		<div class="matchCard--FastBet__accordion-betType text--ellipsis color-red"
+																				 data-card-bet-icon="game3"
+																				 data-icon-color="red">
+																				<abbr>Game 3 Game 3Game 3Game 3Game 3</abbr>
+																		</div>
+																</div>
+
+														</div>
+												</div>
+
+												<!-- ui/matchCard (--FastBet)-->
+												<div class="matchCard matchCard--IconRight matchCard--Short matchCard--FastBet">
+
+														<!-- head text -->
+														<div class="matchCard__headText">
+
+																<!-- time -->
+																<div class="matchCard__headText-timeAgo color-primary">
+																		2016.07.03 06:21
+																</div>
+
+																<!-- title -->
+																<a href="#" class="matchCard__headText-title text--ellipsis color-primary">
+																		<abbr>
+																				ProDota Cup #8 NA (very long league name)
+																		</abbr>
+																</a>
+														</div>
+
+														<!-- body -->
+														<a class="matchCard__body bg-accent-primary card"
+															 data-icon-side="true">
+
+																<!-- Left Absolute Icon -->
+																<span class="matchCard__body-SideIcon"
+																			data-card-side-icon="cross"
+																			data-icon-color="red">
+																</span>
+
+																<!-- colored match type box -->
+																<div class="matchCard__body-matchTypeBox"
+																		 data-match-discpiline="dota2">
+																		<img src="components/disciplines/img/games/dota2.svg"
+																				 alt="dota2"
+																				 class="matchCard__body-matchTypeBox-icon">
+																</div>
+
+																<div class="matchCard__body-main matchCard--FastBet__body-main">
+
+																		<!-- teambox -->
+																		<div class="matchCard--FastBet__body-main-teamBox bg-important-secondary">
+
+																				<!-- title -->
+																				<div class="matchCard--FastBet__body-main-teamBox-name text--ellipsis">
+																						<abbr>InfInfamouInfInfamousamoussamous</abbr>
+																				</div>
+
+																				<!-- image -->
+																				<img src="assets/images/teams/short/1nf.png"
+																						 alt="1nf"
+																						 loading="lazy"
+																						 class="matchCard--FastBet__body-main-teamBox-img">
+																		</div>
+
+																		<!-- center icon -->
+																		<div class="matchCard--FastBet__body-main-centerIconBox"
+																				 data-card-bet-icon="game3"
+																				 data-icon-color="primary"
+																				 data-icon-live-dot="false">
+																				<span class="matchCard--FastBet__body-main-centerIconBox-redDot red-dot"></span>
+																		</div>
+
+																		<!-- teambox -->
+																		<div class="matchCard--FastBet__body-main-teamBox">
+
+																				<!-- title -->
+																				<div class="matchCard--FastBet__body-main-teamBox-name text--ellipsis">
+																						<abbr>matchCard--FastBet__body-main-teamBox-name</abbr>
+																				</div>
+
+																				<!-- image -->
+																				<img src="assets/images/teams/short/1nf.png"
+																						 alt="1nf"
+																						 loading="lazy"
+																						 class="matchCard--FastBet__body-main-teamBox-img">
+																		</div>
+
+																</div>
+														</a>
+
+														<!-- accordion (static) -->
+														<div class="matchCard--FastBet__accordion">
+
+																<div class="matchCard--FastBet__accordion-coef text--ellipsis">
+																		<abbr>x1.512x1.512x1.512x1.512x1.512x1.512x1.512x1.512x1.512x1.512</abbr>
+																</div>
+
+																<div class="matchCard--FastBet__accordion-centerText text--ellipsis color-red fw-700">
+																		<abbr>OUTDATED</abbr>
+																</div>
+
+																<div class="matchCard--FastBet__accordion-betTypeWrapper"
+																		 data-icon-live-dot="false">
+
+																		<!-- red-dot -->
+																		<span class="matchCard--FastBet__accordion-betTypeWrapper-red-dot red-dot"
+																					data-red-dot-animation-duration="5"></span>
+
+																		<!-- icon -->
+																		<div class="matchCard--FastBet__accordion-betType text--ellipsis color-primary"
+																				 data-card-bet-icon="game3"
+																				 data-icon-color="primary">
+																				<abbr>Game 3 Game 3Game 3Game 3Game 3</abbr>
+																		</div>
 																</div>
 
 														</div>
 												</div>
 										</div>
+
+										<!-- ui/notificationBox (Error) -->
+										<div class="notificationBox bg-error color-important">
+
+												<!-- icon -->
+												<div class="notificationBox__iconWrapper"
+														 data-notification-icon="lock">
+												</div>
+
+												<!-- content -->
+												<div class="notificationBox__content">
+
+														<div class="notificationBox__content-title">
+																ERROR: not actual....
+														</div>
+
+														<div class="notificationBox__content-text">
+																It takes time to make live bet, Some-
+																times such bets got canceled...
+														</div>
+												</div>
+
+												<!-- close icon -->
+												<div class="notificationBox__closeIcon"
+														 data-before-icon="cross"
+														 data-icon-color="important"></div>
+										</div>
+
+										<!-- ui/notificationBox (Warning) -->
+										<div class="notificationBox bg-warning color-contrast">
+
+												<!-- icon -->
+												<div class="notificationBox__iconWrapper"
+														 data-notification-icon="pulse-dot">
+												</div>
+
+												<!-- content -->
+												<div class="notificationBox__content">
+
+														<div class="notificationBox__content-title">
+																ERROR: not actual....
+														</div>
+
+														<div class="notificationBox__content-text">
+																It takes time to make live bet, Some-
+																times such bets got canceled...
+														</div>
+												</div>
+
+												<!-- close icon -->
+												<div class="notificationBox__closeIcon"
+														 data-before-icon="cross"
+														 data-icon-color="contrast"></div>
+										</div>
+
+										<!-- components/totalBetBox -->
+										<div class="totalBetBox bg-important-primary">
+
+										</div>
 								</section>
+
 						</aside>
 				</div>
 		</div>
@@ -2152,6 +2327,9 @@
 
 <!-- Add this JS file if page contains any modal windows -->
 <script src="modals/modalWrapper.js"></script>
+
+<!-- Add this JS file if page contains any notification boxes -->
+<script src="ui/notificationBox/notificationBox.js"></script>
 
 </body>
 </html>

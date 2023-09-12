@@ -19,6 +19,7 @@
 @import "../../components/disciplines/disciplines.css";
 @import "../../components/matchesList/matchesList.css";
 @import "../../components/userList/userList.css";
+@import "../../components/totalBetBox/totalBetBox.css";
 
 /* UI-elements */
 @import "../../ui/card/card.css";
@@ -32,6 +33,7 @@
 @import "../../ui/sectionTabs/sectionTabs.css";
 @import "../../ui/button/button.css";
 @import "../../ui/formInput/formInput.css";
+@import "../../ui/notificationBox/notificationBox.css";
 
 /* Common tags */
 *, *:after, *:before {

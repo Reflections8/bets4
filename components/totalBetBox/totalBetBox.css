@@ -1,0 +1,4 @@
+.totalBetBox {
+  padding-top: var(--inner-card-indent);
+  border-radius: var(--border-radius-card);
+}

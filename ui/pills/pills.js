@@ -55,10 +55,24 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Resize glider to default [0] checked label
+    const findCheckedLabel = () => {
+      for (const label of pillsLabels) {
+        const inputId = label.getAttribute('for');
+        const input = document.getElementById(inputId);
+        if (input && input.checked) {
+          return label;
+        }
+      }
+      return pillsLabels[0];
+    }
+
+    const checkedLabel = findCheckedLabel();
+
+    // Resize glider to default checked label
     setTimeout(() => {
-      updateGlider(pillsLabels[0]);
+      updateGlider(checkedLabel);
     }, 300)
+
 
     // Set glider to current checked input
     window.addEventListener('resize', () => {
