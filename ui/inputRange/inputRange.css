@@ -1,0 +1,83 @@
+.inputRange {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.inputRange__title {
+  font-size: 12px;
+}
+
+.inputRange__inputWrapper {
+  display: flex;
+  align-items: center;
+  border-right: 1px solid var(--color-primary);
+  height: 8px;
+  position: relative;
+}
+
+.inputRange__inputWrapper-line {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 1px;
+  background-color: var(--color-primary);
+  width: calc(100% - 6px);
+  z-index: 0;
+}
+
+.inputRange__value {
+  border-radius: var(--border-radius-card);
+  padding: 8px 20px;
+  font-size: 14px;
+  min-width: 70px;
+  text-align: center;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  border-radius: 16px;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Track: webkit browsers */
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 13px;
+  background: transparent;
+}
+
+/* Track: Mozilla Firefox */
+input[type="range"]::-moz-range-track {
+  height: 13px;
+  background: transparent;
+}
+
+/* Thumb: webkit */
+input[type="range"]::-webkit-slider-thumb {
+  /* removing default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+  /* creating a custom design */
+  height: 13px;
+  width: 13px;
+  background: var(--bg-primary);
+  border: 1px solid var(--color-primary);
+  border-radius: 50%;
+}
+
+/* Thumb: Firefox */
+input[type="range"]::-moz-range-thumb {
+  height: 13px;
+  width: 13px;
+  background-color: var(--bg-primary);
+  border-radius: 50%;
+  border: 1px solid var(--color-primary);
+}

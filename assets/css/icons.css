@@ -13,11 +13,11 @@
   align-items: center;
 }
 
-[data-link-custon-icon-position="start"]:before {
+[data-link-custom-icon-position="start"]:before {
   order: 0;
 }
 
-[data-link-custon-icon-position="end"]:before {
+[data-link-custom-icon-position="end"]:before {
   order: 2;
 }
 
@@ -246,6 +246,16 @@
 [data-before-icon="cross"]:before {
   content: "";
   background-image: url("../icons/cross.svg");
+}
+
+[data-before-icon="plus"]:before {
+  content: "";
+  background-image: url("../icons/plus.svg");
+}
+
+[data-before-icon="betcoin"]:before {
+  content: "";
+  background-image: url("../icons/betcoin.svg");
 }
 
 /* NOTIFICATIONS */

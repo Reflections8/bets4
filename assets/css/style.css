@@ -34,6 +34,9 @@
 @import "../../ui/button/button.css";
 @import "../../ui/formInput/formInput.css";
 @import "../../ui/notificationBox/notificationBox.css";
+@import "../../ui/switcher/switcher.css";
+@import "../../ui/headedBox/headedBox.css";
+@import "../../ui/inputRange/inputRange.css";
 
 /* Common tags */
 *, *:after, *:before {
@@ -81,6 +84,10 @@ input::placeholder {
   color: var(--color-secondary);
 }
 
+section {
+  transition: all .2s ease-in-out;
+  max-height: 100%;
+}
 /* CLASSES */
 
 /* Hidden */

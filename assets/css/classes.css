@@ -3,6 +3,10 @@
   background-color: var(--color-important);
 }
 
+.bg-primary-text {
+  background-color: var(--color-primary);
+}
+
 .bg-important-primary {
   background-color: var(--bg-important-primary);
 }

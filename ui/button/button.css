@@ -10,7 +10,7 @@ button {
   font-size: 14px;
   min-width: 100px;
   min-height: 30px;
-  padding: 0 15px;
+  padding: 5px 15px;
   border-radius: var(--border-radius-button);
   display: flex;
   align-items: center;
@@ -22,8 +22,16 @@ button.bg-important-text {
   color: var(--color-contrast);
 }
 
+button.bg-primary-text:hover {
+  background-color: var(--color-important);
+}
+
 button.bg-important-text:hover {
   filter: url(#filter-color-primary);
+}
+
+button.bg-warning:hover {
+  box-shadow: 0 0 12px 0 var(--color-money);
 }
 
 [data-button-icon].bg-important-text:before {
@@ -33,7 +41,7 @@ button.bg-important-text:hover {
 [data-button-size="small"] {
   font-size: 12px;
   min-width: unset;
-  padding: 0 10px;
+  padding: 5px 10px;
 }
 
 [data-button-icon-position="right"]:before {

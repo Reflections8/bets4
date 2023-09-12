@@ -142,3 +142,7 @@
   color: var(--color-contrast);
   box-shadow: 0 0 8px 0 var(--color-money);
 }
+
+.betButton[data-match-card-button="checked"]:hover {
+  box-shadow: 0 0 12px 0 var(--color-money);
+}

@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
           updateGlider(currentLabel.domNode);
         } else {
           // if current pills component is not clicked yet we set glider to default label[0] element
-          updateGlider(pillsLabels[0])
+          updateGlider(findCheckedLabel())
         }
       }, 0)
     })

@@ -1,4 +1,31 @@
 .totalBetBox {
-  padding-top: var(--inner-card-indent);
+  padding: var(--inner-card-indent);
   border-radius: var(--border-radius-card);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.totalBetBox__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.totalBetBox__row-value {
+  font-weight: 700;
+}
+
+.totalBetBox__ul {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.totalBetBox__switchers {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }

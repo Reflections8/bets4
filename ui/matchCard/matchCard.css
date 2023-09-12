@@ -132,6 +132,11 @@
   max-width: 130px;
 }
 
+.matchesList__body .matchCard__body-main-teamImg {
+  max-width: 58px;
+  max-height: 58px;
+}
+
 .matchCard__body-main-LeagueImg {
   margin-left: auto;
   max-width: 120px;
